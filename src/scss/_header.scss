@@ -1,0 +1,1079 @@
+.Header {
+  background: #f7f7f7;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  height: 45px;
+  position: relative;
+
+  &__logo {
+    width: 104px;
+    margin-top: 8px;
+  }
+
+  &__menu {
+    float: left;
+    width: 44px;
+    height: 45px;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html[dir="rtl"] &__menu {
+    float: right;
+    border-left: 1px solid #ddd;
+  }
+
+  &__menuText {
+    font-size: 10px;
+    font-weight: bold;
+    color: #696969;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  &__burger {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #696969;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: #696969;
+      left: 0;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      bottom: -5px;
+    }
+  }
+
+  &__burgerLink {
+    display: flex;
+  }
+
+  &__closeIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/*--------------------------------------
+  Top level icon based navigation Bar
+---------------------------------------*/
+.ctGlobalNav {
+  color: #777;
+  height: 44px;
+  position: relative;
+  /*#Gradient.Vertical(#fff,#eee,#eee);*/
+  background: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Ubuntu, Arial, sans-serif;
+  z-index: 4;
+}
+.ctGlobalNav.global-nav-v3 .ct-logo {
+  width: 191px;
+  height: 28px;
+}
+.ctGlobalNav.global-nav-v3 .productLinks li {
+  height: 44px;
+}
+.ctGlobalNav.global-nav-v3 .productLinks li a {
+  padding: 0 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+.ctGlobalNav.global-nav-v3 .productLinks .product-icon-svg {
+  height: 20px;
+  width: 20px;
+  fill: #ccc;
+}
+.ctGlobalNav.global-nav-v3 .productLinks .product-icon-svg.hotel-icon {
+  width: 25px;
+  height: 16px;
+}
+.ctGlobalNav.global-nav-v3 .productLinks .product-icon-svg.activity-icon {
+  width: 11px;
+  height: 17px;
+}
+.ctGlobalNav.global-nav-v3 .productLinks .product-icon-svg.train-icon {
+  width: 14px;
+  height: 20px;
+}
+.ctGlobalNav.global-nav-v3 .productLinks .activityApp .product-icon-svg {
+  fill: #333;
+}
+.ctGlobalNav.global-nav-v3 .heartWishlist {
+  vertical-align: middle;
+}
+.ctGlobalNav.global-nav-v3 .wishlistCountcontainer {
+  top: 6px;
+}
+.flushBody .ctGlobalNav .row {
+  max-width: 100%;
+}
+.headerRow {
+  justify-content: space-between;
+}
+.ctCol {
+  float: left;
+  width: 33.33333%;
+}
+.ctProducts {
+  white-space: nowrap;
+}
+.ctProducts a:hover {
+  text-decoration: none;
+}
+.ctCenter {
+  text-align: center;
+}
+.ctBrand {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.ctBrand .ct-logo {
+  width: 135px;
+  height: 30px;
+  margin-top: 8px;
+}
+.centerContainer {
+  height: 1px;
+}
+.productIcon,
+.flagIcon,
+.cleartripLogo,
+.searchIcon,
+.secondaryProduct {
+  content: " ";
+  background-image: url("https://www.cleartrip.com/images/ui/iconSprite37.png");
+  background-repeat: no-repeat;
+}
+.cleartripLogo {
+  float: left;
+  margin-top: 8px;
+  width: 135px;
+  height: 30px;
+  background-position: 0px 0px;
+  text-indent: -9999px;
+}
+.secondaryProduct {
+  float: left;
+  width: 80px;
+  height: 12px;
+  text-indent: -9999px;
+  margin-left: 4px;
+  margin-top: 20px;
+}
+.secondaryProduct.alerts {
+  width: 60px;
+  background-position: -400px -303px;
+}
+.secondaryProduct.account {
+  width: 55px;
+  background-position: -400px -272px;
+}
+.secondaryProduct.smallworld {
+  width: 55px;
+  background-position: -400px -240px;
+}
+.secondaryProduct.ticket {
+  width: 38px;
+  background-position: -400px -320px;
+}
+
+.secondaryProduct.calendar {
+  width: 60px;
+  background-position: -400px -288px;
+}
+.secondaryProduct.waytogo {
+  width: 60px;
+  background-position: -480px -304px;
+}
+.secondaryProduct.blog {
+  width: 30px;
+  background-position: -400px -351px;
+}
+.secondaryProduct.collections {
+  width: 74px;
+  background-position: -400px -381px;
+}
+.secondaryProduct.getaways {
+  width: 65px;
+  background-position: -480px -319px;
+}
+.secondaryProduct.homely {
+  width: 48px;
+  background-position: -481px -334px;
+}
+.secondaryProduct.activities {
+  background-position: -480px -354px;
+  width: 59px;
+}
+.secondaryProduct.local {
+  background-position: -480px -240px;
+  width: 39px;
+}
+.productIcon {
+  height: 24px;
+  /*reduced 1 px because it was overlapping with the border of the global nav*/
+  width: 28px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  text-indent: -9999px;
+}
+.darkBody .ctGlobalNav.container {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom-color: #454546;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.darkBody .productIcon,
+.darkBody .cleartripLogo,
+.darkBody .secondaryProduct {
+  content: " ";
+  background-image: url("https://www.cleartrip.com/images/ui/iconSprite_reverse7.png");
+  background-repeat: no-repeat;
+}
+.darkBody .productIcon.collections,
+.darkBody .cleartripLogo.collections,
+.darkBody .secondaryProduct.collections {
+  background-position: -481px -319px;
+}
+.darkBody .productLinks li,
+.darkBody .listMenuContainer,
+.darkBody .productLinks li:first-child,
+.darkBody .ctMainMenu {
+  border-color: #454546;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.darkBody a,
+.darkBody .listMenuLink {
+  color: rgba(255, 255, 255, 0.4);
+}
+.darkBody .listMenuLink {
+  background-position: 36px -52px;
+}
+.darkBody .listMenuLink:hover {
+  color: rgba(255, 255, 255, 0.4);
+  background-position: 36px -52px;
+}
+a#userAccountLink {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+a#userAccountLink span.span19 {
+  width: 100%;
+  padding-left: 26px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 0;
+  max-width: 100px;
+}
+a#userAccountLink .avatar {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin: 9px -24px 0 -4px;
+  box-shadow: none;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+a#userAccountLink .avatar img {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+}
+a#userAccountLink .man_24,
+a#userAccountLink .woman_24,
+a#userAccountLink .specialMembershipBadge {
+  content: " ";
+  background-image: url("https://www.cleartrip.com/images/ui/iconSprite37.png");
+  background-repeat: no-repeat;
+}
+a#userAccountLink .man_24 {
+  background-position: -501px -369px;
+}
+a#userAccountLink .woman_24 {
+  background-position: -537px -369px;
+}
+a#userAccountLink.current.man_24,
+a#userAccountLink:hover.man_24 {
+  background-position: -429px -681px;
+}
+a#userAccountLink.current.woman_24,
+a#userAccountLink:hover.woman_24 {
+  background-position: -467px -682px;
+}
+a#userAccountLink .specialMembershipBadge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -13px;
+  margin-top: 13px;
+}
+a#userAccountLink .specialMembershipBadge.elite {
+  background-position: -359px -448px;
+}
+a#userAccountLink.current .specialMembershipBadge {
+  display: none;
+}
+section#GlobalNav {
+  padding: 0 2em;
+}
+.specialMembershipBadgeBig,
+.specialMembershipTag {
+  content: " ";
+  background-image: url("https://www.cleartrip.com/images/ui/iconSprite37.png");
+  background-repeat: no-repeat;
+}
+.listMenu li.specialMembershipBlock {
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin: 2px 10px;
+  border-bottom: 1px solid #eee;
+}
+.listMenu li.specialMembershipBlock .specialMembershipBadgeBig {
+  float: left;
+  width: 44px;
+  height: 48px;
+  margin: 10px 12px 0 -1px;
+}
+.listMenu li.specialMembershipBlock .specialMembershipBadgeBig.elite {
+  background-position: -298px -427px;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo {
+  float: left;
+  width: 220px;
+  text-indent: -1px;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo p span {
+  font-weight: bold;
+  color: #000;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo nav {
+  display: none;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo a,
+.listMenu li.specialMembershipBlock .specialMembershipInfo a:visited {
+  color: #36c;
+  font-size: 12px;
+  padding: 0;
+  margin-right: 11px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.listMenu li.specialMembershipBlock .specialMembershipInfo a:hover {
+  background: none;
+  text-decoration: underline;
+}
+.listMenu li.specialMembershipBlock .specialMembershipTag {
+  width: 110px;
+  height: 20px;
+  display: block;
+  margin-top: 16px;
+  margin-left: -1px;
+}
+.listMenu li.specialMembershipBlock .specialMembershipTag.elite {
+  background-position: -278px -487px;
+}
+.hasProductIcons .home {
+  background-position: 0px -654px;
+}
+.hasProductIcons .flights {
+  background-position: -30px -654px;
+}
+.hasProductIcons .hotels {
+  background-position: -64px -654px;
+}
+.hasProductIcons .packages {
+  background-position: -144px -654px;
+}
+.hasProductIcons .trains {
+  background-position: -106px -654px;
+}
+.hasProductIcons .trips {
+  background-position: -174px -654px;
+}
+.hasProductIcons .smallWorld {
+  background-position: -208px -654px;
+}
+.hasProductIcons .waytogo {
+  background-position: -352px -655px;
+}
+.hasProductIcons .more {
+  background-position: -239px -654px;
+}
+.hasProductIcons .mobile {
+  background-position: -283px -654px;
+}
+.hasProductIcons .buses {
+  background-position: -317px -654px;
+}
+.hasProductIcons .collections {
+  background-position: -393px -653px;
+}
+.hasProductIcons .tasks {
+  background-position: -503px -653px;
+}
+.hasProductIcons .travellers {
+  background-position: -431px -653px;
+}
+.hasProductIcons .reports {
+  background-position: -539px -653px;
+}
+.hasProductIcons .getaways {
+  background-position: -138px -719px;
+}
+.hasProductIcons .fareCalendarIcon {
+  background-position: -573px -654px;
+}
+.hasProductIcons .dashboard {
+  background-position: -538px -714px;
+}
+.hasProductIcons .activities {
+  background-position: -238px -718px;
+}
+.hasProductIcons .giftcards {
+  background-position: -315px -719px;
+}
+.hasProductIcons a:hover .home,
+.hasProductIcons .menuGroup.exploreProducts a .home {
+  background-position: 0px -686px;
+}
+.hasProductIcons a:hover .flights,
+.hasProductIcons .menuGroup.exploreProducts a .flights {
+  background-position: -30px -686px;
+}
+.hasProductIcons a:hover .hotels,
+.hasProductIcons .menuGroup.exploreProducts a .hotels {
+  background-position: -64px -686px;
+}
+.hasProductIcons a:hover .packages,
+.hasProductIcons .menuGroup.exploreProducts a .packages {
+  background-position: -144px -686px;
+}
+.hasProductIcons a:hover .trains,
+.hasProductIcons .menuGroup.exploreProducts a .trains {
+  background-position: -106px -686px;
+}
+.hasProductIcons a:hover .trips,
+.hasProductIcons .menuGroup.exploreProducts a .trips {
+  background-position: -174px -686px;
+}
+.hasProductIcons a:hover .smallWorld,
+.hasProductIcons .menuGroup.exploreProducts a .smallWorld {
+  background-position: -208px -686px;
+}
+.hasProductIcons a:hover .waytogo,
+.hasProductIcons .menuGroup.exploreProducts a .waytogo {
+  background-position: -352px -687px;
+}
+.hasProductIcons a:hover .more,
+.hasProductIcons .menuGroup.exploreProducts a .more {
+  background-position: -239px -686px;
+}
+.hasProductIcons a:hover .mobile,
+.hasProductIcons .menuGroup.exploreProducts a .mobile {
+  background-position: -283px -686px;
+}
+.hasProductIcons a:hover .buses,
+.hasProductIcons .menuGroup.exploreProducts a .buses {
+  background-position: -317px -686px;
+}
+.hasProductIcons a:hover .collections,
+.hasProductIcons .menuGroup.exploreProducts a .collections {
+  background-position: -393px -685px;
+}
+.hasProductIcons a:hover .tasks,
+.hasProductIcons .menuGroup.exploreProducts a .tasks {
+  background-position: -503px -685px;
+}
+.hasProductIcons a:hover .travellers,
+.hasProductIcons .menuGroup.exploreProducts a .travellers {
+  background-position: -431px -685px;
+}
+.hasProductIcons a:hover .reports,
+.hasProductIcons .menuGroup.exploreProducts a .reports {
+  background-position: -539px -685px;
+}
+.hasProductIcons a:hover .getaways,
+.hasProductIcons .menuGroup.exploreProducts a .getaways {
+  background-position: -168px -719px;
+}
+.hasProductIcons a:hover .fareCalendarIcon,
+.hasProductIcons .menuGroup.exploreProducts a .fareCalendarIcon {
+  background-position: -573px -685px;
+}
+.hasProductIcons a:hover .dashboard,
+.hasProductIcons .menuGroup.exploreProducts a .dashboard {
+  background-position: -572px -714px;
+}
+.hasProductIcons a:hover .activities,
+.hasProductIcons .menuGroup.exploreProducts a .activities {
+  background-position: -208px -718px;
+}
+.hasProductIcons a:hover .giftcards,
+.hasProductIcons .menuGroup.exploreProducts a .giftcards {
+  background-position: -353px -717px;
+}
+.hasProductIcons a:hover .flightDeals,
+.hasProductIcons .menuGroup.exploreProducts a .flightDeals {
+  opacity: 1;
+}
+.hasProductIcons .navGroup .flightDeals {
+  background-image: url("https://www.cleartrip.com/images/ui/flight-offer-nav.svg");
+  background-position: center;
+  background-size: 22px;
+  opacity: 0.65;
+}
+.productLinks {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.productLinks li {
+  font-size: 10px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #ddd;
+}
+.productLinks li:first-child {
+  border-left: 1px solid #ddd;
+}
+.productLinks a {
+  float: left;
+  width: 24px;
+  padding: 10px;
+}
+.ctProductTitle {
+  font-size: 24px;
+  font-weight: 100;
+  color: #aaa;
+  line-height: 44px;
+  white-space: nowrap;
+}
+.swSearchForm {
+  position: relative;
+  display: inline-block;
+  *width: 235px;
+}
+input[type="search"].swSearchField,
+input.swSearchField {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background: #fff;
+  height: 22px;
+  margin-top: 8px;
+  width: 200px;
+  font-size: 13px;
+  padding-left: 30px;
+  box-shadow: 0px 1px #fff, 0px 1px 2px #eee inset;
+  -webkit-appearance: none;
+  -webkit-focus-ring-color: transparent;
+}
+input[type="search"].swSearchField:focus,
+input.swSearchField:focus {
+  background: #fff;
+  outline: none;
+}
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  background-position: -464px -144px;
+  position: absolute;
+  left: 10px;
+  top: 14px;
+}
+.feedbackLink {
+  font-size: 13px;
+  line-height: 44px;
+  white-space: nowrap;
+}
+.tempFeedbackLink.menuItem {
+  margin-right: 0;
+  padding-right: 10px;
+}
+.ctMainMenu {
+  float: right;
+  font-size: 0;
+  white-space: nowrap;
+  border-right: 1px solid #ddd;
+}
+.ctMainMenu .span24 {
+  width: 100%;
+}
+.ctMainMenu span19 {
+  width: 78.666654%;
+}
+.menuItem {
+  font-size: 10px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-size: 13px;
+  line-height: 44px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.menuItem a:hover {
+  text-decoration: underline;
+}
+.menuItem:last-child {
+  margin-right: 0;
+}
+.listMenuContainer {
+  position: relative;
+  max-width: 170px;
+  margin-right: 0px;
+  border-left: 1px solid #ddd;
+}
+.listMenuContainer a:hover {
+  text-decoration: none;
+}
+.listMenuLink {
+  display: block;
+  padding: 0 20px 0 10px;
+  height: 44px;
+  line-height: 44px;
+  color: #666;
+  max-width: 110px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAABuCAMAAAAd8LPfAAAADFBMVEUAAAD///8AAAC+vr5RhLmsAAAAAXRSTlMAQObYZgAAADZJREFUeNrt1MENACAMw0AH9t8ZqX2kjADKPT2AYTcGVRGTXNxc3IiI+NZqDKoi7ubilmPGkw4zrgBfaUnn4AAAAABJRU5ErkJggg==);
+  background-position: right 20px;
+  background-repeat: no-repeat;
+}
+.listMenuLink:hover {
+  text-decoration: none;
+  background-color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-position: right -50px;
+  color: #000;
+}
+.listMenuLink.current {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  background-position: right -50px;
+  color: #000;
+}
+.listMenuLink .flagIcon {
+  margin-top: 10px;
+}
+.listMenuLink > span {
+  line-height: 44px;
+}
+.flagIcon {
+  width: 20px;
+  height: 20px;
+  background-position: 0px -624px;
+  text-indent: -9999px;
+}
+.flagIcon.in {
+  background-position: 0px -561px;
+}
+.flagIcon.ae {
+  background-position: -32px -561px;
+}
+.flagIcon.om {
+  background-position: -64px -561px;
+}
+.flagIcon.qa {
+  background-position: -96px -561px;
+}
+.flagIcon.bh {
+  background-position: -128px -561px;
+}
+.flagIcon.kw {
+  background-position: -160px -561px;
+}
+.flagIcon.sa {
+  background-position: -192px -561px;
+}
+.flagIcon.me {
+  background-position: -225px -561px;
+}
+.listMenu {
+  font-size: 13px;
+  text-align: left;
+  position: absolute;
+  background: #fff;
+  max-width: 170px;
+  z-index: 3;
+  right: 0;
+  top: 43px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+}
+.listMenu li {
+  margin: 0;
+  padding: 0;
+}
+.listMenu .separator {
+  border-bottom: 1px solid #eee;
+}
+.listMenu a {
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.listMenu a:visited {
+  color: #333;
+}
+.listMenu a:hover {
+  background-color: #3c77d4;
+  color: #fff;
+  text-decoration: none;
+}
+.listMenuPicker a {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.listMenuPicker .current a {
+  color: #000;
+  font-weight: bold;
+}
+.listMenuPicker .current a:hover {
+  color: #fff;
+}
+.listMenuPicker .tickMark {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.userAccountMenu {
+  min-width: 120px;
+  width: 100%;
+}
+.countryMenu {
+  width: 160px;
+}
+.countryMenu .flagIcon {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  left: inherit;
+}
+.currencyMenu {
+  width: 180px;
+  height: 278px;
+  overflow-y: scroll;
+}
+.currencyMenu a {
+  padding-right: 15px;
+}
+.currencyMenu .currencySymbol {
+  float: right;
+  text-align: right;
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 11px;
+}
+.currencyMenu,
+.userAccountMenu {
+  width: 400px;
+  max-width: 400px;
+  overflow-y: auto;
+  height: auto;
+  padding: 0;
+}
+.listMenuPicker .current a:hover i.tickMark.black {
+  background-position: -272px -592px;
+}
+.listMenuPicker .current a i.tickMark.black {
+  margin-top: 1px;
+}
+.currencyCol,
+.userAccountCol {
+  width: 199px;
+  height: auto;
+  float: left;
+  border-right: 1px solid #efefef;
+  list-style: none;
+}
+.currencyCol li,
+.userAccountCol li {
+  list-style: none;
+}
+.currencyCol:last-child {
+  width: 200px;
+  border-right: 0;
+}
+.userAccountMenu {
+  width: 310px;
+  max-width: 310px;
+}
+.userAccountMenu.trainsFix {
+  width: 170px;
+}
+.userAccountMenu li ul {
+  list-style: none;
+}
+.userAccountMenu .separator {
+  margin: 0 10px;
+}
+.userAccountMenu .userAccountCol {
+  width: 179px;
+}
+.userAccountMenu .userAccountCol.quickTools {
+  border-right: 0;
+  width: 154px;
+}
+.userAccountMenu .userAccountCol.accountTools {
+  width: 154px;
+}
+.userAccountMenu.loggedOut {
+  width: 154px;
+}
+.userAccountMenu.loggedOut .accountTools,
+.userAccountMenu.loggedOut .miscLinks {
+  display: none;
+}
+.listMenu li i {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 21px;
+  width: 20px;
+  left: 11px;
+  top: 7px;
+}
+.listMenu li.userAccountCol a {
+  padding-left: 40px;
+  position: relative;
+  font-size: 12px;
+}
+.listMenu li.userAccountCol a i.icoDashboard {
+  background-position: -394px -486px;
+}
+.listMenu li.userAccountCol a i.icoTrips {
+  background-position: -430px -486px;
+}
+.listMenu li.userAccountCol a i.icoShortlists {
+  background-position: -541px -555px;
+}
+.listMenu li.userAccountCol a i.icoTravellers {
+  width: 25px;
+  background-position: -468px -486px;
+}
+.listMenu li.userAccountCol a i.icoWallet {
+  background-position: -539px -486px;
+}
+.listMenu li.userAccountCol a i.icoExpressway {
+  background-position: -503px -486px;
+}
+.listMenu li.userAccountCol a i.icoPlans {
+  background-position: -575px -486px;
+}
+.listMenu li.userAccountCol a:hover i.icoDashboard {
+  background-position: -394px -522px;
+}
+.listMenu li.userAccountCol a:hover i.icoTrips {
+  background-position: -430px -522px;
+}
+.listMenu li.userAccountCol a:hover i.icoShortlists {
+  background-position: -577px -555px;
+}
+.listMenu li.userAccountCol a:hover i.icoTravellers {
+  width: 25px;
+  background-position: -468px -522px;
+}
+.listMenu li.userAccountCol a:hover i.icoWallet {
+  background-position: -539px -522px;
+}
+.listMenu li.userAccountCol a:hover i.icoExpressway {
+  background-position: -503px -522px;
+}
+.listMenu li.userAccountCol a:hover i.icoPlans {
+  background-position: -575px -522px;
+}
+.listMenu li.quickTools li a {
+  color: #36c;
+  position: relative;
+  padding-left: 40px;
+}
+.listMenu li.quickTools li a:hover {
+  color: #fff;
+}
+.listMenu li.quickTools li a:hover i.icoCancel {
+  background-position: -394px -449px;
+}
+.listMenu li.quickTools li a:hover i.icoChange {
+  background-position: -467px -449px;
+}
+.listMenu li.quickTools li a:hover i.icoPNR {
+  background-position: -539px -449px;
+}
+.listMenu li.quickTools li a:hover i.icoTicket {
+  background-position: -431px -449px;
+}
+.listMenu li.quickTools li a:hover i.icoHotelVoucher {
+  background-position: -431px -449px;
+}
+.listMenu li.quickTools i.icoCancel {
+  background-position: -394px -413px;
+}
+.listMenu li.quickTools i.icoChange {
+  background-position: -467px -413px;
+}
+.listMenu li.quickTools i.icoPNR {
+  background-position: -539px -413px;
+}
+.listMenu li.quickTools i.icoTicket {
+  background-position: -431px -413px;
+}
+.listMenu li.quickTools i.icoHotelVoucher {
+  background-position: -431px -413px;
+}
+.listMenu li .quickToolsHead {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  color: #777;
+  text-align: center;
+  padding: 10px;
+  cursor: default;
+}
+.listMenu li.miscLinks {
+  overflow: hidden;
+  border-top: 1px solid #efefef;
+  margin: 0 10px;
+}
+.listMenu li.miscLinks ul {
+  list-style: none;
+}
+.listMenu li.miscLinks li {
+  float: left;
+}
+.listMenu li.miscLinks a {
+  padding-left: 0;
+  color: #36c;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.listMenu li.miscLinks a:hover {
+  background: none;
+  color: #36c;
+  text-decoration: underline;
+}
+.listMenu li.miscLinks a#global_signout {
+  color: #cc3300;
+}
+.loggedOut .signInBlock {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0 10px 0;
+}
+.loggedOut input {
+  border-radius: 4px;
+}
+.loggedOut p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.loggedOut p a {
+  display: inline-block;
+  padding: 0;
+  color: #36c;
+  line-height: 24px;
+}
+.loggedOut p a:hover {
+  background: none;
+  text-decoration: underline;
+  color: #36c;
+}
+.loggedOut p a:visited {
+  color: #36c;
+}
+/* ----------------------------------------------------------------------------------------------------------------------*/
+/* -----	social share  ---------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------*/
+.ctCol.socialShare {
+  width: 66.66%;
+}
+.socialShare .social {
+  margin-bottom: 0;
+}
+.socialShare ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.socialShare li {
+  display: inline-block;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+}
+.socialShare li:first-child {
+  margin-right: 6px;
+  color: #666;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.socialShare li .action,
+.socialShare li .connect {
+  text-shadow: none;
+}
+.darkBody .socialShare li:first-child {
+  border-color: #454546;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.darkBody .socialShare li:first-child a {
+  text-decoration: none;
+  color: #fff;
+}
+.darkBody .socialShare li:first-child a:hover {
+  text-decoration: underline;
+}

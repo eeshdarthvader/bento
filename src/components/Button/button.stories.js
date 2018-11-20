@@ -1,0 +1,116 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+
+import Button from './';
+
+storiesOf('Button', module)
+  .add('Default', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Default Button</h3>
+        <h4>
+          Used in places where the intent is not defined
+        </h4>
+        <div className="demo">
+          <Button onClick={action('button-click')}>Hello</Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Primary', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Primary Button</h3>
+        <h4>
+          An orange color button is used to denote the bookflow paths like "Select hotel", "Book" , "Make Payment" etc.
+        </h4>
+        <div className="demo">
+          <Button type="primary" onClick={action('button-click')}>
+            Hello
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Secondary', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Secondary Button</h3>
+        <h4>
+          Used to denote action points which are not "booking" or "payment"
+        </h4>
+        <div className="demo">
+          <Button type="secondary" onClick={action('button-click')}>
+            Hello
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Disabled', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Disabled Button</h3>
+        <h4>
+          Disables hover and pointer effects. Use to disable click while loading or on error
+        </h4>
+        <div className="demo">
+          <Button type="secondary" disabled={true} onClick={action('button-click')}>
+            Hello
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Busy', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Busy Button</h3>
+        <h4>
+          Denotes an busy or waiting states while the UI waits for a response. Disables the button while waiting.
+        </h4>
+        <div className="demo">
+          <Button type="secondary" disabled busy>Hello</Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Full', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Full Button</h3>
+        <h4>
+          Takes up 100% width of available space
+        </h4>
+        <div className="demo">
+          <Button type="secondary" full>Hello</Button>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Outline', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Outline Button</h3>
+        <h4>
+          Used in places where the intent is not defined
+        </h4>
+        <div className="demo">
+          <Button
+            type="secondary"
+            outline
+            onClick={action('button-click')}
+          >
+            Hello
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))

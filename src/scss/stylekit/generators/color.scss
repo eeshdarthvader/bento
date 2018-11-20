@@ -1,0 +1,79 @@
+/* -----------------------------------
+  Color Generator
+  Generates utilty classes for colors
+  based on config
+---------------------------------------
+  1. Color
+  2. Current Color
+------------------------------------ */
+
+// ------------------------------
+// Color
+// ------------------------------
+@each $color, $value in config('colors') {
+  .c-#{$color} {
+    color: $value;
+  }
+  .hover\:c-#{$color} {
+    &:hover { color: $value; }
+  }
+  .group-hover\:c-#{$color} {
+    .group:hover & {
+      color: $value;
+    }
+  }
+  .active\:c-#{$color} {
+    &:active { color: $value; }
+  }
+  .focus\:c-#{$color} {
+    &:focus { color: $value; }
+  }
+
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .hover\:bg-#{$color} {
+    &:hover { background-color: $value; }
+  }
+  .group-hover\:bg-#{$color} {
+    .group:hover & {
+      background-color: $value;
+    }
+  }
+  .active\:bg-#{$color} {
+    &:active { background-color: $value; }
+  }
+  .focus\:bg-#{$color} {
+    &:focus { background-color: $value; }
+  }
+
+  .bc-#{$color} {
+    border-color: $value;
+  }
+  .hover\:bc-#{$color} {
+    &:hover { border-color: $value; }
+  }
+  .group-hover\:bc-#{$color} {
+    .group:hover & {
+      border-color: $value;
+    }
+  }
+  .active\:bc-#{$color} {
+    &:active { border-color: $value; }
+  }
+  .focus\:bc-#{$color} {
+    &:focus { border-color: $value; }
+  }
+}
+
+// ------------------------------
+// Current Color
+// ------------------------------
+.current-fill {
+  fill: currentColor
+}
+
+.current-stroke {
+  stroke: currentColor
+}
+

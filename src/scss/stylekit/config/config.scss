@@ -1,0 +1,304 @@
+/* -----------------------------------
+  Stylekit
+  A Sass bases utility class framework
+  @author Indrashish Ghosh <mail@indrashishghosh.com>
+  @package Stylekit
+  @version 0.1.0
+---------------------------------------
+  1. Spacers
+  2. Typography
+  3. Colors
+  4. Borders
+  5. Box Shadow
+  6. Box Sizing
+  7. Cursors
+  8. Display
+  9. Float
+  10. Grid
+  11. Opacity
+  12. Overflow
+  13. Position
+  14. Dimensions
+------------------------------------ */
+
+
+$config: (
+
+
+  // ------------------------------
+  // Spacers
+  // ------------------------------
+  'spacers': (
+    0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60
+  ),
+
+
+  // ------------------------------
+  // Typography
+  // ------------------------------
+  'typography': (
+    'fontFamily': (
+      'sans': ( "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", sans-serif ),
+      'serif': ( "Georgia", "Times New Roman", "Times", serif )
+    ),
+    'fontWeight': (
+      100, 200, 300, 400, 500, 600, 700, 800, 900
+    ),
+    'fontSize': ( // (font-size, line-height)
+      'caption': (10px, 12px),
+      'caption-2': (12px, 16px),
+      'body': (14px, 20px),
+      'body-2': (16px, 20px),
+      'body-3': (20px, 28px),
+      'heading': (24px, 32px),
+      'heading-2': (32px, 44px),
+      'heading-3': (40px, 52px)
+    ),
+    'lineHeight': (
+      'none': 0,
+      'solid' : 1,
+      'title' : 1.25,
+      'copy' : 1.5
+    ),
+    'fontStyle': (
+      'italic': italic,
+      'normal': normal
+    ),
+    'textDecoration': (
+      'underline': underline,
+      'none': none,
+      'line-through': line-through
+    ),
+    'textAlign': (
+      'left': left,
+      'right': right,
+      'center': center,
+      'justify': justify
+    ),
+    'textTransform': (
+      'normalcase': none,
+      'capitalize': capitalize,
+      'uppercase': uppercase,
+      'lowercase': lowercase,
+      'unset': unset
+    ),
+    'verticalAlign': (
+      'baseline': baseline,
+      'top': top,
+      'middle': middle,
+      'bottom': bottom,
+      'text-top': text-top,
+      'text-bottom': text-bottom
+    ),
+    'letterSpacing': (
+      'tight': -1px,
+      'normal': 0,
+      'wide': 1px
+    ),
+    'fontSmoothing': (
+      'antialiased': antialiased
+    ),
+    'whiteSpace': (
+      'normal': normal,
+      'nowrap': nowrap
+    ),
+    'listStyle': (
+      'reset': none
+    )
+  ),
+
+
+  // ------------------------------
+  // Colors
+  // ------------------------------
+  'colors': (
+    // Blue
+    'blue-lighter': #5C81CC,
+    'blue-light': #4774CC,
+    'blue': #3366CC,
+    'blue-dark': #1F58CC,
+    'blue-darker': #0A4BCC,
+    // Orange
+    'orange-lighter': #F79C63,
+    'orange-light': #F78D4A,
+    'orange': #F77728,
+    'orange-dark': #F76E19,
+    'orange-darker': #F75F00,
+    // Green
+    'green': #5DC32C,
+    // Red
+    'red': #D0021B,
+    // Neautral
+    'white': #FFFFFF,
+    'grey-05': #F2F2F2,
+    'grey-10': #E6E6E6,
+    'grey-20': #CCCCCC,
+    'grey-30': #B3B3B3,
+    'grey-40': #999999,
+    'grey-50': #808080,
+    'grey-60': #666666,
+    'grey-70': #4D4D4D,
+    'grey-80': #333333,
+    'grey-90': #1A1A1A,
+    'black': #000000,
+
+    'transparent': transparent
+  ),
+
+
+  // ------------------------------
+  // Borders
+  // ------------------------------
+  'borders': (
+    'borderStyle': (
+      'solid': solid,
+      'dashed': dashed,
+      'dotted': dotted,
+      'none': none
+    ),
+    'borderWidth': (
+      1, 2, 4, 8
+    ),
+    'borderRadius': (
+      0, 2, 3, 4, 100
+    )
+  ),
+
+
+  // ------------------------------
+  // Box Shadow
+  // ------------------------------
+  'boxShadow': (
+    'sm': 0 2px 8px rgba(59,64,69,.1),
+    'md': 0 4px 8px rgba(59,64,69,.2),
+    'large': 0 4px 12px rgba(36,39,41,.2),
+    'none': none
+  ),
+
+
+  // ------------------------------
+  // Box Sizing
+  // ------------------------------
+  'boxSize': (
+    'contnet': content-box,
+    'border': border-box,
+    'unset': unset
+  ),
+
+
+  // ------------------------------
+  // Cursors
+  // ------------------------------
+  'cursor': (
+    'auto': auto,
+    'default': default,
+    'pointer': pointer,
+    'wait': wait,
+    'move': move,
+    'not-allowed': not-allowed
+  ),
+
+
+  // ------------------------------
+  // Display
+  // ------------------------------
+  'display': (
+    'block': block,
+    'inline': inline,
+    'inline-block': inline-block,
+    'table': table,
+    'table-cell': table-cell,
+    'none': none,
+    'unset': unset
+  ),
+
+
+  // ------------------------------
+  // Floats
+  // ------------------------------
+  'float': (
+    'left': left,
+    'right': right,
+    'none': none
+  ),
+
+
+  // ------------------------------
+  // Grid
+  // ------------------------------
+  'grid': (
+    'gridWidth': 1140px,
+    'gutterWidth': 16px,
+    'gridColumns': 24
+  ),
+
+
+  // ------------------------------
+  // Opacity
+  // ------------------------------
+  'opacity': (
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+  ),
+
+
+  // ------------------------------
+  // Overflow
+  // ------------------------------
+  'overflow': (
+    'auto': auto,
+    'scroll': scroll,
+    'visible': visible,
+    'hidden': hidden
+  ),
+
+
+  // ------------------------------
+  // Positon
+  // ------------------------------
+  'position': (
+    'statergies': (
+      'absolute': absolute,
+      'fixed': fixed,
+      'relative': relative,
+      'static': static,
+      'sticky': sticky
+    ),
+    'coordinates': (
+      0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40
+    ),
+  ),
+
+
+  // ------------------------------
+  // Dimensions
+  // ------------------------------
+  'dimensions': (
+    'width': (
+      '0': 0,
+      '10': 10px,
+      '20': 20px,
+      '30': 30px,
+      '40': 40px,
+      '10p': 10%,
+      '20p': 20%,
+      '30p': 30%,
+      '40p': 40%,
+      '50p': 50%,
+      '60p': 60%,
+      '70p': 70%,
+      '80p': 80%,
+      '90p': 90%,
+      '100p': 100%
+    ),
+    'height': (
+      0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60
+    ),
+  ),
+
+  // ------------------------------
+  // Z-index
+  // ------------------------------
+  'z-index': (
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+  )
+)

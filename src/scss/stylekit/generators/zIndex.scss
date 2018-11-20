@@ -1,0 +1,24 @@
+/* -----------------------------------
+  Z Index Generator
+  Generates utilty classes for z indexes
+  based on config
+---------------------------------------
+  1. Z Index
+  2. Negative Z Index
+------------------------------------ */
+
+// ------------------------------
+// Z Index
+// ------------------------------
+@each $index in config('z-index') {
+  .z-#{$index} {
+    z-index: $index
+  }
+}
+
+// ------------------------------
+// Negative Z Index
+// ------------------------------
+.nz-1 {
+  z-index: -1;
+}

@@ -1,0 +1,32 @@
+/* -----------------------------------
+  Position Generator
+  Generates utilty classes for positioning
+  based on config
+---------------------------------------
+  1. Position
+------------------------------------ */
+
+// ------------------------------
+// Position
+// ------------------------------
+@each $position, $value in config('position.statergies') {
+  .p-#{$position} {
+    position: $value
+  }
+}
+
+
+// ------------------------------
+// Coordinates
+// ------------------------------
+@each $coordinate in config('position.coordinates') {
+  .t-#{$coordinate} { top: $coordinate }
+  .b-#{$coordinate} { bottom: $coordinate }
+  .l-#{$coordinate} { left: $coordinate }
+  .r-#{$coordinate} { right: $coordinate }
+
+  .nt-#{$coordinate} { top: $coordinate * -1px }
+  .nb-#{$coordinate} { bottom: $coordinate * -1px }
+  .nl-#{$coordinate} { left: $coordinate * -1px }
+  .nr-#{$coordinate} { right: $coordinate * -1px }
+}

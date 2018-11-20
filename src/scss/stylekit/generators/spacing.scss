@@ -1,0 +1,85 @@
+/* -----------------------------------
+  Spacing Generator
+  Generates utilty classes for spacing
+  based on config
+---------------------------------------
+  1. Spacers
+  2. Margin
+  3. Padding
+------------------------------------ */
+
+// ------------------------------
+// Spacer
+// ------------------------------
+@each $space in config(spacers) {
+  .spacer-#{$space} {
+    display: block;
+    height: $space + px;
+  }
+}
+
+
+// ------------------------------
+// Margin
+// ------------------------------
+@each $space in config(spacers) {
+  .m-#{$space} { margin: $space * 1px; }
+  .mt-#{$space} { margin-top: $space * 1px; }
+  .mb-#{$space} { margin-bottom: $space * 1px; }
+  .ml-#{$space} { margin-left: $space * 1px; }
+  .mr-#{$space} { margin-right: $space * 1px; }
+  .mx-#{$space} {
+    margin-right: $space * 1px;
+    margin-left: $space * 1px;
+  }
+  .my-#{$space} {
+    margin-top: $space * 1px;
+    margin-bottom: $space * 1px;
+  }
+
+  .nmt-#{$space} { margin-top: (-1 * $space) + px; }
+  .nmb-#{$space} { margin-bottom: (-1 * $space) + px; }
+  .nml-#{$space} { margin-left: (-1 * $space) + px; }
+  .nmr-#{$space} { margin-right: (-1 * $space) + px; }
+  .nmx-#{$space} {
+    margin-right: (-1 * $space) + px;
+    margin-left: (-1 * $space) + px;
+  }
+  .nmy-#{$space} {
+    margin-top: (-1 * $space) + px;
+    margin-bottom: (-1 * $space) + px;
+  }
+}
+
+
+// ------------------------------
+// Padding
+// ------------------------------
+@each $space in config(spacers) {
+  .p-#{$space} { padding: $space * 1px; }
+  .pt-#{$space} { padding-top: $space * 1px; }
+  .pb-#{$space} { padding-bottom: $space * 1px; }
+  .pl-#{$space} { padding-left: $space * 1px; }
+  .pr-#{$space} { padding-right: $space * 1px; }
+  .px-#{$space} {
+    padding-right: $space * 1px;
+    padding-left: $space * 1px;
+  }
+  .py-#{$space} {
+    padding-top: $space * 1px;
+    padding-bottom: $space * 1px;
+  }
+
+  .npt-#{$space} { padding-top: (-1 * $space) + px; }
+  .npb-#{$space} { padding-bottom: (-1 * $space) + px; }
+  .npl-#{$space} { padding-left: (-1 * $space) + px; }
+  .npr-#{$space} { padding-right: (-1 * $space) + px; }
+  .npx-#{$space} {
+    padding-right: (-1 * $space) + px;
+    padding-left: (-1 * $space) + px;
+  }
+  .npy-#{$space} {
+    padding-top: (-1 * $space) + px;
+    padding-bottom: (-1 * $space) + px;
+  }
+}

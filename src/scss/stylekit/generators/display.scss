@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Display Generator
+  Generates utilty classes for cursors
+  based on config
+---------------------------------------
+  1. Display
+------------------------------------ */
+
+// ------------------------------
+// Display
+// ------------------------------
+@each $display, $value in config('display') {
+  .d-#{$display} {
+    display: $value
+  }
+}

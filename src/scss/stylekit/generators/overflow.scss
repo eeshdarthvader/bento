@@ -1,0 +1,22 @@
+/* -----------------------------------
+  Overflow Generator
+  Generates utilty classes for overflow
+  based on config
+---------------------------------------
+  1. Overflow
+------------------------------------ */
+
+// ------------------------------
+// Overflow
+// ------------------------------
+@each $overflow, $value in config('overflow') {
+  .o-#{$overflow} {
+    overflow: $value
+  }
+  .ox-#{$overflow} {
+    overflow-x: $value
+  }
+  .oy-#{$overflow} {
+    overflow-y: $value
+  }
+}

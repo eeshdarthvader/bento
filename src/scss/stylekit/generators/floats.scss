@@ -1,0 +1,28 @@
+/* -----------------------------------
+  Floats Generator
+  Generates utilty classes for floats
+  based on config
+---------------------------------------
+  1. Floats
+  2. Clearfix
+------------------------------------ */
+
+// ------------------------------
+// Floats
+// ------------------------------
+@each $float, $value in config('float') {
+  .f-#{$float} {
+    float: $value
+  }
+}
+
+// ------------------------------
+// Clearfix
+// ------------------------------
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,119 @@
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+::placeholder {
+  color: rgb(128, 128, 128);
+}
+
+select option:disabled {
+  color: rgb(128, 128, 128) !important;
+}
+
+input {
+  &:disabled {
+    background-color: #F2F2F2;
+    border: solid 1px transparent;
+  }
+}
+
+
+.field {
+  &__icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    fill: #3366cc;
+  }
+
+  &__icon-left {
+    top: 12px;
+    left: 10px;
+  }
+
+  &__icon-right {
+    top: 12px;
+    right: 10px;
+  }
+}
+
+
+
+.select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    padding: 4px 24px 4px 4px;
+    position: relative;
+    outline: 0;
+
+    &__icon {
+      position: absolute;
+      right: 10px;
+      top: 14px;
+      width: 10px;
+      height: 10px;
+      z-index: 1;
+    }
+}
+
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-left: 16px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover input ~ .checkbox__mark {
+    border: solid 1px #3366cc;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:active .checkbox__mark,
+    &:focus .checkbox__mark {
+      border: solid 1px #3366cc;
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 5px;
+      top: 2px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  input:checked ~ .checkbox__mark {
+    background-color: #3366cc;
+    border: solid 1px #3366cc;
+  }
+
+  input:checked ~ .checkbox__mark:after {
+    display: block;
+  }
+
+}

@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Cursor Generator
+  Generates utilty classes for cursors
+  based on config
+---------------------------------------
+  1. Cursors
+------------------------------------ */
+
+// ------------------------------
+// Cursors
+// ------------------------------
+@each $cursor, $value in config('cursor') {
+  .c-#{$cursor} {
+    cursor: $value
+  }
+}

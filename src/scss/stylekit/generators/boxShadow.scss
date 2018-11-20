@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Box Shadow Generator
+  Generates utilty classes for box shadow
+  based on config
+---------------------------------------
+  1. Elevation
+------------------------------------ */
+
+// ------------------------------
+// Elevation
+// ------------------------------
+@each $boxShadow, $value in config('boxShadow') {
+  .elevation-#{$boxShadow} {
+    box-shadow: $value
+  }
+}

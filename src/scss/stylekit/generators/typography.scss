@@ -1,0 +1,154 @@
+/* -----------------------------------
+  Typography Generator
+  Generates utilty classes for typography
+  based on config
+---------------------------------------
+  1. Font family
+  2. Font weight
+  3. Font size
+  4. Font style
+  5. Text decoration
+  6. Text align
+  7. Text transform
+  8. Vaerical align
+  9. Letter spacing
+  10. Font smoothing
+  11. White space
+  12. List style
+  13. Line Height
+------------------------------------ */
+
+// ------------------------------
+// Font family
+// ------------------------------
+@each $fontFamily, $stack in config('typography.fontFamily') {
+  .ff-#{$fontFamily} {
+    font-family: $stack;
+  }
+}
+
+// ------------------------------
+// Font Weights
+// ------------------------------
+@each $fontWeight in config('typography.fontWeight') {
+  .fw-#{$fontWeight} {
+    font-weight: $fontWeight;
+  }
+}
+
+
+// ------------------------------
+// Font Size
+// ------------------------------
+@each $fontSize, $value in config('typography.fontSize') {
+  .fs-#{$fontSize} {
+    font-size: nth($value, 1);
+    line-height: nth($value, length($value));
+  }
+}
+
+
+// ------------------------------
+// Font Style
+// ------------------------------
+@each $fontStyle, $value in config('typography.fontStyle') {
+  .fs-#{$fontStyle} {
+    font-style: $value;
+  }
+}
+
+
+// ------------------------------
+// Text Decoration
+// ------------------------------
+@each $textDecoration, $value in config('typography.textDecoration') {
+  .td-#{$textDecoration} {
+    text-decoration: $value;
+  }
+  .hover\:td-#{$textDecoration} {
+    &:hover {
+      text-decoration: $value;
+    }
+  }
+}
+
+// ------------------------------
+// Text Align
+// ------------------------------
+@each $textAlign, $value in config('typography.textAlign') {
+  .ta-#{$textAlign} {
+    text-align: $value;
+  }
+}
+
+
+// ------------------------------
+// Text Transform
+// ------------------------------
+@each $textTransform, $value in config('typography.textTransform') {
+  .tt-#{$textTransform} {
+    text-transform: $value;
+  }
+}
+
+
+// ------------------------------
+// Vertical Align
+// ------------------------------
+@each $verticalAlign, $value in config('typography.verticalAlign') {
+  .va-#{$verticalAlign} {
+    vertical-align: $value;
+  }
+}
+
+
+// ------------------------------
+// Letter Spacing
+// ------------------------------
+@each $letterSpacing, $value in config('typography.letterSpacing') {
+  .ls-#{$letterSpacing} {
+    letter-spacing: $value;
+  }
+}
+
+
+// ------------------------------
+// Font Smoothing
+// ------------------------------
+@each $fontSmoothing, $value in config('typography.fontSmoothing') {
+  .smoothing,
+  .fs-#{$value} {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
+// ------------------------------
+// White Space
+// ------------------------------
+@each $whiteSpace, $value in config('typography.whiteSpace') {
+  .ws-#{$whiteSpace} {
+    white-space: $value;
+  }
+}
+
+
+// ------------------------------
+// List Style
+// ------------------------------
+@each $listStyle, $value in config('typography.listStyle') {
+  .ls-#{$listStyle} {
+    list-style: $value;
+  }
+}
+
+
+// ------------------------------
+// Line Height
+// ------------------------------
+@each $lineHeight, $value in config('typography.lineHeight') {
+  .lh-#{$lineHeight} {
+    line-height: $value;
+  }
+}
