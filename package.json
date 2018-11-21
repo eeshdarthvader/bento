@@ -1,6 +1,6 @@
 {
   "name": "@cleartrip/bento",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cleartrip Design System",
   "main": "dist/bundled.js",
   "scripts": {
@@ -28,5 +28,7 @@
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-plugin-jsx-control-statements": "^4.0.0"
+  }
 }

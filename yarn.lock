@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.1.5", "@babel/core@^7.1.6":
+"@babel/core@^7.1.2", "@babel/core@^7.1.5", "@babel/core@^7.1.6":
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.6.tgz#3733cbee4317429bc87c62b29cf8587dba7baeb3"
   integrity sha512-Hz6PJT6e44iUNpAn8AoyAs6B3bl60g7MJQaI0rZEar6ECzh6+srYO1xlIdssio34mPaUtAb1y+XlkkSJzok3yw==
@@ -1142,6 +1142,13 @@ babel-loader@^8.0.4:
     loader-utils "^1.0.2"
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
+
+babel-plugin-jsx-control-statements@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jsx-control-statements/-/babel-plugin-jsx-control-statements-4.0.0.tgz#a326ed2423d8f3c520655df06e41594143f3f80a"
+  integrity sha512-sIcKisKlodYEpKlcVLj0nRy/3iy6JFVh3kp3SuBaPVRgcKqaTcQQx1J1Dq4AgHiD2Z4SCBmeYfE3epCX5Rr1KA==
+  dependencies:
+    "@babel/core" "^7.1.2"
 
 bail@^1.0.0:
   version "1.0.3"
