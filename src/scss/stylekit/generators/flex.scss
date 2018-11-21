@@ -21,8 +21,10 @@
  */
 
 // Default
+.flex-start,
 .flex-left { justify-content: flex-start; }
 .flex-center { justify-content: center; }
+.flex-end,
 .flex-right { justify-content: flex-end; }
 .flex-between { justify-content: space-between; }
 .flex-around { justify-content: space-around; }

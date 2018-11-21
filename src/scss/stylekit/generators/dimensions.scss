@@ -23,3 +23,7 @@
 @each $height in config('dimensions.height') {
   .h-#{$height} { height: $height * 1px }
 }
+
+.h-100p {
+  height: 100%;
+}
