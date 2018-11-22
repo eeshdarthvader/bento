@@ -8,6 +8,8 @@ import Button from './components/Button'
 import Counter from './components/Counter'
 import Banner from './components/Banner'
 import Icon from './components/Icon'
+import Rating from './components/Rating'
+import Repeat from './components/Repeat'
 
 import Collapse from './animations/Collapse'
 import Fade from './animations/Fade'
@@ -27,6 +29,8 @@ export {
   Counter,
   Banner,
   Icon,
+  Rating,
+  Repeat,
   Collapse,
   Fade,
   Visibility

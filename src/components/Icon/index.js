@@ -14,6 +14,7 @@ import { ReactComponent as AvatarWomanIcon } from './icons/avatar-woman.svg'
 import { ReactComponent as AvatarGirlIcon } from './icons/avatar-girl.svg'
 import { ReactComponent as AvatarBoyIcon } from './icons/avatar-boy.svg'
 import { ReactComponent as AvatarInfantIcon } from './icons/avatar-infant.svg'
+import { ReactComponent as StarIcon } from './icons/star.svg'
 
 
 const IconMap = ({icon, ...props}) => {
@@ -44,15 +45,26 @@ const IconMap = ({icon, ...props}) => {
       return <AvatarBoyIcon {...props} />;
     case 'avatar-infant':
       return <AvatarInfantIcon {...props} />;
+    case 'star':
+      return <StarIcon {...props} />;
 
     default:
       break;
   }
 }
 
-const Icon = props => {
+const handleClick = event => {
+  event.preventDefault()
+  onClick(event)
+}
+
+
+const Icon = ({ onClick, ...props }) => {
   return (
-    <IconMap {...props} />
+    <IconMap
+      onClick={handleClick}
+      {...props}
+    />
   )
 }
 

@@ -1,10 +1,10 @@
 {
   "name": "@cleartrip/bento",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Cleartrip Design System",
   "main": "dist/bundled.js",
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
