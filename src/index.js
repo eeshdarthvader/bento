@@ -12,8 +12,6 @@ import Rating from './components/Rating'
 import Repeat from './components/Repeat'
 
 import Collapse from './animations/Collapse'
-import Fade from './animations/Fade'
-import Visibility from './animations/Visibility'
 
 export {
   Container,
@@ -31,7 +29,5 @@ export {
   Icon,
   Rating,
   Repeat,
-  Collapse,
-  Fade,
-  Visibility
+  Collapse
 }
