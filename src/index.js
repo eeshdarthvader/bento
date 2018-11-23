@@ -1,6 +1,7 @@
 import "./scss/index.scss";
 
 import { Container, Row, Col } from './components/Grid'
+import { Spacer, Margin, Padding } from './components/Spacing'
 import { Select, Label, Field, Checkbox } from './components/Form'
 import Divider from './components/Divider'
 import Badge from './components/Badge'
@@ -29,5 +30,8 @@ export {
   Icon,
   Rating,
   Repeat,
+  Spacer,
+  Margin,
+  Padding,
   Collapse
 }
