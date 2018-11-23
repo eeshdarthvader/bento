@@ -53,13 +53,12 @@ const IconMap = ({icon, ...props}) => {
   }
 }
 
-const handleClick = event => {
-  event.preventDefault()
-  onClick(event)
-}
-
 
 const Icon = ({ onClick, ...props }) => {
+  const handleClick = event => {
+    event.preventDefault()
+    onClick(event)
+  }
   return (
     <IconMap
       onClick={handleClick}
