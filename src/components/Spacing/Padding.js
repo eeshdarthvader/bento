@@ -14,7 +14,7 @@ const Padding = (props) => {
 
   const spacerClass = classnames(
     {
-      [`p-${m}`]: m !== false,
+      [`p-${p}`]: p !== false,
       [`px-${px}`]: px !== false,
       [`py-${py}`]: py !== false
     },

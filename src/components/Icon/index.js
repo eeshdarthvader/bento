@@ -15,6 +15,11 @@ import { ReactComponent as AvatarGirlIcon } from './icons/avatar-girl.svg'
 import { ReactComponent as AvatarBoyIcon } from './icons/avatar-boy.svg'
 import { ReactComponent as AvatarInfantIcon } from './icons/avatar-infant.svg'
 import { ReactComponent as StarIcon } from './icons/star.svg'
+import { ReactComponent as ConsultantIcon } from './icons/consultant.svg'
+import { ReactComponent as KidsIcon } from './icons/kids.svg'
+import { ReactComponent as PaymentIcon } from './icons/payment.svg'
+import { ReactComponent as ShieldIcon } from './icons/shield.svg'
+import { ReactComponent as TwentyFourIcon } from './icons/247.svg'
 
 
 const IconMap = ({icon, ...props}) => {
@@ -47,6 +52,16 @@ const IconMap = ({icon, ...props}) => {
       return <AvatarInfantIcon {...props} />;
     case 'star':
       return <StarIcon {...props} />;
+    case 'consultant':
+      return <ConsultantIcon {...props} />;
+    case 'kids':
+      return <KidsIcon {...props} />;
+    case 'payment':
+      return <PaymentIcon {...props} />;
+    case 'shield':
+      return <ShieldIcon {...props} />;
+    case 'twentyfour':
+      return <TwentyFourIcon {...props} />
 
     default:
       break;
