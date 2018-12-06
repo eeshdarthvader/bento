@@ -5,11 +5,9 @@ import classNames from "classnames";
 import Icon from '../Icon'
 
 const Field = props => {
-  const { className, iconleft, iconright, ...otherProps } = props;
+  const { className, iconleft, iconright, hasError, ...otherProps } = props;
   const fieldClass = classNames(
     'field',
-    'bc-grey-20',
-    'focus:bc-blue',
     'bw-1',
     'bs-solid',
     'w-100p',
@@ -18,6 +16,13 @@ const Field = props => {
     'box-border',
     'br-4',
     'fs-body-2',
+    {
+      'bc-grey-20': !hasError,
+      'bc-red': hasError,
+      'c-red': hasError,
+      'focus:bc-blue': !hasError,
+      'pl-28': iconleft
+    },
     className
   )
   return (
