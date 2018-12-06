@@ -20,10 +20,10 @@
 // Coordinates
 // ------------------------------
 @each $coordinate in config('position.coordinates') {
-  .t-#{$coordinate} { top: $coordinate }
-  .b-#{$coordinate} { bottom: $coordinate }
-  .l-#{$coordinate} { left: $coordinate }
-  .r-#{$coordinate} { right: $coordinate }
+  .t-#{$coordinate} { top: $coordinate * 1px}
+  .b-#{$coordinate} { bottom: $coordinate * 1px}
+  .l-#{$coordinate} { left: $coordinate * 1px}
+  .r-#{$coordinate} { right: $coordinate * 1px}
 
   .nt-#{$coordinate} { top: $coordinate * -1px }
   .nb-#{$coordinate} { bottom: $coordinate * -1px }
