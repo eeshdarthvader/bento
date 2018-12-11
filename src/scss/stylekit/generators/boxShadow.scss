@@ -13,4 +13,9 @@
   .elevation-#{$boxShadow} {
     box-shadow: $value
   }
+  .hover\:elevation-#{$boxShadow} {
+    &:hover {
+    	box-shadow: $value
+    }
+  }
 }
