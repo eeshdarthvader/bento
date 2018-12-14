@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 const Repeat = props => {
@@ -6,7 +6,7 @@ const Repeat = props => {
   for (let i = 0; i < props.times; i++) {
     items.push(props.children(i));
   }
-  return <div>{items}</div>;
+  return <Fragment>{items}</Fragment>;
 }
 
 Repeat.propTypes = {
