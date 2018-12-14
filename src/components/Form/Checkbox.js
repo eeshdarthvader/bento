@@ -10,11 +10,13 @@ const Checkbox = props => {
   )
   return (
     <label className={checkboxClass}>
-      <span className="checkbox__label fs-body lh-body ml-8 c-grey-60" style={{marginTop: "-1px"}}>
-        {children}
-      </span>
-      <input type="checkbox" className="checkbox__input" {...otherProps}/>
-      <span className="checkbox__mark"></span>
+      <div className="p-relative">
+        <span className="checkbox__label fs-body lh-body ml-12 c-grey-80" style={{marginTop: "-1px"}}>
+          {children}
+        </span>
+        <input type="checkbox" className="checkbox__input" {...otherProps}/>
+        <span className="checkbox__mark"></span>
+      </div>
     </label>
   );
 };

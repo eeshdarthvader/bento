@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Field, Select } from './';
+import { Field, Select, Checkbox } from './';
 
 storiesOf('Form', module)
   .add('Field', () => (
@@ -78,6 +78,19 @@ storiesOf('Form', module)
             <option>Bonjour</option>
             <option>Namaste</option>
           </Select>
+        </div>
+      </div>
+    </div>
+  ))
+  .add('Checkbox', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Checkbox</h3>
+        <h4>Checkbox element</h4>
+        <div className="demo">
+          <div>
+            <Checkbox>Buy milk</Checkbox>
+          </div>
         </div>
       </div>
     </div>
