@@ -39,7 +39,8 @@ $config: (
   'typography': (
     'fontFamily': (
       'sans': ( "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", sans-serif ),
-      'serif': ( "Georgia", "Times New Roman", "Times", serif )
+      'serif': ( "Georgia", "Times New Roman", "Times", serif ),
+      'mono': ( "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier", monospace )
     ),
     'fontWeight': (
       100, 200, 300, 400, 500, 600, 700, 800, 900
@@ -119,17 +120,25 @@ $config: (
     'blue': #3366CC,
     'blue-dark': #1F58CC,
     'blue-darker': #0A4BCC,
+
     // Orange
     'orange-lighter': #F79C63,
     'orange-light': #F78D4A,
     'orange': #F77728,
     'orange-dark': #F76E19,
     'orange-darker': #F75F00,
+
+    // Slate
+    'slate': #37404E,
+    'slate-dark': #2C3441,
+
     // Green
     'green': #5DC32C,
+
     // Red
     'red': #D0021B,
-    // Neautral
+
+    // Neutral
     'white': #FFFFFF,
     'grey-05': #F2F2F2,
     'grey-10': #E6E6E6,

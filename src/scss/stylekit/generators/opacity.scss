@@ -11,6 +11,6 @@
 // ------------------------------
 @each $opacity in config('opacity') {
   .o-#{$opacity} {
-    opacity: $opacity * 1%;
+    opacity: $opacity / 100;
   }
 }

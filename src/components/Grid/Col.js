@@ -15,12 +15,12 @@ const Col = props => {
 };
 
 Col.propTypes = {
-  Col: PropTypes.number,
+  span: PropTypes.number,
   className: PropTypes.string
 };
 
 Col.defaultProps = {
-  Col: 24,
+  span: 24,
   className: ''
 };
 
