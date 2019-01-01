@@ -69,12 +69,8 @@ const Button = (props) => {
       onClick={handleClick}
       {...additionalProps}
     >
-      <If condition={busy}>
-        {busyText}
-      </If>
-      <If condition={!busy}>
-        {children}
-      </If>
+      {busy && busyText}
+      {!busy && children}
     </button>
   )
 }
