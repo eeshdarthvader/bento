@@ -27,22 +27,24 @@ const Field = props => {
   )
   return (
     <div className="p-relative">
-      <If condition={iconleft}>
+      { iconleft &&
         <Icon
           icon={iconleft}
           className="field__icon field__icon-left"
         />
-      </If>
+      }
+
       <input
         className={fieldClass}
         {...otherProps}
       />
-      <If condition={iconright}>
+
+      {iconright &&
         <Icon
           icon={iconright}
           className="field__icon field__icon-right"
         />
-      </If>
+      }
     </div>
   );
 };
