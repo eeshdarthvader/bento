@@ -8,7 +8,7 @@ module.exports = {
     library: 'bento',
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    globalObject: "(typeof window !== 'undefined' ? window : this)" // https://github.com/webpack/webpack/issues/6522#issuecomment-371120689
+    globalObject: 'typeof self !== \'undefined\' ? self : this' // https://github.com/webpack/webpack/issues/6522#issuecomment-371120689
   },
   module: {
     rules: [
