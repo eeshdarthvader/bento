@@ -140,6 +140,23 @@
 // ---------------------------------------------------------
 //  Alias @get
 // ---------------------------------------------------------
+@function config ($key) {
+  @return get($key, $config)
+}
+
+// ---------------------------------------------------------
+//  Alias @get
+// ---------------------------------------------------------
 @function config($key) {
   @return get($key, $config)
+}
+
+@function token($key) {
+  @debug config($key);
+  @return config($key);
+}
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }

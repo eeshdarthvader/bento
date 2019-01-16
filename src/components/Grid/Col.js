@@ -5,6 +5,7 @@ import classNames from "classnames";
 const Col = props => {
   const colClass = classNames(
     props.span ? `col-${props.span}` : "col",
+    props.offset ? `col-offset-${props.offset}` : "",
     {
       first: props.first,
       last: props.last
@@ -16,11 +17,12 @@ const Col = props => {
 
 Col.propTypes = {
   span: PropTypes.number,
+  offest: PropTypes.number,
   className: PropTypes.string
 };
 
 Col.defaultProps = {
-  span: 24,
+  span: null,
   className: ''
 };
 

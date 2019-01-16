@@ -181,7 +181,7 @@ $config: (
   'boxShadow': (
     'sm': 0 2px 8px rgba(59,64,69,.1),
     'md': 0 4px 8px rgba(59,64,69,.2),
-    'large': 0 4px 12px rgba(36,39,41,.2),
+    'lg': 0 4px 12px rgba(36,39,41,.2),
     'none': none
   ),
 
@@ -190,7 +190,7 @@ $config: (
   // Box Sizing
   // ------------------------------
   'boxSize': (
-    'contnet': content-box,
+    'content': content-box,
     'border': border-box,
     'unset': unset
   ),

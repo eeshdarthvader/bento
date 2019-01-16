@@ -1,0 +1,5 @@
+@mixin font($key) {
+	$value: config($key);
+	font-size: nth($value, 1);
+	line-height: nth($value, length($value));
+}

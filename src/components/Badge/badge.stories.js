@@ -17,3 +17,17 @@ storiesOf('Badge', module)
       </div>
     </div>
   ))
+
+  .add('Large Badge', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Large Badge</h3>
+        <h4>
+          Displays the badge in a bigger font size
+        </h4>
+        <div className="demo">
+          <Badge size="large">Hello</Badge>
+        </div>
+      </div>
+    </div>
+  ))
