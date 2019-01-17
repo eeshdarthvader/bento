@@ -12,6 +12,7 @@ const Button = (props) => {
     busy,
     outline,
     full,
+    size,
     onClick,
     additionalProps
   } = props
@@ -40,16 +41,21 @@ const Button = (props) => {
     'c-pointer': !disabled & !busy,
     'c-not-allowed': disabled & !busy,
     'c-wait': busy,
-    'w-100p': full
+    'w-100p': full,
+    'h-36': size === 'md',
+    'fs-body-2': size === 'md',
+    'py-8': size === 'md',
+    'px-16': size === 'md',
+    'h-36': size === 'md',
+    'fs-body': size === 'sm',
+    'py-4': size === 'sm',
+    'px-12': size === 'sm',
+    'h-32': size === 'sm'
   },
     'button',
     'bs-solid',
     'bw-1',
-    'h-36',
-    'fs-body-2',
     'br-4',
-    'py-8',
-    'px-16',
     'lh-solid',
     'box-border',
     className
@@ -78,6 +84,7 @@ const Button = (props) => {
 Button.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(['primary', 'secondary']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   disabled: PropTypes.bool,
   busy: PropTypes.string,
   outline: PropTypes.bool,
@@ -88,6 +95,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   type: '',
+  size: 'md',
   disabled: false,
   busy: '',
   outline: false,

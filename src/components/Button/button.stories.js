@@ -114,3 +114,33 @@ storiesOf('Button', module)
       </div>
     </div>
   ))
+
+  .add('Size', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Size</h3>
+        <h4>
+          The button comes in different sizes
+        </h4>
+
+        <div className="demo">
+          <Button
+            type="secondary"
+            size="sm"
+            onClick={action('button-click')}
+          >
+            Small
+          </Button>
+        </div>
+
+        <div className="demo">
+          <Button
+            type="secondary"
+            onClick={action('button-click')}
+          >
+            Small
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
