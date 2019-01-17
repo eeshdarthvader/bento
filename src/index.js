@@ -11,6 +11,7 @@ import Banner from './components/Banner'
 import Icon from './components/Icon'
 import Rating from './components/Rating'
 import Repeat from './components/Repeat'
+import TA from './components/TripAdvisor'
 
 import Collapse from './animations/Collapse'
 
@@ -33,5 +34,6 @@ export {
   Spacer,
   Margin,
   Padding,
-  Collapse
+  TA,
+  Collapse,
 }
