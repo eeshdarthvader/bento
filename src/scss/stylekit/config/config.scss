@@ -54,7 +54,7 @@ $config: (
       'heading': (24px, 32px),
       'heading-2': (32px, 44px),
       'heading-3': (36px, 48px),
-      'display': (64px, 72px)
+      'display': (48px, 56px)
     ),
     'lineHeight': (
       'none': 0,
@@ -129,14 +129,19 @@ $config: (
     'orange-darker': #F75F00,
 
     // Slate
+    'slate-light': #49515e,
     'slate': #37404E,
     'slate-dark': #2C3441,
 
     // Green
+    'green-light': #6bc83f,
     'green': #5DC32C,
+    'green-dark': #55b228,
 
     // Red
+    'red-light': #d4192f,
     'red': #D0021B,
+    'red-dark': #be0219,
 
     // Neutral
     'white': #FFFFFF,
