@@ -8,6 +8,7 @@ import { ReactComponent as TriangleDownIcon } from './icons/triangle-down.svg'
 import { ReactComponent as CalendarIcon } from './icons/calendar.svg'
 import { ReactComponent as CheckboxCircleIcon } from './icons/checkbox-circle.svg'
 import { ReactComponent as CircleOutlineIcon } from './icons/circle-outline.svg'
+import { ReactComponent as CircleSelectedIcon } from './icons/circle-selected.svg'
 import { ReactComponent as CrossIcon } from './icons/cross.svg'
 import { ReactComponent as AvatarManIcon } from './icons/avatar-man.svg'
 import { ReactComponent as AvatarWomanIcon } from './icons/avatar-woman.svg'
@@ -35,6 +36,8 @@ const IconMap = ({icon, ...props}) => {
       return <CheckboxCircleIcon {...props} />;
     case 'circle-outline':
       return <CircleOutlineIcon {...props} />;
+    case 'circle-selected':
+      return <CircleSelectedIcon {...props} />;
     case 'avatar-man':
       return <AvatarManIcon {...props} />;
     case 'avatar-woman':
