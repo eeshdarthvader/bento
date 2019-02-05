@@ -14,6 +14,7 @@ import Repeat from './components/Repeat'
 import TA from './components/TripAdvisor'
 
 import Collapse from './animations/Collapse'
+import Fade from './animations/Fade'
 
 export {
   Container,
@@ -36,4 +37,5 @@ export {
   Padding,
   TA,
   Collapse,
+  Fade
 }

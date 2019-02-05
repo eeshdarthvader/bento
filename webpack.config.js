@@ -8,7 +8,7 @@ module.exports = {
     library: 'bento',
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    globalObject: 'this'
+    globalObject: "typeof self !== 'undefined' ? self : this"
   },
   module: {
     rules: [

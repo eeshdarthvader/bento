@@ -3,8 +3,6 @@
   "version": "0.3.0",
   "description": "Cleartrip Design System",
   "main": "dist/bundled.js",
-  "module": "src/index.js",
-  "files": ["dist"],
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
