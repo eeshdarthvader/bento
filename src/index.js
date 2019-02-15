@@ -1,5 +1,6 @@
 import "./scss/index.scss";
 
+import { NavList, NavItem } from './components/Nav'
 import { Container, Row, Col } from './components/Grid'
 import { Spacer, Margin, Padding } from './components/Spacing'
 import { Select, Label, Field, Checkbox } from './components/Form'
@@ -17,6 +18,8 @@ import Collapse from './animations/Collapse'
 import Fade from './animations/Fade'
 
 export {
+  NavList,
+  NavItem,
   Container,
   Row,
   Col,
