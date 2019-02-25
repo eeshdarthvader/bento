@@ -31,3 +31,45 @@ storiesOf('Badge', module)
       </div>
     </div>
   ))
+
+  .add('Primary Badge', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Primary</h3>
+        <h4>
+          Displays the badge in a bigger font size
+        </h4>
+        <div className="demo">
+          <Badge size="large" intent="primary">Hello</Badge>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Success Badge', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Success</h3>
+        <h4>
+          Displays the badge in a bigger font size
+        </h4>
+        <div className="demo">
+          <Badge size="large" intent="success">Hello</Badge>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Light Badge', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Light</h3>
+        <h4>
+          Displays the badge in a bigger font size
+        </h4>
+        <div className="demo">
+          <Badge size="large" intent="light">Hello</Badge>
+        </div>
+      </div>
+    </div>
+  ))

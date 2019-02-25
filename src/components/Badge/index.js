@@ -6,8 +6,11 @@ const Badge = (props) => {
   const { children, className, intent, size, ...additionalProps } = props
   const labelClass = classnames({
     'bg-green': intent === 'success',
-    'bg-black': intent !== 'success',
+    'bg-black': intent == 'warning',
+    'bg-white': intent === 'light',
+    'bg-blue': intent === 'primary',
     'c-white': true,
+    'c-black': intent === 'light',
     'px-8': size === 'normal',
     'py-4': size === 'normal',
     'fs-caption-2': size === 'normal',
@@ -34,13 +37,13 @@ const Badge = (props) => {
 Badge.propTypes = {
   className: PropTypes.string,
   size: PropTypes.oneOf(['large', 'normal']),
-  intent: PropTypes.oneOf(['sucess', 'warning']),
+  intent: PropTypes.oneOf(['success', 'warning','primary','light']),
 }
 
 Badge.defaultProps = {
   className: '',
-  size: 'normal',
-  intent: ''
+  size: '',
+  intent: 'warning'
 }
 
 Badge.displayName = 'Badge'
