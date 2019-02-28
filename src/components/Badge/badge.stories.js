@@ -32,26 +32,26 @@ storiesOf('Badge', module)
     </div>
   ))
 
-  .add('Primary Badge', () => (
+  .add('Primary', () => (
     <div className="cont storybook">
       <div className="block">
         <h3>Primary</h3>
         <h4>
-          Displays the badge in a bigger font size
+          Displays primary badges -> bg-blue
         </h4>
         <div className="demo">
-          <Badge size="large" intent="primary">Hello</Badge>
+          <Badge size="large" type="primary">Hello</Badge>
         </div>
       </div>
     </div>
   ))
 
-  .add('Success Badge', () => (
+  .add('Success', () => (
     <div className="cont storybook">
       <div className="block">
         <h3>Success</h3>
         <h4>
-          Displays the badge in a bigger font size
+          Displays success badges -> bg-green
         </h4>
         <div className="demo">
           <Badge size="large" intent="success">Hello</Badge>
@@ -60,15 +60,15 @@ storiesOf('Badge', module)
     </div>
   ))
 
-  .add('Light Badge', () => (
+  .add('Light', () => (
     <div className="cont storybook">
       <div className="block">
         <h3>Light</h3>
         <h4>
-          Displays the badge in a bigger font size
+          Displays light color badge -> bg-white
         </h4>
         <div className="demo">
-          <Badge size="large" intent="light">Hello</Badge>
+          <Badge size="large" type="light">Hello</Badge>
         </div>
       </div>
     </div>
