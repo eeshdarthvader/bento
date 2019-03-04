@@ -1364,8 +1364,7 @@
 
   var SvgCircleOutline = function SvgCircleOutline(props) {
     return React__default.createElement("svg", _extends$7({
-      width: 24,
-      height: 24,
+      viewBox: "0 0 24 24",
       fill: "none",
       stroke: "currentColor",
       strokeWidth: 2,
@@ -1401,8 +1400,7 @@
 
   var SvgCircleSelected = function SvgCircleSelected(props) {
     return React__default.createElement("svg", _extends$8({
-      width: 22,
-      height: 22
+      viewBox: "0 0 22 22"
     }, props), _ref$7);
   };
 
@@ -1522,6 +1520,45 @@
     }, props), _ref$e);
   };
 
+  function _extends$g() { _extends$g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$g.apply(this, arguments); }
+
+  var _ref$f =
+  /*#__PURE__*/
+  React__default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    transform: "translate(1 1)"
+  }, React__default.createElement("circle", {
+    cx: 10,
+    cy: 10,
+    r: 10
+  }), React__default.createElement("path", {
+    d: "M10 4v6l4 2"
+  }));
+
+  var SvgClock = function SvgClock(props) {
+    return React__default.createElement("svg", _extends$g({
+      width: 22,
+      height: 22
+    }, props), _ref$f);
+  };
+
+  function _extends$h() { _extends$h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$h.apply(this, arguments); }
+
+  var _ref$g =
+  /*#__PURE__*/
+  React__default.createElement("path", {
+    d: "M18.246 15.876c.954.95 1.908 1.898 2.857 2.852.794.8.789 1.778-.01 2.587-.54.544-1.114 1.064-1.623 1.633-.744.834-1.673 1.104-2.742 1.044-1.553-.085-2.982-.6-4.36-1.269-3.061-1.488-5.678-3.55-7.87-6.157-1.624-1.928-2.962-4.03-3.841-6.398-.43-1.144-.734-2.317-.64-3.56.06-.765.345-1.42.91-1.953.609-.58 1.183-1.184 1.782-1.773.78-.77 1.758-.77 2.542-.005.485.474.96.959 1.439 1.438.464.47.929.929 1.393 1.398.819.824.819 1.783.005 2.602-.584.59-1.164 1.179-1.758 1.753-.155.155-.17.28-.09.47.395.939.959 1.773 1.593 2.552 1.279 1.568 2.722 2.961 4.445 4.045.37.23.78.4 1.164.61.194.11.33.074.49-.09a135.1 135.1 0 0 1 1.772-1.779c.78-.774 1.758-.774 2.542 0zm-.954-3.98a6.355 6.355 0 0 0-1.778-3.436 6.356 6.356 0 0 0-3.635-1.813l.26-1.853a8.192 8.192 0 0 1 4.694 2.343 8.237 8.237 0 0 1 2.302 4.444l-1.843.315zm2.882-8.01a13.688 13.688 0 0 1 3.825 7.376l-1.842.314a11.773 11.773 0 0 0-3.302-6.367 11.782 11.782 0 0 0-6.732-3.356L12.383 0a13.588 13.588 0 0 1 7.79 3.885z"
+  });
+
+  var SvgCall = function SvgCall(props) {
+    return React__default.createElement("svg", _extends$h({
+      viewBox: "0 0 24 24"
+    }, props), _ref$g);
+  };
+
   var IconMap = function IconMap(_ref) {
     var icon = _ref.icon,
         props = _objectWithoutProperties(_ref, ["icon"]);
@@ -1571,6 +1608,12 @@
 
       case 'star':
         return React__default.createElement(SvgStar, props);
+
+      case 'clock':
+        return React__default.createElement(SvgClock, props);
+
+      case 'call':
+        return React__default.createElement(SvgCall, props);
 
       default:
         break;
@@ -1722,21 +1765,65 @@
   };
   var Checkbox$1 = React__default.memo(Checkbox);
 
+  var Textarea = function Textarea(props) {
+    var className = props.className,
+        hasError = props.hasError,
+        otherProps = _objectWithoutProperties(props, ["className", "hasError"]);
+
+    var textAreaClass = classnames('field', 'bw-1', 'bs-solid', 'w-100p', 'p-8', 'box-border', 'br-4', 'fs-body-2', {
+      'bc-grey-20': !hasError,
+      'bc-red': hasError,
+      'c-red': hasError,
+      'focus:bc-blue': !hasError
+    }, className);
+    return React__default.createElement("textarea", _extends({
+      style: {
+        resize: 'none',
+        height: "".concat(props.height, "px"),
+        font: 'caption',
+        fontSize: '16px'
+      },
+      className: textAreaClass
+    }, otherProps));
+  };
+
+  Textarea.propTypes = {
+    className: propTypes.string,
+    height: propTypes.number
+  };
+  Textarea.defaultProps = {
+    className: '',
+    height: 160
+  };
+  var Textarea$1 = React__default.memo(Textarea);
+
   var Divider = function Divider(props) {
     var className = props.className,
         additionalProps = _objectWithoutProperties(props, ["className"]);
 
-    var dividerClass = classnames(className, 'd-block', 'bb', 'bc-grey-10');
-    return React__default.createElement("div", _extends({
+    var dividerClass = classnames(className, 'd-block', 'bb', 'bc-grey-10', 'flex-1');
+    return React__default.createElement("div", {
+      className: "pos-r"
+    }, !props.text && React__default.createElement("div", _extends({
       className: dividerClass
-    }, additionalProps));
+    }, additionalProps)), props.text && React__default.createElement("div", _extends({
+      className: "flex flex-between flex-middle"
+    }, additionalProps), React__default.createElement("div", {
+      className: dividerClass
+    }), React__default.createElement("p", {
+      className: "px-20 fs-caption-2 c-grey-40"
+    }, props.text), React__default.createElement("div", {
+      className: dividerClass
+    })));
   };
 
   Divider.propTypes = {
-    className: propTypes.string
+    className: propTypes.string,
+    text: propTypes.string
   };
   Divider.defaultProps = {
-    className: ''
+    className: '',
+    text: ''
   };
   var index = React__default.memo(Divider);
 
@@ -1948,13 +2035,16 @@
   var index$3 = React__default.memo(Banner);
 
   var StarRating = function StarRating(props) {
-    var rating = props.rating,
+    var className = props.className,
+        rating = props.rating,
         total = props.total,
         size = props.size,
         activeColor = props.activeColor,
         emptyColor = props.emptyColor;
     var starSize = "".concat(size);
-    return React__default.createElement(React__default.Fragment, null, Array(rating).fill().map(function (value, index) {
+    return React__default.createElement("div", {
+      className: className
+    }, Array(rating).fill().map(function (value, index) {
       return React__default.createElement(Icon, {
         icon: "star",
         fill: activeColor,
@@ -1976,6 +2066,7 @@
   };
 
   StarRating.propTypes = {
+    className: propTypes.string,
     rating: propTypes.number.isRequired,
     total: propTypes.number,
     size: propTypes.number,
@@ -1983,6 +2074,7 @@
     emptyColor: propTypes.string
   };
   StarRating.defaultProps = {
+    className: '',
     total: 5,
     size: 15,
     activeColor: '#fec22d',
@@ -2008,9 +2100,9 @@
   };
   var index$5 = React__default.memo(Repeat);
 
-  function _extends$g() { _extends$g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$g.apply(this, arguments); }
+  function _extends$i() { _extends$i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$i.apply(this, arguments); }
 
-  var _ref$f =
+  var _ref$h =
   /*#__PURE__*/
   React__default.createElement("g", {
     fill: "#56953E",
@@ -2025,15 +2117,15 @@
   }));
 
   var SvgTaFull = function SvgTaFull(props) {
-    return React__default.createElement("svg", _extends$g({
+    return React__default.createElement("svg", _extends$i({
       width: 14,
       height: 14
-    }, props), _ref$f);
+    }, props), _ref$h);
   };
 
-  function _extends$h() { _extends$h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$h.apply(this, arguments); }
+  function _extends$j() { _extends$j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$j.apply(this, arguments); }
 
-  var _ref$g =
+  var _ref$i =
   /*#__PURE__*/
   React__default.createElement("path", {
     fill: "#56953E",
@@ -2041,15 +2133,15 @@
   });
 
   var SvgTaEmpty = function SvgTaEmpty(props) {
-    return React__default.createElement("svg", _extends$h({
+    return React__default.createElement("svg", _extends$j({
       width: 14,
       height: 14
-    }, props), _ref$g);
+    }, props), _ref$i);
   };
 
-  function _extends$i() { _extends$i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$i.apply(this, arguments); }
+  function _extends$k() { _extends$k = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$k.apply(this, arguments); }
 
-  var _ref$h =
+  var _ref$j =
   /*#__PURE__*/
   React__default.createElement("g", {
     fill: "none",
@@ -2072,15 +2164,15 @@
   }));
 
   var SvgTaLogo = function SvgTaLogo(props) {
-    return React__default.createElement("svg", _extends$i({
+    return React__default.createElement("svg", _extends$k({
       width: 19,
       height: 12
-    }, props), _ref$h);
+    }, props), _ref$j);
   };
 
-  function _extends$j() { _extends$j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$j.apply(this, arguments); }
+  function _extends$l() { _extends$l = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$l.apply(this, arguments); }
 
-  var _ref$i =
+  var _ref$k =
   /*#__PURE__*/
   React__default.createElement("g", {
     fill: "#56953E",
@@ -2092,10 +2184,10 @@
   }));
 
   var SvgTaHalf = function SvgTaHalf(props) {
-    return React__default.createElement("svg", _extends$j({
+    return React__default.createElement("svg", _extends$l({
       width: 14,
       height: 14
-    }, props), _ref$i);
+    }, props), _ref$k);
   };
 
   var TripAdvisorRating =
@@ -2521,12 +2613,9 @@
               isProcessing = false;
           },
           schedule: function (process, keepAlive, immediate) {
-              if (keepAlive === void 0) { keepAlive = false; }
-              if (immediate === void 0) { immediate = false; }
               invariant(typeof process === 'function', 'Argument must be a function');
               var addToCurrentBuffer = immediate && isProcessing;
               var buffer = addToCurrentBuffer ? processToRun : processToRunNextFrame;
-              cancelled.delete(process);
               if (keepAlive)
                   toKeepAlive.add(process);
               if (buffer.indexOf(process) === -1) {
@@ -2789,8 +2878,6 @@
       return check(v) ? apply(v) : v;
   }; });
 
-  var degreesToRadians = (function (degrees$$1) { return (degrees$$1 * Math.PI) / 180; });
-
   var isPoint = (function (point) {
       return point.hasOwnProperty('x') && point.hasOwnProperty('y');
   });
@@ -2922,77 +3009,42 @@
               ? mixColor
               : mixComplex;
   };
-  var createMixers = function (output, ease) {
-      return Array(output.length - 1)
-          .fill(getMixer(output[0]))
-          .map(function (factory, i) {
-          var mixer = factory(output[i], output[i + 1]);
-          if (ease) {
-              var easingFunction = Array.isArray(ease) ? ease[i] : ease;
-              return pipe(easingFunction, mixer);
-          }
-          else {
-              return mixer;
-          }
-      });
-  };
-  var fastInterpolate = function (_a, _b) {
-      var from = _a[0], to = _a[1];
-      var mixer = _b[0];
-      return function (v) { return mixer(progress(from, to, v)); };
-  };
-  var slowInterpolate = function (input, mixers) {
-      var inputLength = input.length;
-      var lastInputIndex = inputLength - 1;
-      return function (v) {
-          var mixerIndex = 0;
-          var foundMixerIndex = false;
-          if (v <= input[0]) {
-              foundMixerIndex = true;
-          }
-          else if (v >= input[lastInputIndex]) {
-              mixerIndex = lastInputIndex - 1;
-              foundMixerIndex = true;
-          }
-          if (!foundMixerIndex) {
-              var i = 1;
-              for (; i < inputLength; i++) {
-                  if (input[i] > v || i === lastInputIndex) {
-                      break;
-                  }
-              }
-              mixerIndex = i - 1;
-          }
-          var progressInRange = progress(input[mixerIndex], input[mixerIndex + 1], v);
-          return mixers[mixerIndex](progressInRange);
-      };
-  };
-  var interpolate = (function (input, output, _a) {
-      var _b = _a === void 0 ? {} : _a, _c = _b.clamp, clamp = _c === void 0 ? true : _c, ease = _b.ease;
-      var inputLength = input.length;
-      invariant(inputLength === output.length, 'Both input and output ranges must be the same length');
-      invariant(!ease || !Array.isArray(ease) || ease.length === input.length - 1, 'Array of easing functions must be of length `input.length - 1`, as it applies to the transitions **between** the defined values.');
-      if (input[0] > input[inputLength - 1]) {
-          input = input.slice();
-          output = output.slice();
+  var slowInterpolate = function (input, output, rangeLength, rangeEasing) {
+      var finalIndex = rangeLength - 1;
+      if (input[0] > input[finalIndex]) {
           input.reverse();
           output.reverse();
       }
-      var mixers = createMixers(output, ease);
-      var interpolate = inputLength === 2
-          ? fastInterpolate(input, mixers)
-          : slowInterpolate(input, mixers);
-      return clamp
-          ? pipe(clamp$1$1(input[0], input[inputLength - 1]), interpolate)
-          : interpolate;
-  });
-
-  var pointFromVector = (function (origin, angle, distance) {
-      angle = degreesToRadians(angle);
-      return {
-          x: distance * Math.cos(angle) + origin.x,
-          y: distance * Math.sin(angle) + origin.y
+      var mixerFactories = Array(finalIndex).fill(getMixer(output[0]));
+      var mixers = mixerFactories.map(function (factory, i) {
+          return factory(output[i], output[i + 1]);
+      });
+      return function (v) {
+          if (v <= input[0]) {
+              return output[0];
+          }
+          if (v >= input[finalIndex]) {
+              return output[finalIndex];
+          }
+          var i = 1;
+          for (; i < rangeLength; i++) {
+              if (input[i] > v || i === finalIndex) {
+                  break;
+              }
+          }
+          var progressInRange = progress(input[i - 1], input[i], v);
+          var easedProgress = rangeEasing
+              ? rangeEasing[i - 1](progressInRange)
+              : progressInRange;
+          return mixers[i - 1](easedProgress);
       };
+  };
+  var fastInterpolate = function (minA, maxA, minB, maxB) { return function (v) { return ((v - minA) * (maxB - minB)) / (maxA - minA) + minB; }; };
+  var interpolate = (function (input, output, rangeEasing) {
+      var rangeLength = input.length;
+      return rangeLength === 2 && typeof output[0] === 'number'
+          ? fastInterpolate(input[0], input[1], output[0], output[1])
+          : slowInterpolate(input, output, rangeLength, rangeEasing);
   });
 
   var toDecimal = (function (num, precision) {
@@ -3103,25 +3155,19 @@
       return __assign$3.apply(this, arguments);
   };
 
-  function __rest$1(s, e) {
-      var t = {};
-      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-      if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-      return t;
-  }
-
   var createStyler = function (_a) {
       var onRead = _a.onRead,
           onRender = _a.onRender,
-          _b = _a.uncachedValues,
-          uncachedValues = _b === void 0 ? new Set() : _b,
+          _b = _a.aliasMap,
+          aliasMap = _b === void 0 ? {} : _b,
           _c = _a.useCache,
           useCache = _c === void 0 ? true : _c;
       return function (props) {
           var state = {};
           var changedValues = [];
           var hasChanged = false;
-          var setValue = function (key, value) {
+          var setValue = function (unmappedKey, value) {
+              var key = aliasMap[unmappedKey] || unmappedKey;
               var currentValue = state[key];
               state[key] = value;
               if (state[key] !== currentValue) {
@@ -3146,8 +3192,9 @@
               return this;
           }
           return {
-              get: function (key) {
-                  return key ? useCache && !uncachedValues.has(key) && state[key] !== undefined ? state[key] : onRead(key, props) : state;
+              get: function (unmappedKey) {
+                  var key = aliasMap[unmappedKey] || unmappedKey;
+                  return key ? useCache && state[key] !== undefined ? state[key] : onRead(key, props) : state;
               },
               set: function (values, value) {
                   if (typeof values === 'string') {
@@ -3219,7 +3266,9 @@
   };
 
   var axes = ['', 'X', 'Y', 'Z'];
-  var order = ['scale', 'rotate', 'skew', 'transformPerspective'];
+  var order = ['translate', 'scale', 'rotate', 'skew', 'transformPerspective'];
+  var TRANSFORM_ORIGIN_X = 'transformOriginX';
+  var TRANSFORM_ORIGIN_Y = 'transformOriginY';
   var transformProps = /*#__PURE__*/order.reduce(function (acc, key) {
       return axes.reduce(function (axesAcc, axesKey) {
           axesAcc.push(key + axesKey);
@@ -3237,7 +3286,7 @@
       return transformProps.indexOf(a) - transformProps.indexOf(b);
   };
   var isTransformOriginProp = function (key) {
-      return key === 'originX' || key === 'originY';
+      return key === TRANSFORM_ORIGIN_X || key === TRANSFORM_ORIGIN_Y;
   };
 
   var valueTypes = {
@@ -3291,33 +3340,32 @@
       skewX: degrees,
       skewY: degrees,
       distance: px,
-      x: px,
-      y: px,
-      z: px,
+      translateX: px,
+      translateY: px,
+      translateZ: px,
       perspective: px,
       opacity: alpha,
-      originX: percent,
-      originY: percent,
-      originZ: px
+      transformOriginX: percent,
+      transformOriginY: percent,
+      transformOriginZ: px
   };
   var getValueType = function (key) {
       return valueTypes[key];
   };
 
-  var SCROLL_LEFT = 'scrollLeft';
-  var SCROLL_TOP = 'scrollTop';
-  var scrollKeys = /*#__PURE__*/new Set([SCROLL_LEFT, SCROLL_TOP]);
-
-  var blacklist = /*#__PURE__*/new Set([SCROLL_LEFT, SCROLL_TOP, 'transform']);
   var aliasMap = {
       x: 'translateX',
       y: 'translateY',
-      z: 'translateZ'
+      z: 'translateZ',
+      originX: 'transformOriginX',
+      originY: 'transformOriginY',
+      originZ: 'transformOriginZ'
   };
-  var isCustomTemplate = function (v) {
-      return typeof v === 'function';
+  var blacklist = /*#__PURE__*/new Set(['scrollLeft', 'scrollTop']);
+  var styleRule = function (key, value) {
+      return ";" + prefixer(key, true) + ":" + value;
   };
-  var buildStyleProperty = function (state, enableHardwareAcceleration, styles, transform, transformOrigin, transformKeys, isDashCase) {
+  var buildStyleProperty = function (state, enableHardwareAcceleration, styles, transform, transformOrigin, transformKeys) {
       if (enableHardwareAcceleration === void 0) {
           enableHardwareAcceleration = true;
       }
@@ -3333,18 +3381,14 @@
       if (transformKeys === void 0) {
           transformKeys = [];
       }
-      if (isDashCase === void 0) {
-          isDashCase = false;
-      }
       var transformIsDefault = true;
-      var hasTransform = false;
       var hasTransformOrigin = false;
-      for (var key in state) {
-          var value = state[key];
+      for (var k in state) {
+          var key = aliasMap[k] ? aliasMap[k] : k;
+          var value = state[k];
           var valueType = getValueType(key);
           var valueAsType = typeof value === 'number' && valueType ? valueType.transform(value) : value;
           if (isTransformProp(key)) {
-              hasTransform = true;
               transform[key] = valueAsType;
               transformKeys.push(key);
               if (transformIsDefault) {
@@ -3355,53 +3399,60 @@
           } else if (isTransformOriginProp(key)) {
               transformOrigin[key] = valueAsType;
               hasTransformOrigin = true;
-          } else if (!blacklist.has(key) || !isCustomTemplate(valueAsType)) {
-              styles[prefixer(key, isDashCase)] = valueAsType;
+          } else if (!blacklist.has(key)) {
+              styles[key] = valueAsType;
           }
       }
       if (!transformIsDefault) {
           var transformString = '';
-          if (isCustomTemplate(state.transform)) {
-              transformString = state.transform(transform);
-          } else {
-              var transformHasZ = false;
-              transformKeys.sort(sortTransformProps);
-              var numTransformKeys = transformKeys.length;
-              for (var i = 0; i < numTransformKeys; i++) {
-                  var key = transformKeys[i];
-                  transformString += (aliasMap[key] || key) + "(" + transform[key] + ") ";
-                  transformHasZ = key === 'z' ? true : transformHasZ;
-              }
-              if (!transformHasZ && enableHardwareAcceleration) {
-                  transformString += 'translateZ(0)';
-              } else {
-                  transformString = transformString.trim();
-              }
+          var transformHasZ = false;
+          transformKeys.sort(sortTransformProps);
+          var numTransformKeys = transformKeys.length;
+          for (var i = 0; i < numTransformKeys; i++) {
+              var key = transformKeys[i];
+              transformString += key + "(" + transform[key] + ") ";
+              transformHasZ = key === 'z' ? true : transformHasZ;
+          }
+          if (!transformHasZ && enableHardwareAcceleration) {
+              transformString += 'translateZ(0)';
           }
           styles.transform = transformString;
-      } else if (hasTransform) {
+      } else {
           styles.transform = 'none';
       }
       if (hasTransformOrigin) {
-          styles.transformOrigin = (transformOrigin.originX || 0) + " " + (transformOrigin.originY || 0) + " " + (transformOrigin.originZ || 0);
+          styles.transformOrigin = (transformOrigin.transformOriginX || 0) + " " + (transformOrigin.transformOriginY || 0) + " " + (transformOrigin.transformOriginZ || 0);
       }
       return styles;
   };
-  var createStyleBuilder = function (enableHardwareAcceleration) {
+  var buildStyleString = function (enableHardwareAcceleration) {
       if (enableHardwareAcceleration === void 0) {
           enableHardwareAcceleration = true;
       }
-      var styles = {};
+      var next = {};
+      var prev = {};
       var transform = {};
       var transformOrigin = {};
       var transformKeys = [];
       return function (state) {
+          var _a;
+          var style = '';
           transformKeys.length = 0;
-          buildStyleProperty(state, enableHardwareAcceleration, styles, transform, transformOrigin, transformKeys, true);
-          return styles;
+          next = buildStyleProperty(state, enableHardwareAcceleration, next, transform, transformOrigin, transformKeys);
+          for (var key in next) {
+              var value = next[key];
+              if (value !== prev[key]) {
+                  style += styleRule(key, value);
+              }
+          }
+          _a = [prev, next], next = _a[0], prev = _a[1];
+          return style;
       };
   };
 
+  var SCROLL_LEFT = 'scrollLeft';
+  var SCROLL_TOP = 'scrollTop';
+  var scrollValues = /*#__PURE__*/new Set([SCROLL_LEFT, SCROLL_TOP]);
   var cssStyler = /*#__PURE__*/createStyler({
       onRead: function (key, _a) {
           var element = _a.element,
@@ -3409,7 +3460,7 @@
           var valueType = getValueType(key);
           if (isTransformProp(key)) {
               return valueType ? valueType.default || 0 : 0;
-          } else if (scrollKeys.has(key)) {
+          } else if (scrollValues.has(key)) {
               return element[key];
           } else {
               var domValue = window.getComputedStyle(element, null).getPropertyValue(prefixer(key, true)) || 0;
@@ -3419,22 +3470,16 @@
       onRender: function (state, _a, changedValues) {
           var element = _a.element,
               buildStyles = _a.buildStyles;
-          Object.assign(element.style, buildStyles(state));
+          element.style.cssText += buildStyles(state);
           if (changedValues.indexOf(SCROLL_LEFT) !== -1) element.scrollLeft = state.scrollLeft;
           if (changedValues.indexOf(SCROLL_TOP) !== -1) element.scrollTop = state.scrollTop;
       },
-      uncachedValues: scrollKeys
+      aliasMap: aliasMap,
+      uncachedValues: scrollValues
   });
-  var css$2 = function (element, _a) {
-      if (_a === void 0) {
-          _a = {};
-      }
-      var enableHardwareAcceleration = _a.enableHardwareAcceleration,
-          props = __rest$1(_a, ["enableHardwareAcceleration"]);
-      return cssStyler(__assign$3({ element: element, buildStyles: createStyleBuilder(enableHardwareAcceleration), preparseOutput: true }, props));
+  var css$2 = function (element, props) {
+      return cssStyler(__assign$3({ element: element, buildStyles: buildStyleString(), preparseOutput: true }, props));
   };
-
-  var camelCaseAttributes = /*#__PURE__*/new Set(['baseFrequency', 'diffuseConstant', 'kernelMatrix', 'kernelUnitLength', 'keySplines', 'keyTimes', 'limitingConeAngle', 'markerHeight', 'markerWidth', 'numOctaves', 'targetX', 'targetY', 'surfaceScale', 'specularConstant', 'specularExponent', 'stdDeviation', 'tableValues']);
 
   var ZERO_NOT_ZERO = 0.0000001;
   var percentToPixels = function (percent$$1, length) {
@@ -3457,7 +3502,7 @@
       var scaleReplaceX = transformOriginX / scale$$1;
       var scaleReplaceY = transformOriginY / scaleY;
       var transform = {
-          translate: "translate(" + state.x + ", " + state.y + ") ",
+          translate: "translate(" + state.translateX + ", " + state.translateY + ") ",
           scale: "translate(" + scaleTransformX + ", " + scaleTransformY + ") scale(" + scale$$1 + ", " + scaleY + ") translate(" + scaleReplaceX + ", " + scaleReplaceY + ") ",
           rotate: "rotate(" + state.rotate + ", " + transformOriginX + ", " + transformOriginY + ") ",
           skewX: "skewX(" + state.skewX + ") ",
@@ -3474,8 +3519,7 @@
               } else if (isPath && key === 'pathOffset') {
                   props['stroke-dashoffset'] = percentToPixels(-value, pathLength);
               } else {
-                  var attrKey = !camelCaseAttributes.has(key) ? camelToDash(key) : key;
-                  props[attrKey] = value;
+                  props[camelToDash(key)] = value;
               }
           }
       }
@@ -3494,7 +3538,6 @@
       return props;
   };
 
-  var int = /*#__PURE__*/__assign$3({}, number, { transform: Math.round });
   var valueTypes$1 = {
       fill: color,
       stroke: color,
@@ -3503,22 +3546,10 @@
       scaleY: scale,
       opacity: alpha,
       fillOpacity: alpha,
-      strokeOpacity: alpha,
-      numOctaves: int
+      strokeOpacity: alpha
   };
   var getValueType$1 = function (key) {
       return valueTypes$1[key];
-  };
-
-  var getDimensions = function (element) {
-      return typeof element.getBBox === 'function' ? element.getBBox() : element.getBoundingClientRect();
-  };
-  var getSVGElementDimensions = function (element) {
-      try {
-          return getDimensions(element);
-      } catch (e) {
-          return { x: 0, y: 0, width: 0, height: 0 };
-      }
   };
 
   var svgStyler = /*#__PURE__*/createStyler({
@@ -3531,19 +3562,28 @@
               return valueType ? valueType.default : 0;
           }
       },
-      onRender: function (state, _a) {
+      onRender: function (state, _a, changedValues) {
           var dimensions = _a.dimensions,
               element = _a.element,
               isPath = _a.isPath,
               pathLength = _a.pathLength;
           setDomAttrs(element, build(state, dimensions, isPath, pathLength));
+      },
+      aliasMap: {
+          x: 'translateX',
+          y: 'translateY',
+          background: 'fill'
       }
   });
   var svg = function (element) {
-      var dimensions = getSVGElementDimensions(element);
+      var _a = element.getBBox(),
+          x = _a.x,
+          y = _a.y,
+          width = _a.width,
+          height = _a.height;
       var props = {
           element: element,
-          dimensions: dimensions,
+          dimensions: { x: x, y: y, width: width, height: height },
           isPath: false
       };
       if (element.tagName === 'path') {
@@ -3751,17 +3791,6 @@
       return BaseMulticast;
   }(Chainable);
 
-  var Multicast = /*#__PURE__*/function (_super) {
-      __extends(Multicast, _super);
-      function Multicast() {
-          return _super !== null && _super.apply(this, arguments) || this;
-      }
-      Multicast.prototype.create = function (props) {
-          return new Multicast(props);
-      };
-      return Multicast;
-  }(BaseMulticast);
-
   var stepProgress = function (steps, progress$$1) {
       var segment = 1 / (steps - 1);
       var subsegment = 1 / (2 * (steps - 1));
@@ -3770,23 +3799,6 @@
       var segmentProgressOfTarget = Math.floor((subsegmentProgressOfTarget + 1) / 2);
       return segmentProgressOfTarget * segment;
   };
-
-  var calc = /*#__PURE__*/Object.freeze({
-      angle: angle,
-      degreesToRadians: degreesToRadians,
-      distance: distance,
-      isPoint3D: isPoint3D,
-      isPoint: isPoint,
-      dilate: mix,
-      getValueFromProgress: mix,
-      pointFromAngleAndDistance: pointFromVector,
-      getProgressFromValue: progress,
-      radiansToDegrees: radiansToDegrees,
-      smooth: smoothFrame,
-      speedPerFrame: velocityPerFrame,
-      speedPerSecond: velocityPerSecond,
-      stepProgress: stepProgress
-  });
 
   var isValueList = function (v) {
       return Array.isArray(v);
@@ -3861,7 +3873,7 @@
       };
       ValueReaction.prototype.subscribe = function (observerCandidate) {
           var sub = _super.prototype.subscribe.call(this, observerCandidate);
-          this.subscribers[this.subscribers.length - 1].update(this.current);
+          this.update(this.current);
           return sub;
       };
       ValueReaction.prototype.getSingleVelocity = function (current, prev) {
@@ -4170,76 +4182,6 @@
       velocity: number.test
   });
 
-  var spring = function (props) {
-      if (props === void 0) {
-          props = {};
-      }
-      return action(function (_a) {
-          var update = _a.update,
-              complete = _a.complete;
-          var _b = props.velocity,
-              velocity = _b === void 0 ? 0.0 : _b;
-          var _c = props.from,
-              from = _c === void 0 ? 0.0 : _c,
-              _d = props.to,
-              to = _d === void 0 ? 0.0 : _d,
-              _e = props.stiffness,
-              stiffness = _e === void 0 ? 100 : _e,
-              _f = props.damping,
-              damping = _f === void 0 ? 10 : _f,
-              _g = props.mass,
-              mass = _g === void 0 ? 1.0 : _g,
-              _h = props.restSpeed,
-              restSpeed = _h === void 0 ? 0.01 : _h,
-              _j = props.restDelta,
-              restDelta = _j === void 0 ? 0.01 : _j;
-          var initialVelocity = velocity ? -(velocity / 1000) : 0.0;
-          var t = 0;
-          var delta = to - from;
-          var position = from;
-          var prevPosition = position;
-          var process = sync.update(function (_a) {
-              var timeDelta = _a.delta;
-              t += timeDelta;
-              var dampingRatio = damping / (2 * Math.sqrt(stiffness * mass));
-              var angularFreq = Math.sqrt(stiffness / mass) / 1000;
-              prevPosition = position;
-              if (dampingRatio < 1) {
-                  var envelope = Math.exp(-dampingRatio * angularFreq * t);
-                  var expoDecay = angularFreq * Math.sqrt(1.0 - dampingRatio * dampingRatio);
-                  position = to - envelope * ((initialVelocity + dampingRatio * angularFreq * delta) / expoDecay * Math.sin(expoDecay * t) + delta * Math.cos(expoDecay * t));
-              } else {
-                  var envelope = Math.exp(-angularFreq * t);
-                  position = to - envelope * (delta + (initialVelocity + angularFreq * delta) * t);
-              }
-              velocity = velocityPerSecond(position - prevPosition, timeDelta);
-              var isBelowVelocityThreshold = Math.abs(velocity) <= restSpeed;
-              var isBelowDisplacementThreshold = Math.abs(to - position) <= restDelta;
-              if (isBelowVelocityThreshold && isBelowDisplacementThreshold) {
-                  position = to;
-                  update(position);
-                  cancelSync.update(process);
-                  complete();
-              } else {
-                  update(position);
-              }
-          }, true);
-          return {
-              stop: function () {
-                  return cancelSync.update(process);
-              }
-          };
-      });
-  };
-  var vectorSpring = /*#__PURE__*/createVectorAction(spring, {
-      from: number.test,
-      to: number.test,
-      stiffness: number.test,
-      damping: number.test,
-      mass: number.test,
-      velocity: number.test
-  });
-
   var scrubber = function (_a) {
       var _b = _a.from,
           from = _b === void 0 ? 0 : _b,
@@ -4515,6 +4457,76 @@
       springStrength: number.test
   });
 
+  var spring = function (props) {
+      if (props === void 0) {
+          props = {};
+      }
+      return action(function (_a) {
+          var update = _a.update,
+              complete = _a.complete;
+          var _b = props.velocity,
+              velocity = _b === void 0 ? 0.0 : _b;
+          var _c = props.from,
+              from = _c === void 0 ? 0.0 : _c,
+              _d = props.to,
+              to = _d === void 0 ? 0.0 : _d,
+              _e = props.stiffness,
+              stiffness = _e === void 0 ? 100 : _e,
+              _f = props.damping,
+              damping = _f === void 0 ? 10 : _f,
+              _g = props.mass,
+              mass = _g === void 0 ? 1.0 : _g,
+              _h = props.restSpeed,
+              restSpeed = _h === void 0 ? 0.01 : _h,
+              _j = props.restDelta,
+              restDelta = _j === void 0 ? 0.01 : _j;
+          var initialVelocity = velocity ? -(velocity / 1000) : 0.0;
+          var t = 0;
+          var delta = to - from;
+          var position = from;
+          var prevPosition = position;
+          var process = sync.update(function (_a) {
+              var timeDelta = _a.delta;
+              t += timeDelta;
+              var dampingRatio = damping / (2 * Math.sqrt(stiffness * mass));
+              var angularFreq = Math.sqrt(stiffness / mass) / 1000;
+              prevPosition = position;
+              if (dampingRatio < 1) {
+                  var envelope = Math.exp(-dampingRatio * angularFreq * t);
+                  var expoDecay = angularFreq * Math.sqrt(1.0 - dampingRatio * dampingRatio);
+                  position = to - envelope * ((initialVelocity + dampingRatio * angularFreq * delta) / expoDecay * Math.sin(expoDecay * t) + delta * Math.cos(expoDecay * t));
+              } else {
+                  var envelope = Math.exp(-angularFreq * t);
+                  position = to - envelope * (delta + (initialVelocity + angularFreq * delta) * t);
+              }
+              velocity = velocityPerSecond(position - prevPosition, timeDelta);
+              var isBelowVelocityThreshold = Math.abs(velocity) <= restSpeed;
+              var isBelowDisplacementThreshold = Math.abs(to - position) <= restDelta;
+              if (isBelowVelocityThreshold && isBelowDisplacementThreshold) {
+                  position = to;
+                  update(position);
+                  cancelSync.update(process);
+                  complete();
+              } else {
+                  update(position);
+              }
+          }, true);
+          return {
+              stop: function () {
+                  return cancelSync.update(process);
+              }
+          };
+      });
+  };
+  var vectorSpring = /*#__PURE__*/createVectorAction(spring, {
+      from: number.test,
+      to: number.test,
+      stiffness: number.test,
+      damping: number.test,
+      mass: number.test,
+      velocity: number.test
+  });
+
   var listen = function (element, events, options) {
       return action(function (_a) {
           var update = _a.update;
@@ -4576,14 +4588,14 @@
           _c = _b.preventDefault,
           preventDefault = _c === void 0 ? true : _c,
           _d = _b.scale,
-          scale$$1 = _d === void 0 ? 1.0 : _d,
+          scale = _d === void 0 ? 1.0 : _d,
           _e = _b.rotate,
           rotate = _e === void 0 ? 0.0 : _e;
       return action(function (_a) {
           var update = _a.update;
           var output = {
               touches: points,
-              scale: scale$$1,
+              scale: scale,
               rotate: rotate
           };
           var initialDistance = 0.0;
@@ -4601,7 +4613,7 @@
                       secondTouch = points[1];
                   var newDistance = distance(firstTouch, secondTouch);
                   var newRotation = angle(firstTouch, secondTouch);
-                  output.scale = scale$$1 * (newDistance / initialDistance);
+                  output.scale = scale * (newDistance / initialDistance);
                   output.rotate = rotate + (newRotation - initialRotation);
               }
               update(output);
@@ -4671,7 +4683,7 @@
           return touches;
       }, getFirstTouch) : mouse(props);
   };
-  var index$1$1 = function (_a) {
+  var index$7 = function (_a) {
       if (_a === void 0) {
           _a = {};
       }
@@ -4737,7 +4749,7 @@
           return "" + v + unit;
       };
   };
-  var steps$2 = function (st, min, max) {
+  var steps$1 = function (st, min, max) {
       if (min === void 0) {
           min = 0;
       }
@@ -4777,13 +4789,12 @@
       linearSpring: springForceLinear,
       wrap: wrap$1,
       appendUnit: appendUnit,
-      steps: steps$2,
+      steps: steps$1,
       transformMap: transformMap
   });
 
   var getPoseValues = function (_a) {
       var transition = _a.transition,
-          flip = _a.flip,
           delay = _a.delay,
           delayChildren = _a.delayChildren,
           staggerChildren = _a.staggerChildren,
@@ -4793,7 +4804,7 @@
           preTransition = _a.preTransition,
           applyAtStart = _a.applyAtStart,
           applyAtEnd = _a.applyAtEnd,
-          props = __rest(_a, ["transition", "flip", "delay", "delayChildren", "staggerChildren", "staggerDirection", "afterChildren", "beforeChildren", "preTransition", "applyAtStart", "applyAtEnd"]);
+          props = __rest(_a, ["transition", "delay", "delayChildren", "staggerChildren", "staggerDirection", "afterChildren", "beforeChildren", "preTransition", "applyAtStart", "applyAtEnd"]);
       return props;
   };
   var selectPoses = function (_a) {
@@ -4834,17 +4845,14 @@
           return maxStaggerDuration - i * stagger;
       };
       Array.from(children).forEach(function (child, i) {
-          animations.push(child.set(next, {
-              delay: delay + generateStaggerDuration(i)
-          }));
+          animations.push(child.set(next, __assign({}, props, { delay: delay + generateStaggerDuration(i) })));
       });
       return animations;
   };
   var resolveTransition = function (transition, key, value, props, convertTransitionDefinition, getInstantTransition) {
       var resolvedTransition;
       if (typeof transition === 'function') {
-          var resolvedTransitionMap = transition(props);
-          resolvedTransition = resolveTransition(resolvedTransitionMap, key, value, props, convertTransitionDefinition, getInstantTransition);
+          resolvedTransition = transition(props);
       } else if (transition[key] || transition.default) {
           var keyTransition = transition[key] || transition.default;
           if (typeof keyTransition === 'function') {
@@ -4888,8 +4896,7 @@
           posePriority = setterProps.posePriority,
           convertTransitionDefinition = setterProps.convertTransitionDefinition,
           setValue = setterProps.setValue,
-          setValueNative = setterProps.setValueNative,
-          forceRender = setterProps.forceRender;
+          setValueNative = setterProps.setValueNative;
       return function (next, nextProps, propagate) {
           if (nextProps === void 0) {
               nextProps = {};
@@ -4912,16 +4919,15 @@
           };
           var getParentAnimations = function () {
               if (!nextPose) return [];
-              var applyAtStart = nextPose.applyAtStart;
-              if (applyAtStart) {
-                  applyValues(applyAtStart, values, baseTransitionProps, setValue, setValueNative);
-                  if (forceRender) forceRender(baseTransitionProps);
-              }
               if (transformPose) nextPose = transformPose(nextPose, next, state);
               var preTransition = nextPose.preTransition,
                   getTransition = nextPose.transition,
+                  applyAtStart = nextPose.applyAtStart,
                   applyAtEnd = nextPose.applyAtEnd;
               if (preTransition) preTransition(baseTransitionProps);
+              if (applyAtStart) {
+                  applyValues(applyAtStart, values, baseTransitionProps, setValue, setValueNative);
+              }
               var animations = Object.keys(getPoseValues(nextPose)).map(function (key) {
                   var valuePoses = activePoses.has(key) ? activePoses.get(key) : (activePoses.set(key, []), activePoses.get(key));
                   var existingIndex = valuePoses.indexOf(next);
@@ -4937,9 +4943,9 @@
                       if (activeActions.has(key)) stopAction(activeActions.get(key));
                       var resolveTransitionProps = __assign({ to: target }, transitionProps, getTransitionProps(value, target, transitionProps));
                       var transition = resolveTransition(getTransition, key, value, resolveTransitionProps, convertTransitionDefinition, getInstantTransition);
-                      var poseDelay = delay || resolveProp(nextPose.delay, transitionProps);
-                      if (poseDelay) {
-                          transition = addActionDelay(poseDelay, transition);
+                      var poseDelay = resolveProp(nextPose.delay, transitionProps);
+                      if (delay || poseDelay) {
+                          transition = addActionDelay(delay || poseDelay, transition);
                       }
                       activeActions.set(key, startAction(value, transition, complete));
                   }) : Promise.resolve();
@@ -4970,26 +4976,17 @@
   var defaultReadValueFromSource = function (key) {
       return isScale(key) ? 1 : 0;
   };
-  var readValueFromPose = function (pose, key, props) {
-      var valueToResolve = pose.applyAtEnd && pose.applyAtEnd[key] !== undefined ? pose.applyAtEnd[key] : pose[key] !== undefined ? pose[key] : pose.applyAtStart && pose.applyAtStart[key] !== undefined ? pose.applyAtStart[key] : 0;
-      return resolveProp(valueToResolve, props);
-  };
-  var getPosesToSearch = function (pose) {
-      var posesToSearch = Array.isArray(pose) ? pose : [pose];
-      posesToSearch.push(DEFAULT_INITIAL_POSE);
-      return posesToSearch;
-  };
   var getInitialValue = function (poses, key, initialPose, props, readValueFromSource, activePoses) {
       if (readValueFromSource === void 0) {
           readValueFromSource = defaultReadValueFromSource;
       }
-      var posesToSearch = getPosesToSearch(initialPose);
+      var posesToSearch = Array.isArray(initialPose) ? initialPose : [initialPose];
+      posesToSearch.push(DEFAULT_INITIAL_POSE);
       var pose = posesToSearch.filter(Boolean).find(function (name) {
-          var thisPose = poses[name];
-          return thisPose && (thisPose[key] !== undefined || thisPose.applyAtStart && thisPose.applyAtStart[key] !== undefined || thisPose.applyAtEnd && thisPose.applyAtEnd[key] !== undefined);
+          return poses[name] && poses[name][key] !== undefined;
       });
       activePoses.set(key, [pose || DEFAULT_INITIAL_POSE]);
-      return pose ? readValueFromPose(poses[pose], key, props) : readValueFromSource(key, props);
+      return pose ? resolveProp(poses[pose][key], props) : readValueFromSource(key, props);
   };
   var createValues = function (values, _a) {
       var userSetValues = _a.userSetValues,
@@ -5050,36 +5047,11 @@
           values.set(key, newValue);
       };
   };
-  var setNativeValues = function (_a) {
-      var setValueNative = _a.setValueNative,
-          initialPose = _a.initialPose,
-          props = _a.props,
-          poses = _a.poses;
-      var valuesHaveSet = new Set();
-      var setValues = function (pose, propKey) {
-          if (pose[propKey]) {
-              for (var key in pose[propKey]) {
-                  if (!valuesHaveSet.has(key)) {
-                      valuesHaveSet.add(key);
-                      setValueNative(key, resolveProp(pose[propKey][key], props), props);
-                  }
-              }
-          }
-      };
-      getPosesToSearch(initialPose).forEach(function (poseKey) {
-          var pose = poses[poseKey];
-          if (pose) {
-              setValues(pose, 'applyAtEnd');
-              setValues(pose, 'applyAtStart');
-          }
-      });
-  };
   var createValueMap = function (props) {
       var poses = props.poses,
           passive = props.passive;
       var values = new Map();
       Object.keys(poses).forEach(scrapeValuesFromPose(values, props));
-      setNativeValues(props);
       if (passive) Object.keys(passive).forEach(bindPassiveValues(values, props));
       return values;
   };
@@ -5126,7 +5098,6 @@
           convertTransitionDefinition = _a.convertTransitionDefinition,
           transformPose = _a.transformPose,
           posePriority = _a.posePriority,
-          forceRender = _a.forceRender,
           extendAPI = _a.extendAPI;
       return function (config) {
           var parentValues = config.parentValues,
@@ -5137,19 +5108,17 @@
           var activePoses = new Map();
           var children = new Set();
           var poses = generateTransitions(selectPoses(config), defaultTransitions);
-          var _b = config.props,
-              props = _b === void 0 ? {} : _b;
-          if (getDefaultProps) props = __assign({}, getDefaultProps(config), props);
+          var props = config.props || {};
+          if (getDefaultProps) props = __assign({}, props, getDefaultProps(config));
           var passive = config.passive,
               userSetValues = config.values,
-              _c = config.initialPose,
-              initialPose = _c === void 0 ? DEFAULT_INITIAL_POSE : _c;
+              _b = config.initialPose,
+              initialPose = _b === void 0 ? DEFAULT_INITIAL_POSE : _b;
           var values = createValueMap({
               poses: poses,
               passive: passive,
               ancestorValues: ancestorValues,
               readValue: readValue,
-              setValueNative: setValueNative,
               createValue: createValue,
               convertValue: convertValue,
               readValueFromSource: readValueFromSource,
@@ -5180,8 +5149,7 @@
               resolveTarget: resolveTarget,
               addActionDelay: addActionDelay,
               transformPose: transformPose,
-              posePriority: posePriority,
-              forceRender: forceRender
+              posePriority: posePriority
           });
           var has = function (poseName) {
               return !!poses[poseName];
@@ -5267,7 +5235,7 @@
       return __assign$4.apply(this, arguments);
   };
 
-  function __rest$2(s, e) {
+  function __rest$1(s, e) {
       var t = {};
       for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
       if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
@@ -5299,7 +5267,7 @@
   var singleAxisPointer = function (axis) {
       return function (from) {
           var _a;
-          return index$1$1((_a = {}, _a[axis] = typeof from === 'string' ? parseFloat(from) : from, _a)).pipe(function (v) {
+          return index$7((_a = {}, _a[axis] = typeof from === 'string' ? parseFloat(from) : from, _a)).pipe(function (v) {
               return v[axis];
           });
       };
@@ -5464,7 +5432,7 @@
       var _c = _a.type,
           type = _c === void 0 ? 'tween' : _c,
           ease = _a.ease,
-          def = __rest$2(_a, ["type", "ease"]);
+          def = __rest$1(_a, ["type", "ease"]);
       invariant(animationLookup[type] !== undefined, "Invalid transition type '" + type + "'. Valid transition types are: tween, spring, decay, physics and keyframes.");
       if (type === 'tween') {
           var typeOfEase = typeof ease;
@@ -5577,7 +5545,7 @@
                   min = def.min,
                   max = def.max,
                   round = def.round,
-                  remainingDef = __rest$2(def, ["delay", "min", "max", "round"]);
+                  remainingDef = __rest$1(def, ["delay", "min", "max", "round"]);
               var action$$1 = getAction(val, remainingDef, props);
               var outputPipe = [];
               if (delay$$1) action$$1 = addActionDelay(delay$$1, action$$1);
@@ -5751,7 +5719,7 @@
           bottom = nextPose.bottom,
           right = nextPose.right,
           position = nextPose.position,
-          remainingPose = __rest$2(nextPose, ["width", "height", "top", "left", "bottom", "right", "position"]);
+          remainingPose = __rest$1(nextPose, ["width", "height", "top", "left", "bottom", "right", "position"]);
       var propsToSet = positionalProps.concat('position').reduce(function (acc, key) {
           if (nextPose[key] !== undefined) {
               acc[key] = resolveProp$1(nextPose[key], state.props);
@@ -5909,7 +5877,7 @@
           focusable = _a.focusable,
           pressable = _a.pressable,
           dragBounds = _a.dragBounds,
-          config = __rest$2(_a, ["onDragStart", "onDragEnd", "onPressStart", "onPressEnd", "draggable", "hoverable", "focusable", "pressable", "dragBounds"]);
+          config = __rest$1(_a, ["onDragStart", "onDragEnd", "onPressStart", "onPressEnd", "draggable", "hoverable", "focusable", "pressable", "dragBounds"]);
       var poseConfig = __assign$4({ flip: {} }, config, { props: __assign$4({}, config.props, { onDragStart: onDragStart,
               onDragEnd: onDragEnd,
               onPressStart: onPressStart,
@@ -5933,7 +5901,7 @@
       posePriority: ['drag', 'press', 'focus', 'hover'],
       transformPose: function (_a, name, state) {
           var flip = _a.flip,
-              pose$$1 = __rest$2(_a, ["flip"]);
+              pose$$1 = __rest$1(_a, ["flip"]);
           if (isFlipPose(flip, name, state)) {
               return flipPose(state, pose$$1);
           } else if (isPositional(pose$$1)) {
@@ -6523,6 +6491,7 @@
   exports.Select = Select$1;
   exports.Label = Label$1;
   exports.Field = Field$1;
+  exports.Textarea = Textarea$1;
   exports.Checkbox = Checkbox$1;
   exports.Divider = index;
   exports.Badge = index$1;
