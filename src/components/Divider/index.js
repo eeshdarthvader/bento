@@ -9,16 +9,34 @@ const Divider = props => {
     'd-block',
     'bb',
     'bc-grey-10',
+    'flex-1',
   );
-  return <div className={dividerClass} {...additionalProps} />;
+  return (
+    <div className="pos-r">
+      {!props.text &&
+        <div className={dividerClass} {...additionalProps} />
+      }
+      {props.text &&
+        <div className="flex flex-between flex-middle" {...additionalProps}>
+          <div className={dividerClass}/>
+          <p className="px-20 fs-caption-2 c-grey-40">
+            {props.text}
+          </p>
+          <div className={dividerClass} />
+        </div>
+      }
+    </div>
+  );
 };
 
 Divider.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  text: PropTypes.string
 };
 
 Divider.defaultProps = {
-  className: ''
+  className: '',
+  text: ''
 };
 
 export default React.memo(Divider);
