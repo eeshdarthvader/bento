@@ -16,6 +16,8 @@ import { ReactComponent as AvatarGirlIcon } from './icons/avatar-girl.svg'
 import { ReactComponent as AvatarBoyIcon } from './icons/avatar-boy.svg'
 import { ReactComponent as AvatarInfantIcon } from './icons/avatar-infant.svg'
 import { ReactComponent as StarIcon } from './icons/star.svg'
+import { ReactComponent as ClockIcon } from './icons/clock.svg'
+import { ReactComponent as CallIcon } from './icons/call.svg'
 
 
 const IconMap = ({icon, ...props}) => {
@@ -50,6 +52,10 @@ const IconMap = ({icon, ...props}) => {
       return <AvatarInfantIcon {...props} />;
     case 'star':
       return <StarIcon {...props} />;
+    case 'clock':
+      return <ClockIcon {...props} />;
+    case 'call':
+      return <CallIcon {...props} />;
 
     default:
       break;
