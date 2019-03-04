@@ -1,7 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Field, Select, Checkbox } from './';
+import {
+  Field,
+  Select,
+  Checkbox,
+  Textarea
+} from './';
 
 storiesOf('Form', module)
   .add('Field', () => (
@@ -82,6 +87,7 @@ storiesOf('Form', module)
       </div>
     </div>
   ))
+
   .add('Checkbox', () => (
     <div className="cont storybook">
       <div className="block">
@@ -90,6 +96,22 @@ storiesOf('Form', module)
         <div className="demo">
           <div>
             <Checkbox>Buy milk</Checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))
+
+  .add('Textarea', () => (
+    <div className="cont storybook">
+      <div className="block">
+        <h3>Textarea</h3>
+        <h4>Text area</h4>
+        <div className="demo">
+          <div>
+            <Textarea
+              placeholder="Any additional request, travelling with senior citizens? Let us know"
+            />
           </div>
         </div>
       </div>
