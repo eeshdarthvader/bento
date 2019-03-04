@@ -5,19 +5,20 @@ import classnames from 'classnames'
 const Badge = (props) => {
  const { children, className, intent, type, size, ...additionalProps } = props
  const labelClass = classnames({
-   'bg-green': intent === 'success',
-   'bg-black': intent === 'warning' || (intent === '' && type ===''),
-   'bg-blue': type === 'primary',
-   'bg-white': type === 'light',
-   'bg-grey-20': type === 'secondary',
-   'c-white': true,
-   'c-black': type === 'light',
-   'px-8': size === 'normal',
-   'py-4': size === 'normal',
-   'fs-caption-2': size === 'normal',
-   'px-12': size === 'large',
-   'py-8': size === 'large',
-   'fs-body': size === 'large'
+  'bg-orange': type === 'primary',
+  'bg-blue': type === 'secondary',
+  'bg-green': type === 'success',
+  'bg-yellow': type === 'warning',
+  'bg-white': type === 'light',
+  'bg-black': type === 'dark', 
+  'c-white': true,
+  'c-black': type === 'light' || type === 'warning',
+  'px-8': size === 'normal',
+  'py-4': size === 'normal',
+  'fs-caption-2': size === 'normal',
+  'px-12': size === 'large',
+  'py-8': size === 'large',
+  'fs-body': size === 'large'
  },
    'm-0',
    'd-inline-block',
@@ -38,15 +39,13 @@ const Badge = (props) => {
 Badge.propTypes = {
  className: PropTypes.string,
  size: PropTypes.oneOf(['large', 'normal']),
- intent: PropTypes.oneOf(['sucess', 'warning']),
- type: PropTypes.oneOf(['primary', 'light']),
+ type: PropTypes.oneOf(['primary', 'light', 'dark', 'secondary', 'success', 'warning']),
 }
 
 Badge.defaultProps = {
  className: '',
  size: 'normal',
- intent: '',
- type: ''
+ type: 'dark'
 }
 
 Badge.displayName = 'Badge'
