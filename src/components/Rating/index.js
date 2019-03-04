@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import Icon from '../Icon'
 
 const StarRating = props => {
-  const { rating, total, size, activeColor, emptyColor } = props
+  const { className, rating, total, size, activeColor, emptyColor } = props
   const starSize = `${size}`
   return (
-    <>
+    <div className={className}>
       {Array(rating)
         .fill()
         .map((value, index) => (
@@ -30,11 +30,12 @@ const StarRating = props => {
             key={`empty-${index}`}
           /> // eslint-disable-line react/no-array-index-key
         ))}
-    </>
+    </div>
   )
 }
 
 StarRating.propTypes = {
+  className: PropTypes.string,
   rating: PropTypes.number.isRequired,
   total: PropTypes.number,
   size: PropTypes.number,
@@ -43,6 +44,7 @@ StarRating.propTypes = {
 }
 
 StarRating.defaultProps = {
+  className: '',
   total: 5,
   size: 15,
   activeColor: '#fec22d',
