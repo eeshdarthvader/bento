@@ -58,6 +58,7 @@
 // Padding
 // ------------------------------
 @each $space in config(spacers) {
+  
   .p-#{$space} { padding: $space * 1px; }
   .pt-#{$space} { padding-top: $space * 1px; }
   .pb-#{$space} { padding-bottom: $space * 1px; }
@@ -83,5 +84,83 @@
   .npy-#{$space} {
     padding-top: (-1 * $space) + px;
     padding-bottom: (-1 * $space) + px;
+  }
+}
+
+
+
+
+// ------------------------------
+// Padding responsive
+// ------------------------------
+
+@each $space in config(spacers) {
+  @each $key,$value in config('breakPoints') {
+    @include break($key) {
+      .p-#{$space}--#{$key} { padding: $space * 1px; }
+      .pt-#{$space}--#{$key} { padding-top: $space * 1px; }
+      .pb-#{$space}--#{$key} { padding-bottom: $space * 1px; }
+      .pl-#{$space}--#{$key} { padding-left: $space * 1px; }
+      .pr-#{$space}--#{$key} { padding-right: $space * 1px; }
+      .px-#{$space}--#{$key} {
+        padding-right: $space * 1px;
+        padding-left: $space * 1px;
+      }
+      .py-#{$space}--#{$key} {
+        padding-top: $space * 1px;
+        padding-bottom: $space * 1px;
+      }
+
+      .npt-#{$space}--#{$key} { padding-top: (-1 * $space) + px; }
+      .npb-#{$space}--#{$key} { padding-bottom: (-1 * $space) + px; }
+      .npl-#{$space}--#{$key} { padding-left: (-1 * $space) + px; }
+      .npr-#{$space}--#{$key} { padding-right: (-1 * $space) + px; }
+      .npx-#{$space}--#{$key} {
+        padding-right: (-1 * $space) + px;
+        padding-left: (-1 * $space) + px;
+      }
+      .npy-#{$space}--#{$key} {
+        padding-top: (-1 * $space) + px;
+        padding-bottom: (-1 * $space) + px;
+      }
+    }
+  }
+}
+
+
+// ------------------------------
+// margin responsive
+// ------------------------------
+
+@each $space in config(spacers) {
+  @each $key,$value in config('breakPoints') {
+    @include break($key) {
+      .m-#{$space}--#{$key} { margin: $space * 1px; }
+      .mt-#{$space}--#{$key} { margin-top: $space * 1px; }
+      .mb-#{$space}--#{$key} { margin-bottom: $space * 1px; }
+      .ml-#{$space}--#{$key} { margin-left: $space * 1px; }
+      .mr-#{$space}--#{$key} { margin-right: $space * 1px; }
+      .mx-#{$space}--#{$key} {
+        margin-right: $space * 1px;
+        margin-left: $space * 1px;
+      }
+      .my-#{$space}--#{$key} {
+        margin-top: $space * 1px;
+        margin-bottom: $space * 1px;
+      }
+
+      .nmt-#{$space}--#{$key} { margin-top: (-1 * $space) + px; }
+      .nmb-#{$space}--#{$key} { margin-bottom: (-1 * $space) + px; }
+      .nml-#{$space}--#{$key} { margin-left: (-1 * $space) + px; }
+      .nmr-#{$space}--#{$key} { margin-right: (-1 * $space) + px; }
+      .nmx-#{$space}--#{$key} {
+        margin-right: (-1 * $space) + px;
+        margin-left: (-1 * $space) + px;
+      }
+      .nmy-#{$space}--#{$key} {
+        margin-top: (-1 * $space) + px;
+        margin-bottom: (-1 * $space) + px;
+      }
+    }
   }
 }
