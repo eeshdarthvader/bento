@@ -14,3 +14,14 @@
     display: $value
   }
 }
+
+@each $key,$val in config('breakPoints'){
+  @each $display, $value in config('display') {
+    @include break($key){
+      .d-#{$display}--#{$key} {
+        display: $value
+      }
+    }
+    
+  }
+}
