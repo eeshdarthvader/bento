@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "author": "Indrashish Ghosh",
   "license": "MIT",
