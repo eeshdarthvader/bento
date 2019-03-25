@@ -47,6 +47,19 @@
   }
 }
 
+// ------------------------------
+// Font Size Mobile
+// ------------------------------
+
+
+  @each $fontSize, $value in config('typography.fontSizeMobile') {
+    @include break(sm){
+    .fs-#{$fontSize} {
+      font-size: nth($value, 1);
+      line-height: nth($value, length($value));
+    }
+  }
+}
 
 // ------------------------------
 // Font Style
@@ -79,6 +92,13 @@
   .ta-#{$textAlign} {
     text-align: $value;
   }
+  @each $key, $breakpoint in config('breakPoints') {
+    @include break($key) {
+      .ta-#{$textAlign}--#{$key} {
+        text-align: $value;
+      }
+    }
+  }
 }
 
 
@@ -98,6 +118,13 @@
 @each $verticalAlign, $value in config('typography.verticalAlign') {
   .va-#{$verticalAlign} {
     vertical-align: $value;
+  }
+  @each $key, $breakpoint in config('breakPoints') {
+    @include break($key) {
+      .va-#{$verticalAlign}--#{$key} {
+        vertical-align: $value;
+      }
+    }
   }
 }
 
