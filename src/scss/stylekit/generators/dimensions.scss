@@ -11,6 +11,13 @@
 // Widths
 // ------------------------------
 @each $width, $value in config('dimensions.width') {
+  @each $key, $breakpoint in config('breakPoints') {
+    @include break($key) {
+      .w-#{$width}--#{$key} { width: $value !important}
+      .wmx-#{$width}--#{$key} { max-width: $value }
+      .wmn-#{$width}--#{$key} { max-width: $value }
+    }
+  }
   .w-#{$width} { width: $value }
   .wmx-#{$width} { max-width: $value }
   .wmn-#{$width} { max-width: $value }
@@ -22,6 +29,11 @@
 // ------------------------------
 @each $height in config('dimensions.height') {
   .h-#{$height} { height: $height * 1px }
+  @each $key, $breakpoint in config('breakPoints') {
+    @include break($key) {
+      .h-#{$height}--#{$key} { height: $height * 1px }
+    }
+  }
 }
 
 .h-100p {
