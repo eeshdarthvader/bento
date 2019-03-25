@@ -117,6 +117,9 @@ $config: (
     ),
     'listStyle': (
       'reset': none
+    ),
+    'truncateText': (
+      1,2,3,4,5
     )
   ),
 
@@ -335,8 +338,8 @@ $config: (
   // Breakpoints
   // ------------------------------
   'breakPoints': (
-    xs: 480px, // extra small
-    sm: 600px,  // small 
-    md: 992px  // medium  
+    xs: 320px, // extra small
+    sm: 480px,  // small 
+    md: 600px  // medium  
   ),
 )
