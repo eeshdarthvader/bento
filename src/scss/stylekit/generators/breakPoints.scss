@@ -5,7 +5,7 @@
 ---------------------------------------*/
 
 @mixin break($size) {
-    @media screen and (min-width: 320px) and (max-width: map-get(config('breakPoints'), $size)) {
+    @media screen  and (min-width: map-get(config('breakPoints'), $size)) and  (max-width: '1024px') {
         @content;
     }
 }

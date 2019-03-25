@@ -16,6 +16,7 @@
   11. White space
   12. List style
   13. Line Height
+  14. Truncate
 ------------------------------------ */
 
 // ------------------------------
@@ -53,11 +54,13 @@
 
 
   @each $fontSize, $value in config('typography.fontSizeMobile') {
-    @include break(sm){
-    .fs-#{$fontSize} {
-      font-size: nth($value, 1);
-      line-height: nth($value, length($value));
-    }
+    @each $breakpoint, $val in config('breakPoints') {
+    @include break($breakpoint){
+      .fs-#{$fontSize} {
+        font-size: nth($value, 1);
+        line-height: nth($value, length($value));
+      }
+    } 
   }
 }
 
@@ -89,15 +92,15 @@
 // Text Align
 // ------------------------------
 @each $textAlign, $value in config('typography.textAlign') {
-  .ta-#{$textAlign} {
-    text-align: $value;
-  }
   @each $key, $breakpoint in config('breakPoints') {
     @include break($key) {
-      .ta-#{$textAlign}--#{$key} {
+      body .ta-#{$textAlign}--#{$key} {
         text-align: $value;
       }
     }
+  }
+  .ta-#{$textAlign} {
+    text-align: $value;
   }
 }
 
@@ -177,5 +180,22 @@
 @each $lineHeight, $value in config('typography.lineHeight') {
   .lh-#{$lineHeight} {
     line-height: $value;
+  }
+}
+
+// ------------------------------
+// Truncate text
+// ------------------------------
+@mixin multi-truncate($lines-to-show) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@each $value in config('typography.truncateText') {
+  .t-truncate-#{$value} {
+    @include multi-truncate($value);
   }
 }
