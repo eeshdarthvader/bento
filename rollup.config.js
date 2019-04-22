@@ -13,9 +13,9 @@ export default {
     file: 'dist/bundled.js',
     format: 'umd',
     name: 'bundled',
-    globals: [
-      'React'
-    ]
+    globals: {
+      react: 'React',
+    }
   },
   external: [
     'react',
