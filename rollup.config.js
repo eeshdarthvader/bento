@@ -5,21 +5,28 @@ import postcss from 'rollup-plugin-postcss'
 import svgr from '@svgr/rollup'
 import commonjs from 'rollup-plugin-commonjs';
 
+import pkg from './package.json'
 
 // rollup.config.js
 export default {
   input: 'src/index.js',
-  output: {
-    file: 'dist/bundled.js',
-    format: 'umd',
-    name: 'bundled',
-    globals: {
-      react: 'React',
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: true
+    },
+    {
+      file: pkg.module,
+      format: 'es',
+      sourcemap: true
     }
-  },
+  ],
   external: [
     'react',
     'react-dom',
+    'react-pose',
+    'classnames'
   ],
   plugins: [
     resolve(),

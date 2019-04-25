@@ -2,9 +2,10 @@
   "name": "@cleartrip/bento",
   "version": "0.3.9",
   "description": "Cleartrip Design System",
-  "main": "dist/bundled.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
-    "start": "webpack --mode development --watch",
+    "start": "webpack --mode development",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook"
