@@ -1,8 +1,8 @@
 import { configure } from '@storybook/react';
 
-const req = require.context('../src', true, /\.stories\.js$/);
+const req = require.context('../lib', true, /\.stories\.js$/);
 
-import '../src/scss/index.scss'
+import '../lib/scss/index.scss'
 import './storybook.scss'
 
 function loadStories() {

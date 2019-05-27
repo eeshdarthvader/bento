@@ -15,7 +15,7 @@ const isProduction = process.env.MODE === "production";
 
 // rollup.config.js
 export default {
-  input: 'src/index.js',
+  input: 'lib/index.js',
   output: [
     {
       file: pkg.main,
@@ -39,7 +39,9 @@ export default {
     babel({
       exclude: 'node_modules/**'
     }),
-    postcss(),
+    postcss({
+      extract: true
+    }),
     url(),
     svgr(),
     commonjs({

@@ -22,6 +22,10 @@
     "@svgr/rollup": "^4.1.0",
     "babel-plugin-named-asset-import": "^0.2.3",
     "classnames": "^2.2.6",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
+    "gatsby": "^2.7.1",
+    "gatsby-theme-docz": "^1.2.0",
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
@@ -35,7 +39,8 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-uglify-es": "^0.0.1",
-    "rollup-plugin-url": "^2.2.0"
+    "rollup-plugin-url": "^2.2.0",
+    "sass-loader": "^7.1.0"
   },
   "dependencies": {}
 }
