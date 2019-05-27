@@ -5,8 +5,13 @@ import postcss from 'rollup-plugin-postcss'
 import svgr from '@svgr/rollup'
 import commonjs from 'rollup-plugin-commonjs'
 import bundleSize from 'rollup-plugin-bundle-size'
+import conditional from "rollup-plugin-conditional";
+import uglify from 'rollup-plugin-uglify-es';
 
 import pkg from './package.json'
+
+
+const isProduction = process.env.MODE === "production";
 
 // rollup.config.js
 export default {
@@ -42,6 +47,9 @@ export default {
         'node_modules/classnames/index.js': ['classnames']
       }
     }),
+    conditional(isProduction, [
+      uglify()
+    ]),
     bundleSize()
   ],
 };

@@ -6,7 +6,7 @@
   "module": "dist/index.es.js",
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "rollup -c --environment MODE:production",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook"
   },
@@ -31,8 +31,10 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-conditional": "^3.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-uglify-es": "^0.0.1",
     "rollup-plugin-url": "^2.2.0"
   },
   "dependencies": {}
