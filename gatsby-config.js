@@ -10,14 +10,8 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /docs/
+          include: /src/
         }
-      }
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/docs/pages/`
       }
     }
   ]
