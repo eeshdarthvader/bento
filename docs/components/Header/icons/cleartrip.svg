@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="32" viewBox="0 0 33 32">
+  <defs>
+    <path id="cleartrip-a" d="M32.8547762,27.8955494 C32.8547762,30.0677481 31.4433237,31.8250596 29.7014622,31.8250596 L3.22184863,31.8250596 C1.48142995,31.8250596 0.0699774557,30.0677481 0.0699774557,27.8955494 L0.0699774557,4.14369005 C0.0699774557,1.97252774 1.48142995,0.213834443 3.22184863,0.213834443 L29.7014622,0.213834443 C31.4433237,0.213834443 32.8547762,1.97252774 32.8547762,4.14369005 L32.8547762,27.8955494 Z"/>
+    <polygon id="cleartrip-c" points=".048 8.748 3.022 4.16 7.186 11.043 20.568 .145 23.541 5.021 6.589 15.345"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="cleartrip-b" fill="#fff">
+      <use xlink:href="#cleartrip-a"/>
+    </mask>
+    <polygon fill="#E36433" points=".065 31.851 32.875 31.851 32.875 .18 .065 .18" mask="url(#cleartrip-b)"/>
+    <g transform="translate(5.185 8.762)">
+      <mask id="cleartrip-d" fill="#fff">
+        <use xlink:href="#cleartrip-c"/>
+      </mask>
+      <polygon fill="#FFFFFE" points=".007 15.383 23.556 15.383 23.556 .138 .007 .138" mask="url(#cleartrip-d)"/>
+    </g>
+  </g>
+</svg>

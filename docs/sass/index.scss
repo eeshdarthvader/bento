@@ -1,0 +1,61 @@
+// @import '~@cleartrip/bento/src/scss/index.scss';
+
+@import 'vendor/reset';
+
+@import 'helpers/mixins/index';
+
+::-moz-selection { /* Code for Firefox */
+  color: #333;
+  background: #FFFBD7;
+}
+
+::selection {
+  color: #333;
+  background: #FFFBD7;
+}
+
+
+body {
+  min-height: 100vh;
+  font: caption;
+  background-color: #eaeaea;
+}
+
+
+
+.content {
+  padding: 32px 0;
+
+  h1 {
+    font-size: calculateRem(32px);
+    line-height: calculateRem(44px);
+    margin-bottom: calculateRem(16px);
+  }
+
+  h2 {
+    font-size: calculateRem(24px);
+    line-height: calculateRem(32px);
+    margin-bottom: calculateRem(16px);
+  }
+
+  p {
+    font-size: calculateRem(16px);
+    line-height: calculateRem(24px);
+    margin-bottom: calculateRem(16px);
+  }
+
+  h2 {
+    margin-top: calculateRem(54px);
+  }
+
+  code {
+    background-color: #ffeff2;
+    color: #c6475d;
+    background-color: #fafafa;
+    border: solid 1px #eaeaea;
+    color: #291014;
+    font-family: 'SF Mono', monospace;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+}

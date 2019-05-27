@@ -1,0 +1,21 @@
+@mixin baseline($baselineGap, $baselineColor, $offset) {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: $offset;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-size: 100% $baselineGap;
+    background-position: top left;
+    background-image: linear-gradient($baselineColor 0px, transparent 1px, transparent 100%);
+  }
+}

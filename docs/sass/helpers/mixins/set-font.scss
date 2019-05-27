@@ -1,0 +1,5 @@
+@mixin setFont($key) {
+	$value: config($key);
+	font-size: calculateRem(nth($value, 1));
+	line-height: calculateRem(nth($value, length($value)));
+}
