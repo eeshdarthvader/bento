@@ -18,7 +18,7 @@
 body {
   min-height: 100vh;
   font: caption;
-  background-color: #eaeaea;
+  background-color: #fafafa;
 }
 
 
@@ -30,12 +30,14 @@ body {
     font-size: calculateRem(32px);
     line-height: calculateRem(44px);
     margin-bottom: calculateRem(16px);
+    font-weight: 500;
   }
 
   h2 {
     font-size: calculateRem(24px);
     line-height: calculateRem(32px);
     margin-bottom: calculateRem(16px);
+    font-weight: 500;
   }
 
   p {

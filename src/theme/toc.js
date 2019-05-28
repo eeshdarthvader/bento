@@ -16,8 +16,8 @@ const generateTOC = (elems) => {
 
   const tocTree = Object.entries(toc).map(([heading, url]) => {
     return (
-      <li className="fs-body c-grey-40 hover:c-grey-50 mb-8 antialiased">
-        <a href={`#${url}`} key={url} className="c-inherit td-none">
+      <li className="fs-body c-grey-40 hover:c-grey-50 mb-8 antialiased" key={url}>
+        <a href={`#${url}`} className="c-inherit td-none">
           {heading}
         </a>
       </li>

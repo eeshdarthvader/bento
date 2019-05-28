@@ -5,20 +5,22 @@ import Helmet from 'react-helmet'
 import Sticky from 'react-stickynode'
 
 import Header from '../components/Header'
-import { FoundationNav } from '../components/Nav'
 
 import generateTOC from './toc'
+import Menu from './menu'
 
 const Theme = ({children}) => {
-
   const TOC = generateTOC(children.props.children)
+  const menuCategory = children.props.pageContext.frontmatter.menu
+  const docName = children.props.pageContext.frontmatter.name
+
+  console.log(children.props)
 
   return (
     <Fragment>
       <Helmet>
-        <title>Bento</title>
-        <meta name="description" content="Bento" />
-        <meta name="theme-color" content="#008f68" />
+        <title>{docName}</title>
+        <meta name="description" content={docName} />
       </Helmet>
       <div
         className="flex flex-column"
@@ -31,10 +33,10 @@ const Theme = ({children}) => {
             className="nav"
             style={{ width: '260px' }}
           >
-            <FoundationNav />
+            <Menu category={menuCategory} doc={docName} />
           </div>
 
-          <div className="flex-1 bg-white">
+          <div className="flex-1 bg-white elevation-md">
             <div
               className="w-80p m-auto flex pb-60"
               style={{ maxWidth: '800px' }}
