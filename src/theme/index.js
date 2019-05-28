@@ -7,7 +7,12 @@ import Sticky from 'react-stickynode'
 import Header from '../components/Header'
 import { FoundationNav } from '../components/Nav'
 
-const Theme = ({ children }) => {
+import generateTOC from './toc'
+
+const Theme = ({children}) => {
+
+  const TOC = generateTOC(children.props.children)
+
   return (
     <Fragment>
       <Helmet>
@@ -44,13 +49,13 @@ const Theme = ({ children }) => {
               <div className="toc w-20p">
                 <Sticky enabled={true} top={30}>
                   <div className="ml-60">
-                    <p className="fs-body c-grey-60 mt-60 mb-8">
+                    <p className="fs-caption fw-600 c-blue tt-uppercase mt-60 mb-8">
                       Jump to:-
                       </p>
                     <ul
                       className="flex flex-column"
                     >
-                      "TOC"
+                      { TOC }
                   </ul>
                   </div>
                 </Sticky>
