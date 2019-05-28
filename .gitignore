@@ -4,3 +4,4 @@ node_modules/
 .docz
 /public
 /dist
+package-lock.json
