@@ -45,7 +45,7 @@ const Header = props => {
                 >
                   <li className="flex flex-middle hover:bg-slate-dark">
                     <Link
-                      to="/components/button"
+                      to="/foundation/color"
                       className="td-none c-inherit px-32 py-24">
                       Foundation
                     </Link>

@@ -16,7 +16,7 @@ const Menu = ({category, doc}) => {
     <ul className="mt-32 mx-20">
       {menuItems.map((menu, key) => {
         const liClass = classnames('br-2', {
-          'c-grey-70': menu.name !== doc,
+          'c-grey-50': menu.name !== doc,
           'hover:bg-grey-10': menu.name !== doc,
           'hover:bg-blue': menu.name === doc,
           'bg-blue': menu.name === doc,
@@ -27,8 +27,8 @@ const Menu = ({category, doc}) => {
           <li className={liClass} key={menu.id}>
             <Link
               to={menu.route}
-              className="c-inherit py-12 pl-12 d-block td-none fs-body-2">
-              {menu.name}
+              className="c-inherit py-8 pl-8 d-block td-none fs-body">
+              {key + 1}. {menu.name}
             </Link>
           </li>
         )

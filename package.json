@@ -38,6 +38,7 @@
     "react-helmet": "^5.2.1",
     "react-pose": "^4.0.2",
     "react-stickynode": "^2.1.1",
+    "react-toastify": "^5.1.1",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-bundle-size": "^1.0.3",

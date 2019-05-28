@@ -1,0 +1,523 @@
+---
+name: Colors
+route: /foundation/color
+menu: Foundation
+---
+
+import {
+  Container,
+  Row,
+  Col,
+  Spacer
+} from '../../index.js'
+
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { toast } from 'react-toastify';
+
+import Swatch from '../../../src/components/Docs/Swatch.js'
+import { Table, TRow, TCol } from '../../../src/components/Docs/Table'
+
+# Colours
+
+Cleartrip's colors are thoughfully selected to enhance the user's experience while engaging with our product.
+
+
+## Accent colours
+
+<div className="flex">
+  <Swatch className="bg-orange" />
+  <Spacer mx={8}/>
+  <Swatch className="bg-blue" />
+</div>
+<Spacer my={8}/>
+<div className="flex">
+  <Swatch className="bg-red" height="80px" />
+  <Spacer mx={8}/>
+  <Swatch className="bg-green" height="80px" />
+  <Spacer mx={8}/>
+  <Swatch className="bg-slate" height="80px" />
+</div>
+
+<Spacer my={24}/>
+
+
+## Neutral colours
+
+<Table>
+  <CopyToClipboard
+    text="#000000"
+    onCopy={() => toast.success(`Copied black #000000`)}
+  >
+    <TRow>
+      <TCol>
+        <div className="flex flex-middle">
+          <Swatch className="bg-black mr-8" height="24px" width="24px" />
+          Black
+        </div>
+      </TCol>
+      <TCol end>
+        <code>rgb(0, 0, 0)</code>
+      </TCol>
+      <TCol end>
+        <code>#000000</code>
+      </TCol>
+    </TRow>
+  </CopyToClipboard>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-90 mr-8" height="24px" width="24px" />
+        Grey 90
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(26, 26, 26)</code>
+    </TCol>
+    <TCol end>
+      <code>#1a1a1a</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-80 mr-8" height="24px" width="24px" />
+        Grey 80
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(51, 51, 51)</code>
+    </TCol>
+    <TCol end>
+      <code>#333333</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-70 mr-8" height="24px" width="24px" />
+        Grey 70
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(77, 77, 77)</code>
+    </TCol>
+    <TCol end>
+      <code>#4d4d4d</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-60 mr-8" height="24px" width="24px" />
+        Grey 60
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(102, 102, 102)</code>
+    </TCol>
+    <TCol end>
+      <code>#666666</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-50 mr-8" height="24px" width="24px" />
+        Grey 50
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(128, 128, 128)</code>
+    </TCol>
+    <TCol end>
+      <code>#808080</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-40 mr-8" height="24px" width="24px" />
+        Grey 40
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(153, 153, 153)</code>
+    </TCol>
+    <TCol end>
+      <code>#999999</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-30 mr-8" height="24px" width="24px" />
+        Grey 30
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(179, 179, 179)</code>
+    </TCol>
+    <TCol end>
+      <code>#b3b3b3</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-20 mr-8" height="24px" width="24px" />
+        Grey 20
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(204, 204, 204)</code>
+    </TCol>
+    <TCol end>
+      <code>#cccccc</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-grey-10 mr-8" height="24px" width="24px" />
+        Grey 10
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(230, 230, 230)</code>
+    </TCol>
+    <TCol end>
+      <code>#e6e6e6</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-white mr-8" height="24px" width="24px" />
+        White
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 255, 255)</code>
+    </TCol>
+    <TCol end>
+      <code>#ffffff</code>
+    </TCol>
+  </TRow>
+</Table>
+
+<Spacer my={24}/>
+
+
+
+## Orange palette
+
+<Table>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-orange-lighter mr-8" height="24px" width="24px" />
+        Orange Lighter
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 151, 86)</code>
+    </TCol>
+    <TCol end>
+      <code>#f79c63</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-orange-light mr-8" height="24px" width="24px" />
+        Orange Light
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 135, 53)</code>
+    </TCol>
+    <TCol end>
+      <code>#f78d4a</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-orange mr-8" height="24px" width="24px" />
+        Orange
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 110, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>#f77728</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-orange-dark mr-8" height="24px" width="24px" />
+        Orange Dark
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 99, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>#f76e19</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-orange-dark mr-8" height="24px" width="24px" />
+        Orange Darker
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(255, 99, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>#f75f00</code>
+    </TCol>
+  </TRow>
+</Table>
+
+<Spacer my={24}/>
+
+
+
+## Blue palette
+
+<Table>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-blue-lighter mr-8" height="24px" width="24px" />
+        Blue Lighter
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(82, 129, 210)</code>
+    </TCol>
+    <TCol end>
+      <code>#5C81cc</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-blue-light mr-8" height="24px" width="24px" />
+        Blue Light
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(56, 116, 211)</code>
+    </TCol>
+    <TCol end>
+      <code>#4774cc</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-blue mr-8" height="24px" width="24px" />
+        Blue
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(30, 102, 211)</code>
+    </TCol>
+    <TCol end>
+      <code>#3366cc</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-blue-dark mr-8" height="24px" width="24px" />
+        Blue Dark
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(0, 87, 212)</code>
+    </TCol>
+    <TCol end>
+      <code>#1F58CC</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-blue-darker mr-8" height="24px" width="24px" />
+        Blue Darker
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(0, 73, 212)</code>
+    </TCol>
+    <TCol end>
+      <code>#0A4BCC</code>
+    </TCol>
+  </TRow>
+</Table>
+
+<Spacer my={24}/>
+
+
+
+## Red palette
+
+<Table>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-red-light mr-8" height="24px" width="24px" />
+        Red Light
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(67, 204, 17)</code>
+    </TCol>
+    <TCol end>
+      <code>#d4192f</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-red mr-8" height="24px" width="24px" />
+        Red
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(36, 199, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>#d0021b</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-red-dark mr-8" height="24px" width="24px" />
+        Red Dark
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(35, 181, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>
+        #be0219
+      </code>
+    </TCol>
+  </TRow>
+</Table>
+
+<Spacer my={24}/>
+
+
+
+## Green palette
+
+<Table>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-green-light mr-8" height="24px" width="24px" />
+        Green Light
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(67, 204, 17)</code>
+    </TCol>
+    <TCol end>
+      <code>#6bc83f</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-green mr-8" height="24px" width="24px" />
+        Green
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(36, 199, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>#5dc32c</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-green-dark mr-8" height="24px" width="24px" />
+        Green Dark
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(35, 181, 0)</code>
+    </TCol>
+    <TCol end>
+      <code>
+        #1f58cc
+      </code>
+    </TCol>
+  </TRow>
+</Table>
+
+<Spacer my={24}/>
+
+
+
+## Slate palette
+
+<Table>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-slate-light mr-8" height="24px" width="24px" />
+        Slate Light
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(71, 81, 95)</code>
+    </TCol>
+    <TCol end>
+      <code>#49515e</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-slate mr-8" height="24px" width="24px" />
+        Slate
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(53, 64, 79)</code>
+    </TCol>
+    <TCol end>
+      <code>#37404E</code>
+    </TCol>
+  </TRow>
+  <TRow>
+    <TCol>
+      <div className="flex flex-middle">
+        <Swatch className="bg-slate-dark mr-8" height="24px" width="24px" />
+        Slate Dark
+      </div>
+    </TCol>
+    <TCol end>
+      <code>rgb(42, 52, 66)</code>
+    </TCol>
+    <TCol end>
+      <code>
+        #2C3441
+      </code>
+    </TCol>
+  </TRow>
+</Table>

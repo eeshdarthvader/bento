@@ -14,8 +14,6 @@ const Theme = ({children}) => {
   const menuCategory = children.props.pageContext.frontmatter.menu
   const docName = children.props.pageContext.frontmatter.name
 
-  console.log(children.props)
-
   return (
     <Fragment>
       <Helmet>
@@ -38,8 +36,8 @@ const Theme = ({children}) => {
 
           <div className="flex-1 bg-white elevation-md">
             <div
-              className="w-80p m-auto flex pb-60"
-              style={{ maxWidth: '800px' }}
+              className="w-90p m-auto flex pb-60"
+              style={{ maxWidth: '900px' }}
             >
 
               <div

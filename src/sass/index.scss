@@ -25,12 +25,13 @@ body {
 
 .content {
   padding: 32px 0;
+  padding-right: 100px;
 
   h1 {
     font-size: calculateRem(32px);
     line-height: calculateRem(44px);
     margin-bottom: calculateRem(16px);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   h2 {
