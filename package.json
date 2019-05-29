@@ -8,6 +8,7 @@
     "start": "rollup -c -w",
     "build": "rollup -c --environment MODE:production",
     "docs": "yarn gatsby develop",
+    "build:docs": "yarn gatsby build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook"
   },
@@ -50,5 +51,7 @@
     "rollup-plugin-url": "^2.2.0",
     "sass-loader": "^7.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0"
+  }
 }
