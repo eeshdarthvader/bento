@@ -1,0 +1,13 @@
+.link::before {
+    content: "/\00a0";
+    color:#666;
+    margin: auto 6px auto 8px;
+}
+    
+.link:first-child::before {
+    content: "";
+    margin-left: 0;
+}
+.link a:hover{
+    color: #4d4d4d;
+}
