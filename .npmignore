@@ -2,3 +2,5 @@
 .DS_Store
 src/
 lib/
+.cache/
+public/
