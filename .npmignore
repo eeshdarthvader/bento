@@ -1,4 +1,3 @@
-.storybook
+.storybook/
 .DS_Store
-node_modules/
-.cache
+src/
