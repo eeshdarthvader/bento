@@ -5,3 +5,7 @@ lib/
 .cache/
 public/
 .docz/
+.babelrc
+doczrc.js
+gatsby-config.js
+rollup.config.js
