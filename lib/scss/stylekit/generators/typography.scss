@@ -184,6 +184,15 @@
 }
 
 // ------------------------------
+// Text Overflow
+// ------------------------------
+@each $textOverflow, $value in config('typography.textOverflow') {
+  .t-#{$textOverflow} {
+    text-overflow: $value;
+  }
+}
+
+// ------------------------------
 // Truncate text
 // ------------------------------
 @mixin multi-truncate($lines-to-show) {

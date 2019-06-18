@@ -118,6 +118,11 @@ $config: (
     'listStyle': (
       'reset': none
     ),
+    'textOverflow': (
+      'ellipsis': ellipsis,
+      'clip': clip,
+      'unset': unset
+    ),
     'truncateText': (
       1,2,3,4,5
     )
