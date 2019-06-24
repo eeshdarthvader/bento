@@ -187,7 +187,7 @@
 // Text Overflow
 // ------------------------------
 @each $textOverflow, $value in config('typography.textOverflow') {
-  .t-#{$textOverflow} {
+  .to-#{$textOverflow} {
     text-overflow: $value;
   }
 }
