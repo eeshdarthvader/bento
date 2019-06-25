@@ -3,9 +3,30 @@ const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = ({ config }) => {
-  // Extend defaultConfig as you need.
 
-  // For example, add typescript loader:
+  // removes svg from existing rules
+  // see - https://github.com/storybookjs/storybook/issues/6188#issuecomment-487705465
+  config.module.rules = config.module.rules.map(rule => {
+    if (
+      String(rule.test) === String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/)
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      }
+    }
+
+    return rule
+  })
+
+  // use svgr for svg files
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: ["@svgr/webpack", "url-loader"],
+  })
+
+
+
   config.module.rules.push({
     test: /\.scss$/,
     loaders: ["style-loader", "css-loader", "sass-loader"],
