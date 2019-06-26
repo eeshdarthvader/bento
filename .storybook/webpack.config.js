@@ -2,17 +2,38 @@ const path = require("path");
 const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 
-module.exports = (baseConfig, env, defaultConfig) => {
-  // Extend defaultConfig as you need.
+module.exports = ({ config }) => {
 
-  // For example, add typescript loader:
-  defaultConfig.module.rules.push({
+  // removes svg from existing rules
+  // see - https://github.com/storybookjs/storybook/issues/6188#issuecomment-487705465
+  config.module.rules = config.module.rules.map(rule => {
+    if (
+      String(rule.test) === String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/)
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      }
+    }
+
+    return rule
+  })
+
+  // use svgr for svg files
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: ["@svgr/webpack", "url-loader"],
+  })
+
+
+
+  config.module.rules.push({
     test: /\.scss$/,
     loaders: ["style-loader", "css-loader", "sass-loader"],
     include: path.resolve(__dirname, "../")
   });
 
-  defaultConfig.module.rules.push({
+  config.module.rules.push({
     test: /\.(js|jsx)$/,
     include: path.resolve(appDirectory, 'src'),
     loader: require.resolve('babel-loader'),
@@ -33,8 +54,8 @@ module.exports = (baseConfig, env, defaultConfig) => {
     }
   });
 
-  defaultConfig.resolve.extensions.push(".ts", ".tsx");
-  defaultConfig.resolve.alias.Bento = path.resolve(appDirectory, "src", "bento");
+  config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.alias.Bento = path.resolve(appDirectory, "src", "bento");
 
-  return defaultConfig;
+  return config;
 };
