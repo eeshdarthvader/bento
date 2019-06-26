@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Object fit
+  Generates utility classes for object-fit
+  based on config
+---------------------------------------
+  1. Object Fit
+------------------------------------ */
+
+// ------------------------------
+// Object Fit
+// ------------------------------
+@each $object, $value in config('objectFit') {
+  .of-#{$object} {
+    object-fit: $value
+  }
+}

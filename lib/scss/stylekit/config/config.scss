@@ -19,6 +19,9 @@
   12. Overflow
   13. Position
   14. Dimensions
+  15. Z Index
+  16. Object Fit
+  17. Breakpoints
 ------------------------------------ */
 
 
@@ -162,7 +165,7 @@ $config: (
     'red': #D0021B,
     'red-dark': #be0219,
 
-    //Yellow 
+    //Yellow
     'yellow' : #ffc40d,
 
     // Neutral
@@ -340,11 +343,22 @@ $config: (
   ),
 
   // ------------------------------
+  // Object Fit
+  // ------------------------------
+  'objectFit': (
+    'fill': fill,
+    'contain': contain,
+    'cover': cover,
+    'none': none,
+    'scale-down': scale-down
+  ),
+
+  // ------------------------------
   // Breakpoints
   // ------------------------------
   'breakPoints': (
     xs: 320px, // extra small
-    sm: 480px,  // small 
-    md: 600px  // medium  
+    sm: 480px,  // small
+    md: 600px  // medium
   ),
 )
