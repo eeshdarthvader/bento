@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "babel-loader": "^8.0.6",
     "react-intersection-observer": "^8.23.0"
   }
 }
