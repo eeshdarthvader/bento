@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@svgr/rollup": "^4.1.0",
     "babel-plugin-named-asset-import": "^0.3.2",
