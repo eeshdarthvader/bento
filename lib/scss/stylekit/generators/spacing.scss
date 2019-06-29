@@ -1,6 +1,6 @@
 /* -----------------------------------
   Spacing Generator
-  Generates utilty classes for spacing
+  Generates utility classes for spacing
   based on config
 ---------------------------------------
   1. Spacers
@@ -58,7 +58,7 @@
 // Padding
 // ------------------------------
 @each $space in config(spacers) {
-  
+
   .p-#{$space} { padding: $space * 1px; }
   .pt-#{$space} { padding-top: $space * 1px; }
   .pb-#{$space} { padding-bottom: $space * 1px; }

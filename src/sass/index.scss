@@ -26,6 +26,8 @@ body {
 .content {
   padding: 32px 0;
   padding-right: 100px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   h1 {
     font-size: calculateRem(32px);
@@ -45,6 +47,12 @@ body {
     font-size: calculateRem(16px);
     line-height: calculateRem(24px);
     margin-bottom: calculateRem(16px);
+
+    &:first-of-type {
+      font-size: calculateRem(20px);
+      line-height: calculateRem(28px);
+      font-weight: 400;
+    }
   }
 
   h2 {

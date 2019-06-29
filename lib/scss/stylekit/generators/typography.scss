@@ -1,6 +1,6 @@
 /* -----------------------------------
   Typography Generator
-  Generates utilty classes for typography
+  Generates utility classes for typography
   based on config
 ---------------------------------------
   1. Font family
@@ -60,7 +60,7 @@
         font-size: nth($value, 1);
         line-height: nth($value, length($value));
       }
-    } 
+    }
   }
 }
 
