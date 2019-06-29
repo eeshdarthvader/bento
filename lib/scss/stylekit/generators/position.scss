@@ -9,7 +9,7 @@
 // ------------------------------
 // Position
 // ------------------------------
-@each $position, $value in config('position.statergies') {
+@each $position, $value in config('position.strategies') {
   .p-#{$position} {
     position: $value
   }
