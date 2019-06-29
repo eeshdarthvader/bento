@@ -28,7 +28,7 @@ const Menu = ({category, doc}) => {
             <Link
               to={menu.route}
               className="c-inherit py-8 pl-8 d-block td-none fs-body">
-              {key + 1}. {menu.name}
+              {menu.name}
             </Link>
           </li>
         )
