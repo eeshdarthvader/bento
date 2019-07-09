@@ -1,4 +1,9 @@
 
-Todo:
-  ☐ Added eslint to project
-  ☐ Use this https://www.npmjs.com/package/eslint-plugin-react-hooks
+Tooling:
+  [ ] Added eslint to project @high
+  [ ] Use this https://www.npmjs.com/package/eslint-plugin-react-hooks
+  [ ] Provide styles as separate package for use in playgrounds like codesandbox/codepen @low
+  [ ] Move token styles to a json file
+  [ ] Consider adding a theme provider
+  [ ] Add changelog
+  [ ] Backport changelog to initial release
