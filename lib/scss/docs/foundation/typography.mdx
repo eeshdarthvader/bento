@@ -3,6 +3,18 @@ name: Typography
 route: /foundation/type
 menu: Foundation
 ---
+
+
+import {
+  Container,
+  Row,
+  Col,
+  Spacer
+} from '@lib'
+
+import { Table, TRow, TCol } from '@components/Table'
+
+
 # Typography
 
 Cleartrip has always stood for attention to detail. Type is one of the major elements of our booking experience.
@@ -24,73 +36,141 @@ Bento uses system font stack for Mac, Windows and Linux to stay close to the nat
 </div>
 
 ## Font sizes
-<div class="w-100p ba bc-grey-10 br-4">
-<div class="flex flex-between p-12 bg-grey-05 c-pointer">
-<div class="flex-1 flex flex-start c-grey-50 fw-500">Type</div>
-<div class="flex-1 flex flex-start c-grey-50 fw-500">Size</div>
-<div class="flex-1 flex flex-start c-grey-50 fw-500">Line height</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-caption">
-<div class="flex-1 flex flex-startfs-caption">Caption</div>
-<div class="flex-1 flex flex-start">10px</div>
-<div class="flex-1 flex flex-start">12px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-caption-2">
-<div class="flex-1 flex flex-start">Caption-2</div>
-<div class="flex-1 flex flex-start">12px</div>
-<div class="flex-1 flex flex-start">16px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-body">
-<div class="flex-1 flex flex-start">Body</div>
-<div class="flex-1 flex flex-start">14px</div>
-<div class="flex-1 flex flex-start">20px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-body-2">
-<div class="flex-1 flex flex-start">Body-2</div>
-<div class="flex-1 flex flex-start">16px</div>
-<div class="flex-1 flex flex-start">20px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-body-3">
-<div class="flex-1 flex flex-start">Body-3</div>
-<div class="flex-1 flex flex-start">20px</div>
-<div class="flex-1 flex flex-start">28px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-heading">
-<div class="flex-1 flex flex-start">Heading</div>
-<div class="flex-1 flex flex-start">24px</div>
-<div class="flex-1 flex flex-start">32px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-heading-2">
-<div class="flex-1 flex flex-start">Heading-2</div>
-<div class="flex-1 flex flex-start">32px</div>
-<div class="flex-1 flex flex-start">44px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-heading-3">
-<div class="flex-1 flex flex-start">Heading-3</div>
-<div class="flex-1 flex flex-start">36px</div>
-<div class="flex-1 flex flex-start">48px</div>
-</div>
-<div class="flex flex-between p-12 c-pointer fs-display">
-<div class="flex-1 flex flex-start">Display</div>
-<div class="flex-1 flex flex-start">48px</div>
-<div class="flex-1 flex flex-start">56px</div>
-</div>
-</div>
+<Table>
+    <TRow class="flex flex-between p-12 bg-grey-05 c-pointer">
+        <TCol class="flex-1 flex flex-start c-grey-50 fw-500">
+            Type
+        </TCol>
+        <TCol class="flex-1 flex flex-start c-grey-50 fw-500">
+            Size
+        </TCol>
+        <TCol class="flex-1 flex flex-start c-grey-50 fw-500">
+            Line height
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-caption">
+        <TCol class="flex-1 flex flex-start">
+            Caption
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            10px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            12px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-caption-2">
+        <TCol class="flex-1 flex flex-start">
+            Caption-2
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            12px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            16px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-body">
+        <TCol class="flex-1 flex flex-start">
+            Body
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            14px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            20px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-body-2">
+        <TCol class="flex-1 flex flex-start">
+            Body-2
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            16px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            20px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-body-2">
+        <TCol class="flex-1 flex flex-start">
+            Body-3
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            20px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            28px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-heading">
+        <TCol class="flex-1 flex flex-start">
+            Heading
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            24px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            32px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-heading-2">
+        <TCol class="flex-1 flex flex-start">
+            Heading-2
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            32px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            44px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-heading-3">
+        <TCol class="flex-1 flex flex-start">
+            Heading-3
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            36px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            48px
+        </TCol>
+    </TRow>
+    <TRow class="flex flex-between p-12 c-pointer fs-display">
+        <TCol class="flex-1 flex flex-start">
+            Display
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            48px
+        </TCol>
+        <TCol class="flex-1 flex flex-start">
+            56px
+        </TCol>
+    </TRow>
 
-## Font weight
+</Table>
+
+## Available font weights
 <div class="flex">
 <span class="fs-body-2 fw-100 pr-12">100</span><span class="fs-body-2 fw-200 pr-12">200</span><span class="fs-body-2 fw-300 pr-12">300</span><span class="fs-body-2 fw-400 pr-12">400</span><span class="fs-body-2 fw-500 pr-12">500</span><span class="fs-body-2 fw-600 pr-12">600</span><span class="fs-body-2 fw-700 pr-12">700</span><span class="fs-body-2 fw-800 pr-12">800</span><span class="fs-body-2 fw-900 pr-12">900</span>
 </div>
 
 ## Letter spacing
+Defines the spacing between the characters of a block of text.
 <div>
-<div class="fs-body-2 ls-tight pb-12" style="display:block">
-Tight
+<div class="flex pb-20">
+<span class="flex flex-start w-10p fs-body-2 ls-tight">Tight</span>
+<code class="flex flex-center w-30p">letter-spacing: -1px</code>
+<span class="flex flex-1 flex-start ls-tight fs-body-2 pl-20">Tightly letter-spaced at -1px</span>
 </div>
-<div class="fs-body-2 ls-normal pb-12" style="display:block">
-Normal
+<div class="flex pb-20">
+<span class="flex flex-start w-10p fs-body-2 ls-normal">Normal</span>
+<code class="flex flex-center w-30p">letter-spacing: 0px</code>
+<span class="flex flex-1 flex-start ls-normal fs-body-2 pl-20">No additional letter-spacing applied</span>
 </div>
-<div class="fs-body-2 ls-wide pb-12" style="display:block">
-Wide
+<div class="flex pb-20">
+<span class="flex flex-start w-10p fs-body-2 ls-wide">Wide</span>
+<code class="flex flex-center w-30p">letter-spacing: 1px</code>
+<span class="flex flex-1 flex-start ls-wide fs-body-2 pl-20">No additional letter-spacing applied</span>
 </div>
 </div>
