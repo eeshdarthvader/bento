@@ -64,7 +64,11 @@ class Zoom extends React.Component {
         style={{ width: imageWidth, height: imageHeight }}
         onClick={this.toggleZoom}
       >
-        <Image pose={pose} {...props} />
+        <Image
+          pose={pose}
+          className={pose === 'zoom' ? 'zoomed' : ''}
+          {...props}
+        />
         <Frame pose={pose} className="frame" />
       </div>
     );
