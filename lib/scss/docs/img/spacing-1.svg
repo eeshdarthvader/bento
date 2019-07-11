@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="383px" height="111px" viewBox="0 0 383 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="383" height="111"></rect>
+        <g id="Group" transform="translate(10.000000, 8.000000)">
+            <text id="4px" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#F77728">
+                <tspan x="334" y="15">4px</tspan>
+            </text>
+            <rect id="Rectangle" fill="#333333" x="0" y="5" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="13" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="21" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="29" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="37" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="45" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="53" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="61" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="69" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="77" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="85" width="325" height="1"></rect>
+            <rect id="Rectangle" fill="#333333" x="0" y="93" width="325" height="1"></rect>
+        </g>
+        <polyline id="Path-2" stroke="#F77728" stroke-linecap="square" points="339 14 341 14 341 21 339 21"></polyline>
+    </g>
+</svg>
