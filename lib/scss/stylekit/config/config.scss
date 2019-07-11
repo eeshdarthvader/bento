@@ -1,7 +1,6 @@
 /* -----------------------------------
   Stylekit
   A Sass bases utility class framework
-  @author Indrashish Ghosh <mail@indrashishghosh.com>
   @package Stylekit
   @version 0.1.0
 ---------------------------------------
@@ -22,6 +21,9 @@
   15. Z Index
   16. Object Fit
   17. Breakpoints
+  18. Background Size
+  19. Background Repeat
+  20. Background Position
 ------------------------------------ */
 
 
@@ -29,7 +31,7 @@ $config: (
 
 
   // ------------------------------
-  // Spacers
+  // 1. Spacers
   // ------------------------------
   'spacers': (
     0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60
@@ -37,7 +39,7 @@ $config: (
 
 
   // ------------------------------
-  // Typography
+  // 2. Typography
   // ------------------------------
   'typography': (
     'fontFamily': (
@@ -133,7 +135,7 @@ $config: (
 
 
   // ------------------------------
-  // Colors
+  // 3. Colors
   // ------------------------------
   'colors': (
     // Blue
@@ -187,7 +189,7 @@ $config: (
 
 
   // ------------------------------
-  // Borders
+  // 4. Borders
   // ------------------------------
   'borders': (
     'borderStyle': (
@@ -206,7 +208,7 @@ $config: (
 
 
   // ------------------------------
-  // Box Shadow
+  // 5. Box Shadow
   // ------------------------------
   'boxShadow': (
     'sm': 0 2px 8px rgba(59,64,69,.1),
@@ -217,7 +219,7 @@ $config: (
 
 
   // ------------------------------
-  // Box Sizing
+  // 6. Box Sizing
   // ------------------------------
   'boxSize': (
     'content': content-box,
@@ -227,7 +229,7 @@ $config: (
 
 
   // ------------------------------
-  // Cursors
+  // 7. Cursors
   // ------------------------------
   'cursor': (
     'auto': auto,
@@ -240,7 +242,7 @@ $config: (
 
 
   // ------------------------------
-  // Display
+  // 8. Display
   // ------------------------------
   'display': (
     'block': block,
@@ -254,7 +256,7 @@ $config: (
 
 
   // ------------------------------
-  // Floats
+  // 9. Floats
   // ------------------------------
   'float': (
     'left': left,
@@ -264,7 +266,7 @@ $config: (
 
 
   // ------------------------------
-  // Grid
+  // 10. Grid
   // ------------------------------
   'grid': (
     'gridWidth': 1140px,
@@ -274,7 +276,7 @@ $config: (
 
 
   // ------------------------------
-  // Opacity
+  // 11. Opacity
   // ------------------------------
   'opacity': (
     0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
@@ -282,7 +284,7 @@ $config: (
 
 
   // ------------------------------
-  // Overflow
+  // 12. Overflow
   // ------------------------------
   'overflow': (
     'auto': auto,
@@ -293,10 +295,10 @@ $config: (
 
 
   // ------------------------------
-  // Positon
+  // 13. Position
   // ------------------------------
   'position': (
-    'statergies': (
+    'strategies': (
       'absolute': absolute,
       'fixed': fixed,
       'relative': relative,
@@ -310,7 +312,7 @@ $config: (
 
 
   // ------------------------------
-  // Dimensions
+  // 14. Dimensions
   // ------------------------------
   'dimensions': (
     'width': (
@@ -336,14 +338,14 @@ $config: (
   ),
 
   // ------------------------------
-  // Z-index
+  // 15. Z-index
   // ------------------------------
   'z-index': (
     0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
   ),
 
   // ------------------------------
-  // Object Fit
+  // 16. Object Fit
   // ------------------------------
   'objectFit': (
     'fill': fill,
@@ -354,11 +356,45 @@ $config: (
   ),
 
   // ------------------------------
-  // Breakpoints
+  // 17. Breakpoints
   // ------------------------------
   'breakPoints': (
     xs: 320px, // extra small
     sm: 480px,  // small
     md: 600px  // medium
+  ),
+
+  // ------------------------------
+  // 18. Background Size
+  // ------------------------------
+  'backgroundSize': (
+    'auto': auto,
+    'cover': cover,
+    'contain': contain
+  ),
+
+  // ------------------------------
+  // 19. Background Repeat
+  // ------------------------------
+  'backgroundRepeat': (
+    'repeat': repeat,
+    'no-repeat': no-repeat,
+    'repeat-x': repeat-x,
+    'repeat-y': repeat-y
+  ),
+
+  // ------------------------------
+  // 20. Background Position
+  // ------------------------------
+  'backgroundPosition': (
+    'bottom': bottom,
+    'center': center,
+    'left': left,
+    'left-bottom': left bottom,
+    'left-top': left top,
+    'right': right,
+    'right-bottom': right bottom,
+    'right-top': right top,
+    'top': top
   ),
 )

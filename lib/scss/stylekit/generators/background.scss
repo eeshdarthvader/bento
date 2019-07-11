@@ -1,0 +1,37 @@
+/* -----------------------------------
+  Background Generator
+  Generates utility classes for background image elements
+  based on config
+---------------------------------------
+  1. Background Size
+  2. Background Repeat
+  3. Background Position
+------------------------------------ */
+
+// ------------------------------
+// Background Size
+// ------------------------------
+@each $size, $value in config('backgroundSize') {
+  .bs-#{$size} {
+    background-size: $value
+  }
+}
+
+// ------------------------------
+// Background Repeat
+// ------------------------------
+@each $repeat, $value in config('backgroundSize') {
+  .br-#{$repeat} {
+    background-repeat: $value
+  }
+}
+
+
+// ------------------------------
+// Background Position
+// ------------------------------
+@each $position, $value in config('backgroundSize') {
+  .bp-#{$position} {
+    background-position: $value
+  }
+}

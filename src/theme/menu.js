@@ -1,5 +1,6 @@
 import React from 'react';
-import { useMenus, Link } from 'docz'
+import { useMenus } from 'docz'
+import { Link } from 'gatsby'
 import classnames from 'classnames'
 
 const Menu = ({category, doc}) => {
