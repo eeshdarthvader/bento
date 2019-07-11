@@ -1,3 +1,5 @@
+// TODO: Remove this from bento.
+// Should be place at application level
 .Header {
   background: #f7f7f7;
   text-align: center;
@@ -271,7 +273,7 @@
 }
 .darkBody .productLinks li,
 .darkBody .listMenuContainer,
-.darkBody .productLinks li:first-child,
+.darkBody .productLinks li:first-of-type,
 .darkBody .ctMainMenu {
   border-color: #454546;
   border-color: rgba(255, 255, 255, 0.15);
@@ -580,7 +582,7 @@ section#GlobalNav {
   padding: 0;
   border-right: 1px solid #ddd;
 }
-.productLinks li:first-child {
+.productLinks li:first-of-type {
   border-left: 1px solid #ddd;
 }
 .productLinks a {
@@ -1054,7 +1056,7 @@ input.swSearchField:focus {
   margin: 0 0 0 4px;
   vertical-align: middle;
 }
-.socialShare li:first-child {
+.socialShare li:first-of-type {
   margin-right: 6px;
   color: #666;
   border-right: 1px solid #ddd;
@@ -1066,14 +1068,14 @@ input.swSearchField:focus {
 .socialShare li .connect {
   text-shadow: none;
 }
-.darkBody .socialShare li:first-child {
+.darkBody .socialShare li:first-of-type {
   border-color: #454546;
   border-color: rgba(255, 255, 255, 0.15);
 }
-.darkBody .socialShare li:first-child a {
+.darkBody .socialShare li:first-of-type a {
   text-decoration: none;
   color: #fff;
 }
-.darkBody .socialShare li:first-child a:hover {
+.darkBody .socialShare li:first-of-type a:hover {
   text-decoration: underline;
 }

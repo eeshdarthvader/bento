@@ -3,8 +3,8 @@
     color:#666;
     margin: auto 6px auto 8px;
 }
-    
-.link:first-child::before {
+
+.link:first-of-type::before {
     content: "";
     margin-left: 0;
 }
