@@ -94,6 +94,27 @@ body {
   }
 
   img {
+    cursor: zoom-in;
+    display: block;
     max-width: 100%;
+    margin: auto;
+    z-index: 11;
   }
+
+  img.zoomed {
+    cursor: zoom-out;
+  }
+}
+
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateZ(0);
+  z-index: 10; // to make it cover the header
 }

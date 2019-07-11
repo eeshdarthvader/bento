@@ -5,5 +5,10 @@ Tooling:
   [ ] Provide styles as separate package for use in playgrounds like codesandbox/codepen @low
   [ ] Move token styles to a json file
   [ ] Consider adding a theme provider
+
+
+
+Docs:
   [ ] Add changelog
   [ ] Backport changelog to initial release
+  [ ] Add prev/next page to docs - http://localhost:8000/___graphql?query=%7B%0A%20%20allDoczEntries%20%7B%0A%20%20%20%20distinct(field%3A%20id)%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20next%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20route%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20previous%20%7B%0A%20%20%20%20%20%20%20%20menu%0A%20%20%20%20%20%20%20%20route%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A

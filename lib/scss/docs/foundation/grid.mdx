@@ -4,6 +4,13 @@ route: /foundation/grid
 menu: Foundation
 ---
 
+import Image from '@components/Image.js'
+
+import GridCols from '../img/grid-cols.png'
+import GridLayouts from '../img/grid-layouts.png'
+import GridAround from '../img/grid-around.png'
+import GridHoly from '../img/grid-holy.png'
+
 # Grid
 
 The grid system helps maintain a horizontal rhythm to the page. All major layout-ing elements should line up to the columns.
@@ -18,14 +25,22 @@ The container constrains the grid system to a max width of `1140px`. On smaller 
 
 The grid composes 24 columns of `32px` each with gutters of `16px`. All borders and paddings are included within the widths, since `border-box` is applied on the grid.
 
-![Grid columns](../img/grid-cols.png)
+<Image
+  imageWidth={620}
+  imageHeight={346}
+  src={GridCols}
+/>
 
 
 ## Mixed grids
 
 The grid layout can be easily extended by mixing different column sizes. It is also possible to nests columns within a single column.
 
-![Grid layouts](../img/grid-layouts.png)
+<Image
+  imageWidth={620}
+  imageHeight={346}
+  src={GridLayouts}
+/>
 
 
 ## Offset
@@ -39,10 +54,18 @@ You chose to leave a gap of a few columns between elements.
 
 In the example below is a multi column layout centered on the page,while leaving a gap of `2 col` on either side.
 
-![Grid around](../img/grid-around.png)
+<Image
+  imageWidth={620}
+  imageHeight={346}
+  src={GridAround}
+/>
 
 <div className="mt-40" />
 
 This layout is an example of a 3 col layout with each section taking up different numer of columns.
 
-![Grid holy](../img/grid-holy.png)
+<Image
+  imageWidth={620}
+  imageHeight={346}
+  src={GridHoly}
+/>
