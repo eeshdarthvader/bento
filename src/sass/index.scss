@@ -80,6 +80,7 @@ body {
       font-size: calculateRem(20px);
       line-height: calculateRem(28px);
       font-weight: 400;
+      margin-bottom: calculateRem(40px);
     }
   }
 
@@ -94,14 +95,18 @@ body {
   }
 
   img {
-    cursor: zoom-in;
     display: block;
     max-width: 100%;
     margin: auto;
     z-index: 11;
   }
 
+  img.zoomable {
+    cursor: zoom-in;
+  }
+
   img.zoomed {
+    margin: auto;
     cursor: zoom-out;
   }
 }
@@ -117,4 +122,15 @@ body {
   background: rgba(255, 255, 255, 0.95);
   transform: translateZ(0);
   z-index: 10; // to make it cover the header
+}
+
+.wc-transform {
+  will-change: transform;
+  transition: transform 280ms ease-in-out;
+}
+
+.hover\:translate {
+    &:hover {
+      transform: translate3d(-2px,0,0) !important;
+    }
 }

@@ -1,0 +1,68 @@
+---
+name: Media
+route: /foundation/media
+menu: Foundation
+---
+
+import {
+  Row,
+  Col
+} from '@lib'
+
+import Image from '@components/Image.js'
+
+import MediaRatios from '../img/media-ratios.png'
+import MediaBaseline from '../img/media-baseline.jpg'
+import MediaCard from '../img/media-card.png'
+import MediaGrid from '../img/media-grid.png'
+
+# Media
+
+Standardized sizes for media objects.
+
+Instead of using arbitatry sizes, we reccomend a few aspect ratios to define the width/height of any kind of media object on the page. This could be an image, video, gif, icons, etc.
+
+The aspect ratios are usually written in the format of `width:height`
+
+## Ratios
+
+We use and recommend the following ratios:-
+
+<Image src={MediaRatios} />
+
+## Baseline
+
+Make sure that the height of the media object is in multiples of 4. This will ensure that the objects aligns perfectly with our baseline.
+
+<img src={MediaBaseline} width="50%" style={{ margin: 0 }}/>
+
+## Examples
+
+<Row className="mt-40 mb-60">
+  <Col span={24}>
+    <img src={MediaGrid} />
+  </Col>
+  <Col span={24} className="mt-12">
+    <span className="fs-body-2 lh-copy mb-8 d-block">
+      An example of an image grid with each media item falling within the constraints of the <code>1:1</code> ratio.
+    </span>
+  </Col>
+</Row>
+
+
+
+
+<Row className="my-40">
+  <Col>
+    <img src={MediaCard} />
+  </Col>
+  <Col offset={1}>
+    <span className="fs-body-2 lh-copy mb-8 d-block">
+      The image on the card has a ratio of <code>3:4</code>.
+    </span>
+    <br />
+    <span className="fs-body-2 lh-copy d-block">
+      For slightly taller images the <code>3:2</code> or the <code>3:4</code> ratio could be used as well.
+    </span>
+  </Col>
+</Row>

@@ -66,7 +66,7 @@ class Zoom extends React.Component {
       >
         <Image
           pose={pose}
-          className={pose === 'zoom' ? 'zoomed' : ''}
+          className={pose === 'zoom' ? 'zoomed' : 'zoomable'}
           {...props}
         />
         <Frame pose={pose} className="frame" />
