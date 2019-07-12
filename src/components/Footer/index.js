@@ -8,6 +8,8 @@ import {
 
 import UpIcon from './icons/up.svg'
 
+var PackageInfo = require('../../../package.json');
+
 const Footer = props => {
   const scrollToTop = () => {
     if (typeof window !== 'undefined' && window.requestAnimationFrame) {
@@ -31,7 +33,7 @@ const Footer = props => {
                     Bento - Cleartrip Design System
                   </p>
                   <p className="fs-caption-2 c-grey-40">
-                    Version - 0.1.1
+                    Version - {PackageInfo.version}
                   </p>
                 </div>
                 <div className="flex">
