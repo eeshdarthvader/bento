@@ -67,6 +67,74 @@
 }
 
 // ------------------------------
+// New Colors
+// ------------------------------
+@each $palette, $map in config('semanticColors') {
+  @each $color, $value in $map {
+
+  .c-#{$palette}-#{$color} {
+    color: $value;
+  }
+  .hover\:c-#{$palette}-#{$color} {
+    &:hover { color: $value; }
+  }
+  .group-hover\:c-#{$palette}-#{$color} {
+    .group:hover & {
+      color: $value;
+    }
+  }
+  .active\:c-#{$palette}-#{$color} {
+    &:active { color: $value; }
+  }
+  .focus\:c-#{$palette}-#{$color} {
+    &:focus { color: $value; }
+  }
+
+  .bg-#{$palette}-#{$color} {
+    background-color: $value;
+  }
+  .hover\:bg-#{$palette}-#{$color} {
+    &:hover { background-color: $value; }
+  }
+  .group-hover\:bg-#{$palette}-#{$color} {
+    .group:hover & {
+      background-color: $value;
+    }
+  }
+  .active\:bg-#{$palette}-#{$color} {
+    &:active { background-color: $value; }
+  }
+  .focus\:bg-#{$palette}-#{$color} {
+    &:focus { background-color: $value; }
+  }
+
+  .bc-#{$palette}-#{$color} {
+    border-color: $value;
+  }
+  .hover\:bc-#{$palette}-#{$color} {
+    &:hover { border-color: $value; }
+  }
+  .group-hover\:bc-#{$palette}-#{$color} {
+    .group:hover & {
+      border-color: $value;
+    }
+  }
+  .active\:bc-#{$palette}-#{$color} {
+    &:active { border-color: $value; }
+  }
+  .focus\:bc-#{$palette}-#{$color} {
+    &:focus { border-color: $value; }
+  }
+
+  }
+}
+
+
+// ------------------------------
+// Aliases
+// ------------------------------
+
+// ------------------------------
 // Inherit Color
 // ------------------------------
 .c-inherit {
