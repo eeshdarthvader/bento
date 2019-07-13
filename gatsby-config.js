@@ -7,6 +7,13 @@ module.exports = {
       resolve: 'gatsby-plugin-sass'
     },
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#F77728`,
+        showSpinner: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
