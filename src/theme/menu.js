@@ -16,12 +16,13 @@ const Menu = ({category, doc}) => {
   return (
     <ul className="mt-32 mx-20">
       {menuItems.map((menu, key) => {
-        const liClass = classnames('br-2', {
-          'c-grey-50': menu.name !== doc,
-          'hover:bg-grey-10': menu.name !== doc,
-          'hover:bg-blue': menu.name === doc,
-          'bg-blue': menu.name === doc,
-          'c-white': menu.name === doc
+        const liClass = classnames('br-2 wc-transform', {
+          'c-tertiary-400': menu.name !== doc,
+          'hover:translate': menu.name !== doc,
+          'hover:c-tertiary-500': menu.name !== doc,
+          'hover:bg-secondary-100': menu.name === doc,
+          'bg-secondary-100': menu.name === doc,
+          'c-secondary-500': menu.name === doc
         })
 
         return (
@@ -29,7 +30,7 @@ const Menu = ({category, doc}) => {
             <Link
               to={menu.route}
               className="c-inherit py-8 pl-8 d-block td-none fs-body">
-              {menu.name}
+              {key + 1}. {menu.name}
             </Link>
           </li>
         )
