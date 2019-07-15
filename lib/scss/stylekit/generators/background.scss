@@ -30,7 +30,7 @@
 // ------------------------------
 // Background Position
 // ------------------------------
-@each $position, $value in config('backgroundSize') {
+@each $position, $value in config('backgroundPosition') {
   .bp-#{$position} {
     background-position: $value
   }

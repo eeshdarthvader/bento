@@ -94,7 +94,7 @@ Used to set the background properties of an element
   <Sandbox.Preview>
     <div
       alt="random image"
-      className="bs-cover br-no-repeat bg-neutral-100 w-100p"
+      className="bs-cover br-no-repeat bg-tertiary-100 w-100p"
       style={{
         height: '200px',
         backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
@@ -103,7 +103,7 @@ Used to set the background properties of an element
     <Spacer my={8} />
     <div
       alt="random image"
-      className="bs-contain br-no-repeat bg-neutral-100 w-100p"
+      className="bs-contain br-no-repeat bg-tertiary-100 w-100p"
       style={{
         height: '200px',
         backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
@@ -112,7 +112,7 @@ Used to set the background properties of an element
     <Spacer my={8} />
     <div
       alt="random image"
-      className="bs-auto br-no-repeat bg-neutral-100 w-100p"
+      className="bs-auto br-no-repeat bg-tertiary-100 w-100p"
       style={{
         height: '200px',
         backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
@@ -120,9 +120,159 @@ Used to set the background properties of an element
     />
   </Sandbox.Preview>
   <Sandbox.Code>
-    <img className="bg-cover" src="..."/>
-    <img className="bg-contain" src="..."/>
-    <img className="bg-auto" src="..."/>
+    <div className="bs-cover"/>
+    <div className="bs-contain"/>
+    <div className="bs-auto"/>
   </Sandbox.Code>
 </Sandbox>
 
+
+
+## Background repeat
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div
+      alt="random image"
+      className="br-repeat bp-center bg-tertiary-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-center bg-tertiary-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-repeat-x bp-center bg-tertiary-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-repeat-y bp-center bg-tertiary-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="br-repeat"/>
+    <div className="br-no-repeat"/>
+    <div className="br-repeat-x"/>
+    <div className="br-no-repeat-y"/>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+
+## Background position
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div
+      alt="random image"
+      className="br-no-repeat bp-center bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-top bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-right-top bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-right bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-right-bottom bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-bottom bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-left-bottom bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-left bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="br-no-repeat bp-left-top bg-tertiary-100 w-100p"
+      style={{
+        height: '140px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+      }}
+    />
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="bp-center"/>
+    <div className="bp-top"/>
+    <div className="bp-right-top"/>
+    <div className="bp-right"/>
+    <div className="bp-right-bottom"/>
+    <div className="bp-bottom"/>
+    <div className="bp-left-bottom"/>
+    <div className="bp-left"/>
+    <div className="bp-left-top"/>
+  </Sandbox.Code>
+</Sandbox>
