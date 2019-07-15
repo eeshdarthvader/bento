@@ -14,6 +14,16 @@
   background: #FFFBD7;
 }
 
+.table {
+  code {
+    background-color: transparent !important;
+    border: 0 !important;
+    color: #3366cc !important;
+    line-height: calculateRem(24px);
+    font-size: calculateRem(14px);
+  }
+}
+
 
 body {
   min-height: 100vh;

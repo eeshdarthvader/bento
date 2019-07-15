@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 const Table = props => {
   return (
-    <div className="w-100p br-4" {...props}>
+    <div className="table w-100p br-4 box-border" {...props}>
       {props.children}
     </div>
   )
@@ -11,7 +11,7 @@ const Table = props => {
 
 const TRow = props => {
   return (
-    <div className="flex flex-between p-12 hover:bg-grey-05 c-pointer" {...props}>
+    <div className="flex flex-between p-12 hover:bg-grey-05 c-pointer box-border" {...props}>
       {props.children}
     </div>
   )
