@@ -3,7 +3,7 @@ import { TCol } from '../Table'
 
 const Output = ({ children }) => {
   return (
-    <TCol class="flex-1 flex flex-start">
+    <TCol className="flex-1 flex flex-start">
       <code
         style={{
           color: '#37404E',
