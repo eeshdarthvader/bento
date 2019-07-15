@@ -48,7 +48,7 @@ const Theme = ({children}) => {
 
               <div className="toc w-20p">
                 <Sticky enabled={true} top={30}>
-                  <div className="ml-60">
+                  <div className="ml-12">
                     <p className="fs-caption fw-600 c-blue tt-uppercase mt-60 mb-8 ls-wide">
                       Jump to
                       </p>

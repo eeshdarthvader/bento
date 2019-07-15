@@ -12,7 +12,7 @@ const Box = posed.div({
 })
 
 
-const Swatches = ({name, color, dark}) => {
+const Swatches = ({ name, color, dark }) => {
 
   const [copied, setCopyStatus] = useState(false)
 
@@ -38,9 +38,9 @@ const Swatches = ({name, color, dark}) => {
       onCopy={handeCopy}
     >
       <Box className={classes}>
-      {
+        {
           copied && <div>Copied to clipboard!</div>
-      }
+        }
         {
           !copied &&
           <>

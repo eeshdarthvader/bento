@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 const Table = props => {
   return (
-    <div className="w-100p ba bc-grey-10 br-4" {...props}>
+    <div className="w-100p br-4" {...props}>
       {props.children}
     </div>
   )
