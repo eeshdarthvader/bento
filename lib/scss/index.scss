@@ -1,2 +1,5 @@
-@import "stylekit/stylekit";
+@import 'config/config';
+@import 'helpers/helpers';
+@import 'generators/generators';
+
 @import "header";
