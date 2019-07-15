@@ -13,14 +13,14 @@
   padding: 12px;
 
   p {
-    font-size: calculateRem(16px);
-    line-height: calculateRem(24px);
+    font-size: 14px;
+    line-height: 24px;
     margin: 0;
 
     &:first-of-type {
-      margin: 0;
-      font-size: calculateRem(16px);
-      line-height: calculateRem(24px);
+      margin: 0 !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
     }
   }
 }
@@ -34,7 +34,8 @@
       background-color: transparent !important;
       border: 0 !important;
       color: #6290E0 !important;
-      line-height: calculateRem(24px);
+      line-height: 24px !important;
+      font-size: 14px !important;
     }
   }
 }

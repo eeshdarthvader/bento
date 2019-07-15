@@ -11,6 +11,7 @@ import {
   Spacer
 } from '@lib'
 
+import Sandbox from '@components/Sandbox'
 import ColorTable from './color.js'
 
 
@@ -51,4 +52,93 @@ Color variables to use inplace of hardcoded values
 
 ## Neutral palette
 <ColorTable palette="neutral" />
+<Spacer my={24}/>
+
+
+## Text color
+Text colour classes take on the syntax of `.c-{palette}-{shade}`.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <p className="c-secondary-500 m-0">
+      The quick brown fox jumped over the lazy dog
+    </p>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="c-secondary-500">...</p>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={24}/>
+
+
+
+## Background colour
+Similar to text colours, background classes take on the syntax of `.bg-{palette}-{shade}`.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <button
+      className="button bs-solid bw-1 br-4 lh-solid box-border h-36 fs-body-2 px-16 py-8 bg-primary-500 c-white c-pointer bc-transparent"
+    >
+      Button
+    </button>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <button className="bg-primary-500">...</button>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={24}/>
+
+
+
+## Border colour
+Border colours also take take on the syntax of `.bg-{palette}-{shade}`.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <button
+      className="button bs-solid bw-1 br-4 lh-solid box-border h-36 fs-body-2 px-16 py-8 bg-transparent c-primary-500 c-pointer bc-primary-500"
+    >
+      Button
+    </button>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <button className="bc-primary-500">...</button>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={24}/>
+
+
+
+## Hoverable
+All color classes support a `hover:` modifier. The syntax is `.hover:bg-{palette}-{shade}`.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <p className="c-secondary-500 hover:c-primary-500 m-0 c-pointer">
+      The quick brown fox jumped over the lazy dog
+    </p>
+  </Sandbox.Preview>
+  <Spacer my={8} />
+  <Sandbox.Preview>
+    <button
+      className="button bc-transparent br-4 lh-solid box-border h-36 fs-body-2 px-16 py-8 bg-transparent c-white bg-primary-500 hover:bg-primary-600 c-pointer"
+    >
+      Button
+    </button>
+  </Sandbox.Preview>
+  <Spacer my={8} />
+  <Sandbox.Preview>
+      <button
+        className="button bs-solid bw-1 br-4 lh-solid box-border h-36 fs-body-2 px-16 py-8 bg-transparent c-primary-500 hover:c-primary-800 c-pointer bc-primary-500 hover:bc-primary-800"
+      >
+        Button
+      </button>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="c-secondary-500 hover:c-primary-500">...</p>
+    <button className="bg-primary-500 hover:bg-primary-600">...</button>
+    <button className="bc-primary-500 hover:bc-primary-800">...</button>
+  </Sandbox.Code>
+</Sandbox>
 <Spacer my={24}/>
