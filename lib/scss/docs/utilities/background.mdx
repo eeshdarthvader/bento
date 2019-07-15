@@ -3,7 +3,16 @@ name: Background
 route: /utilities/background
 menu: Utilities
 ---
-import { Reference, Property, Name, Output } from '@components/Reference'
+import {
+  Spacer
+} from '@lib'
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+import Sandbox from '@components/Sandbox'
 
 # Background
 
@@ -21,8 +30,8 @@ Used to set the background properties of an element
         <Output>background-size: cover;</Output>
     </Property>
     <Property>
-        <Name>.bs-auto</Name>
-        <Output>background-size: auto;</Output>
+        <Name>.bs-contain</Name>
+        <Output>background-size: contain;</Output>
     </Property>
     <Property>
         <Name>.br-repeat</Name>
@@ -77,3 +86,43 @@ Used to set the background properties of an element
         <Output>background-position: top;</Output>
     </Property>
 </Reference>
+
+
+## Background size
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div
+      alt="random image"
+      className="bs-cover br-no-repeat bg-neutral-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="bs-contain br-no-repeat bg-neutral-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+      }}
+    />
+    <Spacer my={8} />
+    <div
+      alt="random image"
+      className="bs-auto br-no-repeat bg-neutral-100 w-100p"
+      style={{
+        height: '200px',
+        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+      }}
+    />
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <img className="bg-cover" src="..."/>
+    <img className="bg-contain" src="..."/>
+    <img className="bg-auto" src="..."/>
+  </Sandbox.Code>
+</Sandbox>
+

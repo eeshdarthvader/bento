@@ -20,7 +20,7 @@
 // ------------------------------
 // Background Repeat
 // ------------------------------
-@each $repeat, $value in config('backgroundSize') {
+@each $repeat, $value in config('backgroundRepeat') {
   .br-#{$repeat} {
     background-repeat: $value
   }
