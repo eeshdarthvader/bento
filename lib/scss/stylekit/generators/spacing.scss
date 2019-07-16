@@ -1,0 +1,166 @@
+/* -----------------------------------
+  Spacing Generator
+  Generates utility classes for spacing
+  based on config
+---------------------------------------
+  1. Spacers
+  2. Margin
+  3. Padding
+------------------------------------ */
+
+// ------------------------------
+// Spacer
+// ------------------------------
+@each $space in config(spacers) {
+  .spacer-#{$space} {
+    display: block;
+    height: $space + px;
+  }
+}
+
+
+// ------------------------------
+// Margin
+// ------------------------------
+@each $space in config(spacers) {
+  .m-#{$space} { margin: $space * 4px; }
+  .mt-#{$space} { margin-top: $space * 4px; }
+  .mb-#{$space} { margin-bottom: $space * 4px; }
+  .ml-#{$space} { margin-left: $space * 4px; }
+  .mr-#{$space} { margin-right: $space * 4px; }
+  .mx-#{$space} {
+    margin-right: $space * 4px;
+    margin-left: $space * 4px;
+  }
+  .my-#{$space} {
+    margin-top: $space * 4px;
+    margin-bottom: $space * 4px;
+  }
+
+  .nmt-#{$space} { margin-top: (-4 * $space) + px; }
+  .nmb-#{$space} { margin-bottom: (-4 * $space) + px; }
+  .nml-#{$space} { margin-left: (-4 * $space) + px; }
+  .nmr-#{$space} { margin-right: (-4 * $space) + px; }
+  .nmx-#{$space} {
+    margin-right: (-4 * $space) + px;
+    margin-left: (-4 * $space) + px;
+  }
+  .nmy-#{$space} {
+    margin-top: (-4 * $space) + px;
+    margin-bottom: (-4 * $space) + px;
+  }
+
+  .m-auto { margin: auto; }
+}
+
+
+// ------------------------------
+// Padding
+// ------------------------------
+@each $space in config(spacers) {
+
+  .p-#{$space} { padding: $space * 4px; }
+  .pt-#{$space} { padding-top: $space * 4px; }
+  .pb-#{$space} { padding-bottom: $space * 4px; }
+  .pl-#{$space} { padding-left: $space * 4px; }
+  .pr-#{$space} { padding-right: $space * 4px; }
+  .px-#{$space} {
+    padding-right: $space * 4px;
+    padding-left: $space * 4px;
+  }
+  .py-#{$space} {
+    padding-top: $space * 4px;
+    padding-bottom: $space * 4px;
+  }
+
+  .npt-#{$space} { padding-top: (-4 * $space) + px; }
+  .npb-#{$space} { padding-bottom: (-4 * $space) + px; }
+  .npl-#{$space} { padding-left: (-4 * $space) + px; }
+  .npr-#{$space} { padding-right: (-4 * $space) + px; }
+  .npx-#{$space} {
+    padding-right: (-4 * $space) + px;
+    padding-left: (-4 * $space) + px;
+  }
+  .npy-#{$space} {
+    padding-top: (-4 * $space) + px;
+    padding-bottom: (-4 * $space) + px;
+  }
+}
+
+
+
+
+// ------------------------------
+// Padding responsive
+// ------------------------------
+
+@each $space in config(spacers) {
+  @each $key,$value in config('breakPoints') {
+    @include break($key) {
+      .p-#{$space}--#{$key} { padding: $space * 4px; }
+      .pt-#{$space}--#{$key} { padding-top: $space * 4px; }
+      .pb-#{$space}--#{$key} { padding-bottom: $space * 4px; }
+      .pl-#{$space}--#{$key} { padding-left: $space * 4px; }
+      .pr-#{$space}--#{$key} { padding-right: $space * 4px; }
+      .px-#{$space}--#{$key} {
+        padding-right: $space * 4px;
+        padding-left: $space * 4px;
+      }
+      .py-#{$space}--#{$key} {
+        padding-top: $space * 4px;
+        padding-bottom: $space * 4px;
+      }
+
+      .npt-#{$space}--#{$key} { padding-top: (-4 * $space) + px; }
+      .npb-#{$space}--#{$key} { padding-bottom: (-4 * $space) + px; }
+      .npl-#{$space}--#{$key} { padding-left: (-4 * $space) + px; }
+      .npr-#{$space}--#{$key} { padding-right: (-4 * $space) + px; }
+      .npx-#{$space}--#{$key} {
+        padding-right: (-4 * $space) + px;
+        padding-left: (-4 * $space) + px;
+      }
+      .npy-#{$space}--#{$key} {
+        padding-top: (-4 * $space) + px;
+        padding-bottom: (-4 * $space) + px;
+      }
+    }
+  }
+}
+
+
+// ------------------------------
+// margin responsive
+// ------------------------------
+
+@each $space in config(spacers) {
+  @each $key,$value in config('breakPoints') {
+    @include break($key) {
+      .m-#{$space}--#{$key} { margin: $space * 4px; }
+      .mt-#{$space}--#{$key} { margin-top: $space * 4px; }
+      .mb-#{$space}--#{$key} { margin-bottom: $space * 4px; }
+      .ml-#{$space}--#{$key} { margin-left: $space * 4px; }
+      .mr-#{$space}--#{$key} { margin-right: $space * 4px; }
+      .mx-#{$space}--#{$key} {
+        margin-right: $space * 4px;
+        margin-left: $space * 4px;
+      }
+      .my-#{$space}--#{$key} {
+        margin-top: $space * 4px;
+        margin-bottom: $space * 4px;
+      }
+
+      .nmt-#{$space}--#{$key} { margin-top: (-4 * $space) + px; }
+      .nmb-#{$space}--#{$key} { margin-bottom: (-4 * $space) + px; }
+      .nml-#{$space}--#{$key} { margin-left: (-4 * $space) + px; }
+      .nmr-#{$space}--#{$key} { margin-right: (-4 * $space) + px; }
+      .nmx-#{$space}--#{$key} {
+        margin-right: (-4 * $space) + px;
+        margin-left: (-4 * $space) + px;
+      }
+      .nmy-#{$space}--#{$key} {
+        margin-top: (-4 * $space) + px;
+        margin-bottom: (-4 * $space) + px;
+      }
+    }
+  }
+}
