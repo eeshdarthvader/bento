@@ -95,10 +95,6 @@ body {
   }
 
   code {
-    // background-color: #F7FBFF;
-    // color: #3366cc;
-    // border: solid 1px #D6E8FC;
-
     background-color: #FFF9F5;
     color: #FF3C2B;
     border:solid 1px #FFE5D4;
@@ -107,6 +103,7 @@ body {
     font-weight: 500;
     padding: 2px 4px;
     border-radius: 4px;
+    white-space: pre;
   }
 
   img {
