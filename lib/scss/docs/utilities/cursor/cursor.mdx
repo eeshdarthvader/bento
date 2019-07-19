@@ -1,0 +1,155 @@
+---
+name: Cursor
+route: /utilities/cursor
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import { Spacer } from '@lib'
+import Sandbox from '@components/Sandbox'
+
+
+# Cursor
+
+Utility classes to change pointer behaviour
+
+
+## Class reference
+<Reference>
+    <Property>
+        <Name>.c-auto</Name>
+        <Output>pointer: auto;</Output>
+    </Property>
+    <Property>
+        <Name>.c-default</Name>
+        <Output>pointer: default;</Output>
+    </Property>
+    <Property>
+        <Name>.c-pointer</Name>
+        <Output>pointer: pointer;</Output>
+    </Property>
+    <Property>
+        <Name>.c-wait</Name>
+        <Output>pointer: wait;</Output>
+    </Property>
+    <Property>
+        <Name>.c-move</Name>
+        <Output>pointer: move;</Output>
+    </Property>
+    <Property>
+        <Name>.c-not-allowed</Name>
+        <Output>pointer: not-allowed;</Output>
+    </Property>
+</Reference>
+
+
+
+## Auto
+
+`.c-auto` changes the cursor depending on the context of the content being hovered on. Example:- cursor becomes a select on hovering over text.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-auto">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Default
+
+`.c-defaults` shows the default cursor irrespective of the semantic element it is hovering on.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="c-default d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-default">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+## Pointer
+
+`.c-pointer` shows a pointing hand to indicate that an element is clickable.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="c-pointer d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-pointer">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Wait
+
+`.c-wait` shows a spinner to indicate that some background process is taking place.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="c-wait d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-wait">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Move
+
+`.c-move` indicates that the element is draggable.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="c-move d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-move">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+## Not allowed
+
+`.c-not-allowed` indicates that the element cannot be clicked. Sometimes used to prevent accidental clicks.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="c-not-allowed d-inline-block h-40 bg-secondary-500 ta-center flex flex-center flex-middle">
+      <span className="fw-600 c-white">Hover on me</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="c-not-allowed">...</div>
+  </Sandbox.Code>
+</Sandbox>
