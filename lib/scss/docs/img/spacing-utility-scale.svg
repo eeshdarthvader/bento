@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="713px" height="171px" viewBox="0 0 713 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Spacing---Utility" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-8.000000, 0.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="732" height="171"></rect>
+            <rect id="Rectangle-Copy-38" fill="#333333" x="213" y="72" width="1" height="24"></rect>
+            <rect id="Rectangle-Copy-39" fill="#333333" x="249" y="72" width="1" height="28"></rect>
+            <rect id="Rectangle-Copy-40" fill="#333333" x="285" y="72" width="1" height="32"></rect>
+            <rect id="Rectangle-Copy-41" fill="#333333" x="321" y="72" width="1" height="36"></rect>
+            <rect id="Rectangle-Copy-42" fill="#333333" x="362" y="72" width="1" height="40"></rect>
+            <rect id="Rectangle-Copy-43" fill="#333333" x="408" y="72" width="1" height="44"></rect>
+            <rect id="Rectangle-Copy-44" fill="#333333" x="454" y="72" width="1" height="48"></rect>
+            <text id="24-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="203" y="54">24</tspan>
+            </text>
+            <text id="28-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="239" y="54">28</tspan>
+            </text>
+            <text id="32-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="275" y="54">32</tspan>
+            </text>
+            <text id="36-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="311" y="54">36</tspan>
+            </text>
+            <text id="40-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="352" y="54">40</tspan>
+            </text>
+            <text id="44-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="398" y="54">44</tspan>
+            </text>
+            <text id="48-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="444" y="54">48</tspan>
+            </text>
+            <rect id="Rectangle-Copy-3" fill="#333333" x="33" y="72" width="1" height="4"></rect>
+            <rect id="Rectangle-Copy-4" fill="#333333" x="69" y="72" width="1" height="8"></rect>
+            <rect id="Rectangle-Copy-35" fill="#333333" x="104" y="72" width="1" height="12"></rect>
+            <rect id="Rectangle-Copy-36" fill="#333333" x="141" y="72" width="1" height="16"></rect>
+            <rect id="Rectangle-Copy-37" fill="#333333" x="177" y="72" width="1" height="20"></rect>
+            <rect id="Rectangle-Copy-45" fill="#333333" x="500" y="72" width="1" height="52"></rect>
+            <rect id="Rectangle-Copy-46" fill="#333333" x="546" y="72" width="1" height="56"></rect>
+            <rect id="Rectangle-Copy-47" fill="#333333" x="592" y="72" width="1" height="60"></rect>
+            <text id="4-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="28" y="54">4</tspan>
+            </text>
+            <text id="1u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="23" y="29">1u</tspan>
+            </text>
+            <text id="2u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="59" y="29">2u</tspan>
+            </text>
+            <text id="3u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="95" y="29">3u</tspan>
+            </text>
+            <text id="4u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="131" y="29">4u</tspan>
+            </text>
+            <text id="5u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="167" y="29">5u</tspan>
+            </text>
+            <text id="6u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="203" y="29">6u</tspan>
+            </text>
+            <text id="7u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="239" y="29">7u</tspan>
+            </text>
+            <text id="8u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="275" y="29">8u</tspan>
+            </text>
+            <text id="9u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="311" y="29">9u</tspan>
+            </text>
+            <text id="10u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="347" y="29">10u</tspan>
+            </text>
+            <text id="11u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="393" y="29">11u</tspan>
+            </text>
+            <text id="12u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="439" y="29">12u</tspan>
+            </text>
+            <text id="13u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="485" y="29">13u</tspan>
+            </text>
+            <text id="14u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="531" y="29">14u</tspan>
+            </text>
+            <text id="15u" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#000000">
+                <tspan x="577" y="29">15u</tspan>
+            </text>
+            <text id="1u*n" font-family="SFMono-Semibold, SF Mono" font-size="20" font-style="condensed" font-weight="500" fill="#F77728">
+                <tspan x="646" y="31">1u*n</tspan>
+            </text>
+            <text id="8-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="64" y="54">8</tspan>
+            </text>
+            <text id="12-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="95" y="54">12</tspan>
+            </text>
+            <text id="16-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="131" y="54">16</tspan>
+            </text>
+            <text id="20-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="167" y="54">20</tspan>
+            </text>
+            <text id="52-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="490" y="54">52</tspan>
+            </text>
+            <text id="56-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="536" y="54">56</tspan>
+            </text>
+            <text id="60-copy" font-family="SFMono-Semibold, SF Mono" font-size="16" font-style="condensed" font-weight="500" fill="#999999">
+                <tspan x="582" y="54">60</tspan>
+            </text>
+            <rect id="Rectangle-Copy-48" fill="#F77728" x="671" y="72" width="1" height="64"></rect>
+            <g id="Group-2" transform="translate(638.000000, 36.000000)" fill="#F77728" font-family="SFMono-Semibold, SF Mono" font-style="condensed" font-weight="500">
+                <text id="4*n" font-size="20">
+                    <tspan x="0" y="19">4*n</tspan>
+                </text>
+                <text id="(px)" font-size="12">
+                    <tspan x="38" y="19">(px)</tspan>
+                </text>
+            </g>
+            <text id="…" font-family="SFProText-Regular, SF Pro Text" font-size="20" font-weight="normal" fill="#4D4D4D">
+                <tspan x="614" y="54">…</tspan>
+            </text>
+            <text id="…-copy" font-family="SFProText-Regular, SF Pro Text" font-size="20" font-weight="normal" fill="#4D4D4D">
+                <tspan x="614" y="30">…</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
