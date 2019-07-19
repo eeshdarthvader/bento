@@ -1,0 +1,110 @@
+---
+name: Float
+route: /utilities/float
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output,
+  Text
+} from '@components/Reference'
+
+import { Spacer } from '@lib'
+import Sandbox from '@components/Sandbox'
+
+
+# Float
+
+Float and clearfix classes to help position elements.
+
+
+## Class reference
+<Reference>
+    <Property>
+        <Name>.c-left</Name>
+        <Output>float: left;</Output>
+    </Property>
+    <Property>
+        <Name>.f-right</Name>
+        <Output>float: right;</Output>
+    </Property>
+    <Property>
+        <Name>.f-none</Name>
+        <Output>float: none;</Output>
+    </Property>
+    <Property>
+        <Name>.clearfix</Name>
+        <Text>Clears the children floats</Text>
+    </Property>
+</Reference>
+
+
+
+## Float left
+
+`.f-left` floats children within a container to its left.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-center">
+      <span className="f-left">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="f-left">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+## Float left
+
+`.f-right` floats children within a container to its left.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-center">
+      <span className="f-right">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="f-right">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Float none
+
+`.f-none` removes any float properties from the element.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-center">
+      <span className="f-none">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="f-right">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Clearfix
+
+`.clearfix` forces an element to clear its children.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block bg-secondary-100 w-100p">
+      <span className="f-left">left</span>
+      <span className="f-right">right</span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="clearfix">...</div>
+  </Sandbox.Code>
+</Sandbox>
