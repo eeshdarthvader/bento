@@ -2,10 +2,17 @@ import React from "react";
 import Highlight from "react-highlight";
 import { renderToStaticMarkup } from "react-dom/server";
 
+const pretty = require('pretty');
+
+const classify = text => {
+  const string = `${text}`
+  return string.replace(/class/, "className")
+}
+
 const stringify = children => {
   if (children.length >= 2) {
     const strung = children.map(c => {
-      return renderToStaticMarkup(c).replace(/class/, "className");
+      return classify(renderToStaticMarkup(c));
     });
     return strung.join("\n");
   }
@@ -16,7 +23,9 @@ const stringify = children => {
 const Code = ({ children }) => {
   return (
     <div className="demo-code">
-      <Highlight language="html">{stringify(children)}</Highlight>
+      <Highlight language="html">
+        {pretty(stringify(children))}
+      </Highlight>
     </div>
   );
 };

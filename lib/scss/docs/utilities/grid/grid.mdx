@@ -1,0 +1,421 @@
+---
+name: Grid
+route: /utilities/grid
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Text
+} from '@components/Reference'
+import Sandbox from '@components/Sandbox'
+
+import { Spacer, Container, Row, Col } from '@lib'
+
+import Cell from './Cell'
+
+
+# Grid
+
+The grid system provides us with a device agnostic layout system.
+
+
+## Grid construction
+
+A basic grid is constructed out of three elements, `.container`, `.row` and `.col`
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row>
+        <Col>
+          <Cell>col-12</Cell>
+        </Col>
+        <Col>
+          <Cell>col-12</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row">
+        <div className="col-12">...</div>
+        <div className="col-12">...</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={12} />
+
+<Reference>
+    <Property>
+        <Name>.container</Name>
+        <Text>Sets width and centers outermost div</Text>
+    </Property>
+    <Property>
+        <Name>.row</Name>
+        <Text>Aligns children columns</Text>
+    </Property>
+    <Property>
+        <Name>.col</Name>
+        <Text>Set width of individual column</Text>
+    </Property>
+</Reference>
+
+<Spacer my={16} />
+
+## Grid combinations
+
+A 24 column grid allows us to make a varied range of layouts. These are some of the possible layouts.
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row>
+        <Col span={1}>
+          <Cell>1</Cell>
+        </Col>
+        <Col span={23}>
+          <Cell>col-23</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={2}>
+          <Cell>col-2</Cell>
+        </Col>
+        <Col span={22}>
+          <Cell>col-22</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={3}>
+          <Cell>col-3</Cell>
+        </Col>
+        <Col span={21}>
+          <Cell>col-21</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={4}>
+          <Cell>col-4</Cell>
+        </Col>
+        <Col span={20}>
+          <Cell>col-20</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={5}>
+          <Cell>col-5</Cell>
+        </Col>
+        <Col span={19}>
+          <Cell>col-19</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={6}>
+          <Cell>col-6</Cell>
+        </Col>
+        <Col span={18}>
+          <Cell>col-18</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={7}>
+          <Cell>col-7</Cell>
+        </Col>
+        <Col span={17}>
+          <Cell>col-17</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+        <Col span={16}>
+          <Cell>col-16</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={9}>
+          <Cell>col-9</Cell>
+        </Col>
+        <Col span={15}>
+          <Cell>col-15</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={10}>
+          <Cell>col-10</Cell>
+        </Col>
+        <Col span={14}>
+          <Cell>col-14</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={11}>
+          <Cell>col-11</Cell>
+        </Col>
+        <Col span={13}>
+          <Cell>col-13</Cell>
+        </Col>
+      </Row>
+      <Spacer my={4} />
+      <Row>
+        <Col span={12}>
+          <Cell>col-12</Cell>
+        </Col>
+        <Col span={12}>
+          <Cell>col-12</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row">
+        <div className="col-1">...</div>
+        <div className="col-24">...</div>
+      </div>
+      <div className="row">
+        <div className="...">...</div>
+        <div className="...">...</div>
+      </div>
+      <div className="row">
+        <div className="col-24">...</div>
+        <div className="col-1">...</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={16} />
+
+## Offset columns
+
+It's possible to leave some some columns empty. The syntax for that is `col-offest-{number}`
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+        <Col span={12} offset={4}>
+          <Cell>col-12 (offset by 4 columns)</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row">
+        <div className="col-8">...</div>
+        <div className="col-12 col-offset-4">...</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={16} />
+
+
+## Alignment
+
+Add classes to align elements to the start, end and center of the row. Notice that these classes are applied on the `row` element.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row start>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <Container>
+      <Row end>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <Container>
+      <Row center>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row start">
+        <div className="col-8">...</div>
+      </div>
+      <div className="row end">
+        <div className="col-8">...</div>
+      </div>
+      <div className="row center">
+        <div className="col-8">...</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={16} />
+
+
+
+## Distribution
+
+Add the `around` or `between` classes to distribute the contents of the row. Notice that these classes are applied on the `row` element.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row around>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <Container>
+      <Row between>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>col-8</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row around">
+        <div className="col-8">...</div>
+        <div className="col-8">...</div>
+      </div>
+      <div className="row between">
+        <div className="col-8">...</div>
+        <div className="col-8">...</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={16} />
+
+
+
+## Ordering
+
+It possible to alter the order of the colmumns using the `last` or `fist` classes. Notice that these classes are applied on the `col` element.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row>
+        <Col span={8}>
+          <Cell>1</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>2</Cell>
+        </Col>
+        <Col span={8} first>
+          <Cell dark>3</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <Container>
+      <Row>
+        <Col span={8} last>
+          <Cell dark>1</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>2</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>3</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row">
+        <div className="col-8">1</div>
+        <div className="col-8">2</div>
+        <div className="col-8 first">3</div>
+      </div>
+      <div className="row">
+        <div className="col-8 last">1</div>
+        <div className="col-8">2</div>
+        <div className="col-8">3</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+<Spacer my={16} />
+
+
+## Reversing
+
+You can reverse the order of the columns by adding a `reverse` class to the `row`.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <Container>
+      <Row reverse>
+        <Col span={8}>
+          <Cell>1</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>2</Cell>
+        </Col>
+        <Col span={8}>
+          <Cell>3</Cell>
+        </Col>
+      </Row>
+    </Container>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="container">
+      <div className="row reverse">
+        <div className="col-8">1</div>
+        <div className="col-8">2</div>
+        <div className="col-8">3</div>
+      </div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
