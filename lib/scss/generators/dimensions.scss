@@ -28,10 +28,10 @@
 // Height
 // ------------------------------
 @each $height in config('dimensions.height') {
-  .h-#{$height} { height: $height * 4px }
+  .h-#{$height} { height: $height * 1px }
   @each $key, $breakpoint in config('breakPoints') {
     @include break($key) {
-      .h-#{$height}--#{$key} { height: $height * 4px }
+      .h-#{$height}--#{$key} { height: $height * 1px }
     }
   }
 }

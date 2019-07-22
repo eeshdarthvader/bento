@@ -72,19 +72,6 @@
     padding-top: $space * 4px;
     padding-bottom: $space * 4px;
   }
-
-  .npt-#{$space} { padding-top: (-4 * $space) + px; }
-  .npb-#{$space} { padding-bottom: (-4 * $space) + px; }
-  .npl-#{$space} { padding-left: (-4 * $space) + px; }
-  .npr-#{$space} { padding-right: (-4 * $space) + px; }
-  .npx-#{$space} {
-    padding-right: (-4 * $space) + px;
-    padding-left: (-4 * $space) + px;
-  }
-  .npy-#{$space} {
-    padding-top: (-4 * $space) + px;
-    padding-bottom: (-4 * $space) + px;
-  }
 }
 
 
@@ -109,19 +96,6 @@
       .py-#{$space}--#{$key} {
         padding-top: $space * 4px;
         padding-bottom: $space * 4px;
-      }
-
-      .npt-#{$space}--#{$key} { padding-top: (-4 * $space) + px; }
-      .npb-#{$space}--#{$key} { padding-bottom: (-4 * $space) + px; }
-      .npl-#{$space}--#{$key} { padding-left: (-4 * $space) + px; }
-      .npr-#{$space}--#{$key} { padding-right: (-4 * $space) + px; }
-      .npx-#{$space}--#{$key} {
-        padding-right: (-4 * $space) + px;
-        padding-left: (-4 * $space) + px;
-      }
-      .npy-#{$space}--#{$key} {
-        padding-top: (-4 * $space) + px;
-        padding-bottom: (-4 * $space) + px;
       }
     }
   }
