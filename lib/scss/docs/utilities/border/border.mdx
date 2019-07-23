@@ -146,17 +146,19 @@ Used to set the border style.
 <Sandbox>
   <Sandbox.Preview>
     <div className="d-inline-block ta-center flex flex-start flex-around" style={{
-        width: '400px'
+        width: '500px'
     }}>
-      <div className="bn bg-primary-400 h-50 flex flex-middle p-4 mx-4">No Border</div>
+      <div className="ba bs-none bg-primary-400 h-50 flex flex-middle p-4 mx-4">No Border style</div>
       <div className="ba bs-solid bg-primary-400 h-40 flex flex-middle p-4 mx-4">Solid Border</div>
+      <div className="bt bs-solid bg-primary-400 h-40 flex flex-middle p-4 mx-4">Only Top Solid Border</div>
       <div className="ba bs-dashed bg-primary-400 h-40 flex flex-middle p-4 mx-4">Dashed Border</div>
       <div className="ba bs-dotted bg-primary-400 h-40 flex flex-middle p-4 mx-4">Dotted Border</div>
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="bn bg-primary-400">No Border</div>
+    <div className="ba bs-none bg-primary-400">No Border Style</div>
       <div className="ba bs-solid bg-primary-400">Solid Border</div>
+      <div className="bt bs-solid bg-primary-400">Only Top Solid Border</div>
       <div className="ba bs-dashed bg-primary-400">Dashed Border</div>
       <div className="ba bs-dotted bg-primary-400">Dotted Border</div>
   </Sandbox.Code>
@@ -201,11 +203,12 @@ Used to set the border width. Possible values are 1,2,4 and 8.
 <Sandbox>
   <Sandbox.Preview>
     <div className="d-inline-block ta-center flex flex-start flex-around" style={{
-        width: '400px'
+        width: '500px'
     }}>
       <div className="ba bw-1 bg-primary-400 h-50 flex flex-middle p-4 mx-4">1px Border Width</div>
       <div className="ba bw-2 bg-primary-400 h-50 flex flex-middle p-4 mx-4">2px Border Width</div>
       <div className="ba bw-4 bg-primary-400 h-50 flex flex-middle p-4 mx-4">4px Border Width</div>
+      <div className="bx bw-4 bg-primary-400 h-50 flex flex-middle p-4 mx-4">4px Border Width on left and right</div>
       <div className="ba bw-8 bg-primary-400 h-50 flex flex-middle p-4 mx-4">8px Border Width</div>
     </div>
   </Sandbox.Preview>
@@ -213,6 +216,7 @@ Used to set the border width. Possible values are 1,2,4 and 8.
     <div className="ba bw-1 bg-primary-400">...</div>
       <div className="ba bw-2 bg-primary-400">...</div>
       <div className="ba bw-4 bg-primary-400">...</div>
+      <div className="bx bw-4 bg-primary-400">...</div>
       <div className="ba bw-8 bg-primary-400">...</div>
   </Sandbox.Code>
 </Sandbox>
