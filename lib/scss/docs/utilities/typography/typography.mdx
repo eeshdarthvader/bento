@@ -7,6 +7,8 @@ menu: Utilities
 import { Reference, Property, Name, Output } from "@components/Reference";
 import Sandbox from "@components/Sandbox";
 
+import { Spacer } from "@lib";
+
 # Typography
 
 Utility classes for all typography elements.
@@ -86,32 +88,59 @@ Utility classes for all typography elements.
   </Property>
 </Reference>
 
+## Font weight
+
+The font-weight property sets the weight/boldness of the font. Some of the commonly used font-weights are `.fw-300`, `.fw-400`, `.fw-600` and `.fw-800`
+
 ## Line height
 
 The line-height CSS property sets the height of a line box.
 
 <Reference>
-<Property>
-    <Name>.lh-none</Name>
-    <Output>line-height:0;</Output>
-  </Property>
+
   <Property>
     <Name>.lh-solid</Name>
-    <Output>line-height:1px;</Output>
+    <Output>line-height:1;</Output>
   </Property>
   <Property>
     <Name>.lh-title</Name>
-    <Output>line-height:1.25px;</Output>
+    <Output>line-height:1.25;</Output>
   </Property>
   <Property>
     <Name>.lh-copy</Name>
-    <Output>line-height:1.5px;</Output>
+    <Output>line-height:1.5;</Output>
   </Property>
   </Reference>
+<Spacer my={8} />
 <Sandbox>
   <Sandbox.Preview>
-    <span className="c-secondary-500 m-0 lh-none">
-      The quick brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <span className="c-neutral-800 m-0 lh-solid d-block">
+      <strong>Line height of this paragraph is set to 1.</strong> The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="c-neutral-800 m-0 lh-title d-block">
+      <strong>Line height of this paragraph is set to 1.25.</strong>The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="c-neutral-800 m-0 lh-copy d-block">
+      <strong>Line height of this paragraph is set to 1.5.</strong>The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
     </span>
   </Sandbox.Preview>
 </Sandbox>
+
+<Spacer my={8} />
+
+Additionally, `.lh-none` sets the `line-height` to `0`. It's best to not use it unless needed for a specific usecase.
