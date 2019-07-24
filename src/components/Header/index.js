@@ -46,21 +46,21 @@ const Header = props => {
                   <li className="flex flex-middle hover:bg-slate-dark">
                     <Link
                       to="/foundation/color"
-                      className="td-none c-inherit px-32 py-24">
+                      className="td-none c-inherit px-8 py-6">
                       Foundation
                     </Link>
                   </li>
                   <li className="flex flex-middle hover:bg-slate-dark">
                     <Link
                       to="/utilities/background"
-                      className="td-none c-inherit px-32 py-24">
+                      className="td-none c-inherit px-8 py-6">
                       Utilities
                     </Link>
                   </li>
                   <li className="flex flex-middle hover:bg-slate-dark">
                     <Link
                       to="/components/button"
-                      className="td-none c-inherit px-32 py-24">
+                      className="td-none c-inherit px-8 py-6">
                       Components
                     </Link>
                   </li>
