@@ -98,14 +98,14 @@ Used to set border properties
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="bn bg-primary-400">No Border</div>
-      <div className="ba bg-primary-400">All Borders</div>
-      <div className="bt bg-primary-400">Only Border Top</div>
-      <div className="br bg-primary-400">Only Border right</div>
-      <div className="bb bg-primary-400">Only Border bottom</div>
-      <div className="bl bg-primary-400">Only Border left</div>
-      <div className="bx bg-primary-400">Borders left and right</div>
-      <div className="by bg-primary-400">Borders top and bottom</div>
+    <div className="bn">No Border</div>
+      <div className="ba">All Borders</div>
+      <div className="bt">Only Border Top</div>
+      <div className="br">Only Border right</div>
+      <div className="bb">Only Border bottom</div>
+      <div className="bl">Only Border left</div>
+      <div className="bx">Borders left and right</div>
+      <div className="by">Borders top and bottom</div>
   </Sandbox.Code>
 </Sandbox>
 
@@ -115,29 +115,22 @@ Used to set the border style.
 <Reference>
     <Property>
         <Name>.bs-none</Name>
-        <Output>border-style: none; <br /><br />
-                border-width: 0px;
+        <Output>border-style: none;
         </Output>
     </Property>
     <Property>
         <Name>.bs-solid</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px; <br /> <br />
-                border-color: #000;
+        <Output>border-style: solid;
         </Output>
     </Property>
     <Property>
         <Name>.bs-dashed</Name>
-        <Output>border-style: dashed; <br /><br />
-                border-width: 1px; <br /> <br />
-                border-color: #000; 
+        <Output>border-style: dashed;
         </Output>
     </Property>
     <Property>
         <Name>.bs-dotted</Name>
-        <Output>border-style: dotted; <br /><br />
-                border-width: 1px; <br /> <br />
-                border-color: #000; 
+        <Output>border-style: dotted;
         </Output>
     </Property>
 </Reference>
@@ -148,7 +141,7 @@ Used to set the border style.
     <div className="d-inline-block ta-center flex flex-start flex-around" style={{
         width: '500px'
     }}>
-      <div className="ba bs-none bg-primary-400 h-50 flex flex-middle p-4 mx-4">No Border style</div>
+      <div className="bs-none bg-primary-400 h-50 flex flex-middle p-4 mx-4">No Border style</div>
       <div className="ba bs-solid bg-primary-400 h-40 flex flex-middle p-4 mx-4">Solid Border</div>
       <div className="bt bs-solid bg-primary-400 h-40 flex flex-middle p-4 mx-4">Only Top Solid Border</div>
       <div className="ba bs-dashed bg-primary-400 h-40 flex flex-middle p-4 mx-4">Dashed Border</div>
@@ -156,11 +149,11 @@ Used to set the border style.
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="ba bs-none bg-primary-400">No Border Style</div>
-      <div className="ba bs-solid bg-primary-400">Solid Border</div>
-      <div className="bt bs-solid bg-primary-400">Only Top Solid Border</div>
-      <div className="ba bs-dashed bg-primary-400">Dashed Border</div>
-      <div className="ba bs-dotted bg-primary-400">Dotted Border</div>
+    <div className="bs-none">No Border Style</div>
+      <div className="ba bs-solid">Solid Border</div>
+      <div className="bt bs-solid">Only Top Solid Border</div>
+      <div className="ba bs-dashed">Dashed Border</div>
+      <div className="ba bs-dotted">Dotted Border</div>
   </Sandbox.Code>
 </Sandbox>
 
@@ -171,30 +164,22 @@ Used to set the border width. Possible values are 1,2,4 and 8.
 <Reference>
     <Property>
         <Name>.bw-1</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-color: #000;
+        <Output>border-width: 1px;
         </Output>
     </Property>
     <Property>
         <Name>.bw-2</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 2px; <br /> <br />
-                border-color: #000;
+        <Output>border-width: 2px;
         </Output>
     </Property>
     <Property>
         <Name>.bw-4</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 4px; <br /> <br />
-                border-color: #000; 
+        <Output>border-width: 4px;
         </Output>
     </Property>
     <Property>
         <Name>.bw-8</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 8px; <br /> <br />
-                border-color: #000; 
+        <Output>border-width: 8px; 
         </Output>
     </Property>
 </Reference>
@@ -213,11 +198,11 @@ Used to set the border width. Possible values are 1,2,4 and 8.
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="ba bw-1 bg-primary-400">...</div>
-      <div className="ba bw-2 bg-primary-400">...</div>
-      <div className="ba bw-4 bg-primary-400">...</div>
-      <div className="bx bw-4 bg-primary-400">...</div>
-      <div className="ba bw-8 bg-primary-400">...</div>
+    <div className="ba bw-1">...</div>
+      <div className="ba bw-2">...</div>
+      <div className="ba bw-4">...</div>
+      <div className="bx bw-4">...</div>
+      <div className="ba bw-8">...</div>
   </Sandbox.Code>
 </Sandbox>
 
@@ -227,36 +212,24 @@ Used to set the border radius. Possible values are : 0,2,3 and 100.
 <Reference>
     <Property>
         <Name>.br-0</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-radius: 0px;<br /> <br />
-                border-color: #000;
+        <Output>border-radius: 0px
         </Output>
     </Property>
     <Property>
         <Name>.br-2</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-radius: 2px;<br /> <br />
-                border-color: #000;
+        <Output>border-radius: 2px;
         </Output>
     </Property>
     <Property>
         <Name>.btr-2</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-top-left-radius: 2px;<br /> <br />
+        <Output>border-top-left-radius: 2px;<br /> <br />
                 border-top-right-radius: 2px;<br /> <br />
-                border-color: #000;
         </Output>
     </Property>
     <Property>
         <Name>.bbr-2</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-bottom-left-radius: 2px;<br /> <br />
+        <Output>border-bottom-left-radius: 2px;<br /> <br />
                 border-bottom-right-radius: 2px;<br /> <br />
-                border-color: #000;
         </Output>
     </Property>
 </Reference>
@@ -274,10 +247,10 @@ Used to set the border radius. Possible values are : 0,2,3 and 100.
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="ba br-0 bg-primary-400">...</div>
-      <div className="ba br-100 bg-primary-400">...</div>
-      <div className="ba btr-2 bg-primary-400">...</div>
-      <div className="ba bbr-2 bg-primary-400">...</div>
+    <div className="ba br-0">...</div>
+      <div className="ba br-100">...</div>
+      <div className="ba btr-2">...</div>
+      <div className="ba bbr-2">...</div>
   </Sandbox.Code>
 </Sandbox>
 
@@ -287,10 +260,7 @@ Used to set the border color. The syntax is `.bc-{palette}-{shade}`.
 <Reference>
     <Property>
         <Name>.bc-secondary-400</Name>
-        <Output>border-style: solid; <br /><br />
-                border-width: 1px;<br /> <br />
-                border-radius: 0px;<br /> <br />
-                border-color: #6290E0;
+        <Output>border-color: #6290E0;
         </Output>
     </Property>
     
@@ -306,6 +276,6 @@ Used to set the border color. The syntax is `.bc-{palette}-{shade}`.
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="ba bc-secondary-400 bg-neutral-100">...</div>
+    <div className="ba bc-secondary-400">...</div>
   </Sandbox.Code>
 </Sandbox>
