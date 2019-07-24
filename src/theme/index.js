@@ -36,20 +36,20 @@ const Theme = ({children}) => {
 
           <div className="flex-1 bg-white elevation-md">
             <div
-              className="w-90p m-auto flex pb-60"
+              className="w-90p m-auto flex pb-15"
               style={{ maxWidth: '900px' }}
             >
 
               <div
-                className="content flex-1 mt-32 pr-60"
+                className="content flex-1 mt-8 pr-15"
               >
                 {children}
               </div>
 
               <div className="toc w-20p">
                 <Sticky enabled={true} top={30}>
-                  <div className="ml-12">
-                    <p className="fs-caption fw-600 c-blue tt-uppercase mt-60 mb-8 ls-wide">
+                  <div className="ml-3">
+                    <p className="fs-caption fw-600 c-blue tt-uppercase mt-15 mb-2 ls-wide">
                       Jump to
                       </p>
                     <ul
