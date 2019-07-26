@@ -23,7 +23,7 @@ const Swatches = ({ name, color, dark }) => {
 
   const classes = classNames(
     `bg-${name}`,
-    'h-40 w-100p flex flex-middle px-12 box-border fw-500 c-pointer',
+    'h-40 w-100p flex flex-middle px-3 box-border fw-500 c-pointer',
     {
       'c-black': dark,
       'c-white': !dark,

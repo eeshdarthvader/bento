@@ -27,9 +27,9 @@ const Footer = props => {
         <Row>
           <Col>
             <div>
-              <footer className="flex flex-between py-32">
+              <footer className="flex flex-between py-8">
                 <div>
-                  <p className="fs-body fw-500 c-grey-60 mb-4">
+                  <p className="fs-body fw-500 c-grey-60 mb-1">
                     Bento - Cleartrip Design System
                   </p>
                   <p className="fs-caption-2 c-grey-40">
@@ -38,8 +38,8 @@ const Footer = props => {
                 </div>
                 <div className="flex">
                   <div className="flex flex-column flex-bottom">
-                    <ul className="flex mb-8">
-                      <li className="ml-16 c-grey-60">
+                    <ul className="flex mb-2">
+                      <li className="ml-4 c-grey-60">
                         <a
                           href="/"
                           className="fw-500 td-none c-inherit hover:c-blue"
@@ -47,7 +47,7 @@ const Footer = props => {
                           Github
                         </a>
                       </li>
-                      <li className="ml-16 c-grey-60">
+                      <li className="ml-4 c-grey-60">
                         <a
                           href="/"
                           className="fw-500 td-none c-inherit hover:c-blue"
@@ -55,7 +55,7 @@ const Footer = props => {
                           Issues
                         </a>
                       </li>
-                      <li className="ml-16 c-grey-60">
+                      <li className="ml-4 c-grey-60">
                         <a
                           href="/"
                           className="fw-500 td-none c-inherit hover:c-blue"
@@ -63,7 +63,7 @@ const Footer = props => {
                           Changelog
                         </a>
                       </li>
-                      <li className="ml-16 c-grey-60">
+                      <li className="ml-4 c-grey-60">
                         <a
                           href="/"
                           className="fw-500 td-none c-inherit hover:c-blue"
@@ -77,7 +77,7 @@ const Footer = props => {
                     </p>
                   </div>
                   <div
-                    className="ba br-4 bc-grey-20 w-40 h-40 ml-16 flex flex-middle flex-center c-pointer hover:bg-grey-10"
+                    className="ba br-4 bc-grey-20 w-40 h-40 ml-4 flex flex-middle flex-center c-pointer hover:bg-grey-10"
                     onClick={scrollToTop}
                   >
                     <UpIcon />
