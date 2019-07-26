@@ -20,7 +20,7 @@ const Home = () => (
     <Jumbotron />
 
 
-    <Spacer my={24} />
+    <Spacer my={6} />
 
     <Container>
       <Row>
@@ -30,7 +30,7 @@ const Home = () => (
             Guiding Priciples
           </h1>
 
-          <Spacer my={20} />
+          <Spacer my={5} />
 
           <div className="flex flex-top">
             <div className="w-10p">
@@ -39,8 +39,8 @@ const Home = () => (
                 className="current-fill c-blue"
               />
             </div>
-            <div className="ml-24">
-              <p className="fs-body-3 fw-500 mb-8">
+            <div className="ml-6">
+              <p className="fs-body-3 fw-500 mb-2">
                 Reuse over reinvent
               </p>
               <p className="fs-body-2 lh-copy c-grey-80">
@@ -49,7 +49,7 @@ const Home = () => (
             </div>
           </div>
 
-          <Spacer my={20} />
+          <Spacer my={5} />
 
           <div className="flex flex-top">
             <div className="w-10p">
@@ -58,8 +58,8 @@ const Home = () => (
                 className="current-fill c-blue"
               />
             </div>
-            <div className="ml-24">
-              <p className="fs-body-3 fw-500 mb-8">
+            <div className="ml-6">
+              <p className="fs-body-3 fw-500 mb-2">
                 Increase efficiency
               </p>
               <p className="fs-body-2 lh-copy c-grey-80">
@@ -68,7 +68,7 @@ const Home = () => (
             </div>
           </div>
 
-          <Spacer my={20} />
+          <Spacer my={5} />
 
           <div className="flex flex-top">
             <div className="w-10p">
@@ -77,8 +77,8 @@ const Home = () => (
                 className="current-fill c-blue"
               />
             </div>
-            <div className="ml-24">
-              <p className="fs-body-3 fw-500 mb-8">
+            <div className="ml-6">
+              <p className="fs-body-3 fw-500 mb-2">
                 Evolve and adapt
               </p>
               <p className="fs-body-2 lh-copy c-grey-80">
@@ -87,7 +87,7 @@ const Home = () => (
             </div>
           </div>
 
-          <Spacer my={20} />
+          <Spacer my={5} />
 
           <div className="flex flex-top">
             <div className="w-10p">
@@ -96,8 +96,8 @@ const Home = () => (
                 className="current-fill c-blue"
               />
             </div>
-            <div className="ml-24">
-              <p className="fs-body-3 fw-500 mb-8">
+            <div className="ml-6">
+              <p className="fs-body-3 fw-500 mb-2">
                 Establish Vocabulary
               </p>
               <p className="fs-body-2 lh-copy c-grey-80">
@@ -113,24 +113,24 @@ const Home = () => (
             Resources
           </h1>
 
-          <Spacer my={20} />
+          <Spacer my={5} />
 
-          <div className="ba bc-grey-20 p-20 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
+          <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
             <Icon
               icon="sketch"
-              className="mr-16 current-fill c-grey-70 w-30 h-30"
+              className="mr-4 current-fill c-grey-70 w-30 h-30"
             />
             <p className="fs-body-2 fw-500 c-grey-60">
               Download Sketch library
             </p>
           </div>
 
-          <Spacer my={8} />
+          <Spacer my={2} />
 
-          <div className="ba bc-grey-20 p-20 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
+          <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
             <Icon
               icon="bitbucket"
-              className="mr-16 current-fill c-slate h-30 w-30"
+              className="mr-4 current-fill c-slate h-30 w-30"
             />
             <p className="fs-body-2 fw-500 c-grey-60">
               Visit Bitbucket repository
@@ -141,7 +141,7 @@ const Home = () => (
       </Row>
     </Container>
 
-    <Spacer my={60} />
+    <Spacer my={15} />
 
     <Footer />
 

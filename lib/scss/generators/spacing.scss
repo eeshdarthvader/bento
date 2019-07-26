@@ -23,31 +23,31 @@
 // Margin
 // ------------------------------
 @each $space in config(spacers) {
-  .m-#{$space} { margin: $space * 1px; }
-  .mt-#{$space} { margin-top: $space * 1px; }
-  .mb-#{$space} { margin-bottom: $space * 1px; }
-  .ml-#{$space} { margin-left: $space * 1px; }
-  .mr-#{$space} { margin-right: $space * 1px; }
+  .m-#{$space} { margin: $space * 4px; }
+  .mt-#{$space} { margin-top: $space * 4px; }
+  .mb-#{$space} { margin-bottom: $space * 4px; }
+  .ml-#{$space} { margin-left: $space * 4px; }
+  .mr-#{$space} { margin-right: $space * 4px; }
   .mx-#{$space} {
-    margin-right: $space * 1px;
-    margin-left: $space * 1px;
+    margin-right: $space * 4px;
+    margin-left: $space * 4px;
   }
   .my-#{$space} {
-    margin-top: $space * 1px;
-    margin-bottom: $space * 1px;
+    margin-top: $space * 4px;
+    margin-bottom: $space * 4px;
   }
 
-  .nmt-#{$space} { margin-top: (-1 * $space) + px; }
-  .nmb-#{$space} { margin-bottom: (-1 * $space) + px; }
-  .nml-#{$space} { margin-left: (-1 * $space) + px; }
-  .nmr-#{$space} { margin-right: (-1 * $space) + px; }
+  .nmt-#{$space} { margin-top: (-4 * $space) + px; }
+  .nmb-#{$space} { margin-bottom: (-4 * $space) + px; }
+  .nml-#{$space} { margin-left: (-4 * $space) + px; }
+  .nmr-#{$space} { margin-right: (-4 * $space) + px; }
   .nmx-#{$space} {
-    margin-right: (-1 * $space) + px;
-    margin-left: (-1 * $space) + px;
+    margin-right: (-4 * $space) + px;
+    margin-left: (-4 * $space) + px;
   }
   .nmy-#{$space} {
-    margin-top: (-1 * $space) + px;
-    margin-bottom: (-1 * $space) + px;
+    margin-top: (-4 * $space) + px;
+    margin-bottom: (-4 * $space) + px;
   }
 
   .m-auto { margin: auto; }
@@ -59,31 +59,18 @@
 // ------------------------------
 @each $space in config(spacers) {
 
-  .p-#{$space} { padding: $space * 1px; }
-  .pt-#{$space} { padding-top: $space * 1px; }
-  .pb-#{$space} { padding-bottom: $space * 1px; }
-  .pl-#{$space} { padding-left: $space * 1px; }
-  .pr-#{$space} { padding-right: $space * 1px; }
+  .p-#{$space} { padding: $space * 4px; }
+  .pt-#{$space} { padding-top: $space * 4px; }
+  .pb-#{$space} { padding-bottom: $space * 4px; }
+  .pl-#{$space} { padding-left: $space * 4px; }
+  .pr-#{$space} { padding-right: $space * 4px; }
   .px-#{$space} {
-    padding-right: $space * 1px;
-    padding-left: $space * 1px;
+    padding-right: $space * 4px;
+    padding-left: $space * 4px;
   }
   .py-#{$space} {
-    padding-top: $space * 1px;
-    padding-bottom: $space * 1px;
-  }
-
-  .npt-#{$space} { padding-top: (-1 * $space) + px; }
-  .npb-#{$space} { padding-bottom: (-1 * $space) + px; }
-  .npl-#{$space} { padding-left: (-1 * $space) + px; }
-  .npr-#{$space} { padding-right: (-1 * $space) + px; }
-  .npx-#{$space} {
-    padding-right: (-1 * $space) + px;
-    padding-left: (-1 * $space) + px;
-  }
-  .npy-#{$space} {
-    padding-top: (-1 * $space) + px;
-    padding-bottom: (-1 * $space) + px;
+    padding-top: $space * 4px;
+    padding-bottom: $space * 4px;
   }
 }
 
@@ -97,31 +84,18 @@
 @each $space in config(spacers) {
   @each $key,$value in config('breakPoints') {
     @include break($key) {
-      .p-#{$space}--#{$key} { padding: $space * 1px; }
-      .pt-#{$space}--#{$key} { padding-top: $space * 1px; }
-      .pb-#{$space}--#{$key} { padding-bottom: $space * 1px; }
-      .pl-#{$space}--#{$key} { padding-left: $space * 1px; }
-      .pr-#{$space}--#{$key} { padding-right: $space * 1px; }
+      .p-#{$space}--#{$key} { padding: $space * 4px; }
+      .pt-#{$space}--#{$key} { padding-top: $space * 4px; }
+      .pb-#{$space}--#{$key} { padding-bottom: $space * 4px; }
+      .pl-#{$space}--#{$key} { padding-left: $space * 4px; }
+      .pr-#{$space}--#{$key} { padding-right: $space * 4px; }
       .px-#{$space}--#{$key} {
-        padding-right: $space * 1px;
-        padding-left: $space * 1px;
+        padding-right: $space * 4px;
+        padding-left: $space * 4px;
       }
       .py-#{$space}--#{$key} {
-        padding-top: $space * 1px;
-        padding-bottom: $space * 1px;
-      }
-
-      .npt-#{$space}--#{$key} { padding-top: (-1 * $space) + px; }
-      .npb-#{$space}--#{$key} { padding-bottom: (-1 * $space) + px; }
-      .npl-#{$space}--#{$key} { padding-left: (-1 * $space) + px; }
-      .npr-#{$space}--#{$key} { padding-right: (-1 * $space) + px; }
-      .npx-#{$space}--#{$key} {
-        padding-right: (-1 * $space) + px;
-        padding-left: (-1 * $space) + px;
-      }
-      .npy-#{$space}--#{$key} {
-        padding-top: (-1 * $space) + px;
-        padding-bottom: (-1 * $space) + px;
+        padding-top: $space * 4px;
+        padding-bottom: $space * 4px;
       }
     }
   }
@@ -135,31 +109,31 @@
 @each $space in config(spacers) {
   @each $key,$value in config('breakPoints') {
     @include break($key) {
-      .m-#{$space}--#{$key} { margin: $space * 1px; }
-      .mt-#{$space}--#{$key} { margin-top: $space * 1px; }
-      .mb-#{$space}--#{$key} { margin-bottom: $space * 1px; }
-      .ml-#{$space}--#{$key} { margin-left: $space * 1px; }
-      .mr-#{$space}--#{$key} { margin-right: $space * 1px; }
+      .m-#{$space}--#{$key} { margin: $space * 4px; }
+      .mt-#{$space}--#{$key} { margin-top: $space * 4px; }
+      .mb-#{$space}--#{$key} { margin-bottom: $space * 4px; }
+      .ml-#{$space}--#{$key} { margin-left: $space * 4px; }
+      .mr-#{$space}--#{$key} { margin-right: $space * 4px; }
       .mx-#{$space}--#{$key} {
-        margin-right: $space * 1px;
-        margin-left: $space * 1px;
+        margin-right: $space * 4px;
+        margin-left: $space * 4px;
       }
       .my-#{$space}--#{$key} {
-        margin-top: $space * 1px;
-        margin-bottom: $space * 1px;
+        margin-top: $space * 4px;
+        margin-bottom: $space * 4px;
       }
 
-      .nmt-#{$space}--#{$key} { margin-top: (-1 * $space) + px; }
-      .nmb-#{$space}--#{$key} { margin-bottom: (-1 * $space) + px; }
-      .nml-#{$space}--#{$key} { margin-left: (-1 * $space) + px; }
-      .nmr-#{$space}--#{$key} { margin-right: (-1 * $space) + px; }
+      .nmt-#{$space}--#{$key} { margin-top: (-4 * $space) + px; }
+      .nmb-#{$space}--#{$key} { margin-bottom: (-4 * $space) + px; }
+      .nml-#{$space}--#{$key} { margin-left: (-4 * $space) + px; }
+      .nmr-#{$space}--#{$key} { margin-right: (-4 * $space) + px; }
       .nmx-#{$space}--#{$key} {
-        margin-right: (-1 * $space) + px;
-        margin-left: (-1 * $space) + px;
+        margin-right: (-4 * $space) + px;
+        margin-left: (-4 * $space) + px;
       }
       .nmy-#{$space}--#{$key} {
-        margin-top: (-1 * $space) + px;
-        margin-bottom: (-1 * $space) + px;
+        margin-top: (-4 * $space) + px;
+        margin-bottom: (-4 * $space) + px;
       }
     }
   }
