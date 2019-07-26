@@ -1,0 +1,144 @@
+---
+name: Overflow
+route: /utilities/overflow
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import Sandbox from '@components/Sandbox'
+
+
+# Overflow
+
+Overflow classes to change an elements overflow properties
+
+
+## Class reference
+<Reference>
+    <Property>
+        <Name>.o-auto</Name>
+        <Output>overflow: auto;</Output>
+    </Property>
+    <Property>
+        <Name>.ox-auto</Name>
+        <Output>overflow-x: auto;</Output>
+    </Property>
+    <Property>
+        <Name>.oy-auto</Name>
+        <Output>overflow-y: auto;</Output>
+    </Property>
+    <Property>
+        <Name>.o-scroll</Name>
+        <Output>overflow: scroll;</Output>
+    </Property>
+    <Property>
+        <Name>.ox-scroll</Name>
+        <Output>overflow-x: scroll;</Output>
+    </Property>
+    <Property>
+        <Name>.oy-scroll</Name>
+        <Output>overflow-y: scroll;</Output>
+    </Property>
+    <Property>
+        <Name>.o-hidden</Name>
+        <Output>overflow: hidden;</Output>
+    </Property>
+    <Property>
+        <Name>.ox-hidden</Name>
+        <Output>overflow-x: hidden;</Output>
+    </Property>
+    <Property>
+        <Name>.oy-hidden</Name>
+        <Output>overflow-y: hidden;</Output>
+    </Property>
+    <Property>
+        <Name>.o-visible</Name>
+        <Output>overflow: visible;</Output>
+    </Property>
+</Reference>
+
+
+
+## Auto
+
+`.o-auto` adds scrollbars when required and extends the content in all directions.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-60 bg-secondary-100 p-2 o-auto">
+      <p>
+        Mi mauris venenatis penatibus sem pulvinar volutpat tellus suscipit elementum euismod, pharetra per faucibus scelerisque justo senectus cursus id laoreet viverra maximus, blandit molestie sed purus curae dapibus sociosqu lorem ligula.
+      </p>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="o-auto">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Scroll
+
+`.o-scroll` adds scrollbars even if scrolling is not required.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-60 bg-secondary-100 p-2 o-auto">
+      <p>
+        Mi mauris venenatis penatibus sem pulvinar volutpat tellus suscipit elementum euismod, pharetra per faucibus scelerisque justo senectus cursus id laoreet viverra maximus, blandit molestie sed purus curae dapibus sociosqu lorem ligula.
+      </p>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="o-scroll">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Hidden
+
+`.o-hidden` cuts off children elements, which exceed its bounds.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-60 bg-secondary-100 p-2 o-hidden">
+      <p>
+        Mi mauris venenatis penatibus sem pulvinar volutpat tellus suscipit elementum euismod, pharetra per faucibus scelerisque justo senectus cursus id laoreet viverra maximus, blandit molestie sed purus curae dapibus sociosqu lorem ligula.
+      </p>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="o-hidden">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Visible
+
+`.o-visible` allows children exceeding its bounds to be visible.
+
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-60 bg-secondary-100 p-2 o-visible">
+      <p>
+        Mi mauris venenatis penatibus sem pulvinar volutpat tellus suscipit elementum euismod, pharetra per faucibus scelerisque justo senectus cursus id laoreet viverra maximus, blandit molestie sed purus curae dapibus sociosqu lorem ligula.
+      </p>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="o-visible">...</div>
+  </Sandbox.Code>
+</Sandbox>
