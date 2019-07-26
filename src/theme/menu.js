@@ -29,7 +29,7 @@ const Menu = ({category, doc}) => {
           <li className={liClass} key={menu.id}>
             <Link
               to={menu.route}
-              className="c-inherit py-2 pl-2 d-block td-none fs-body">
+              className="c-inherit py-2 pl-2 d-block td-none fs-body c-pointer">
               {key + 1}. {menu.name}
             </Link>
           </li>
