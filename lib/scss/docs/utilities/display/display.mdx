@@ -1,0 +1,199 @@
+---
+name: Display
+route: /utilities/display
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+import { Spacer } from '@lib'
+
+import Sandbox from '@components/Sandbox'
+
+
+# Display
+
+Utility classes to control the display properties of an element
+
+
+## Class reference
+<Reference>
+    <Property>
+        <Name>.d-block</Name>
+        <Output>display: block;</Output>
+    </Property>
+    <Property>
+        <Name>.d-inline-block</Name>
+        <Output>display: inline-block;</Output>
+    </Property>
+    <Property>
+        <Name>.d-inline</Name>
+        <Output>display: inline;</Output>
+    </Property>
+    <Property>
+        <Name>.d-flex</Name>
+        <Output>display: flex;</Output>
+    </Property>
+    <Property>
+        <Name>.d-inline-flex</Name>
+        <Output>display: inline-flex;</Output>
+    </Property>
+    <Property>
+        <Name>.d-table</Name>
+        <Output>display: table;</Output>
+    </Property>
+    <Property>
+        <Name>.d-table-row</Name>
+        <Output>display: table-row;</Output>
+    </Property>
+    <Property>
+        <Name>.d-table-cell</Name>
+        <Output>display: table-cell;</Output>
+    </Property>
+    <Property>
+        <Name>.d-none</Name>
+        <Output>display: none;</Output>
+    </Property>
+    <Property>
+        <Name>.d-unset</Name>
+        <Output>display: unset;</Output>
+    </Property>
+  </Reference>
+
+
+## Block
+
+`.d-block` creates block level elements.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="bg-tertiary-400 c-white d-block">
+      <div className="flex flex-center flex-middle h-40">
+        This takes up all the available space
+      </div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-block">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+
+## Inline Block
+
+`.d-inline-block` creates inline elements which behave as blocks.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="bg-tertiary-400 c-white d-inline-block mr-3">
+      <div className="flex flex-middle flex-center h-40">
+        This only
+      </div>
+    </div>
+
+    <div className="bg-tertiary-400 c-white d-inline-block mr-3">
+      <div className="flex flex-middle flex-center h-40">
+        takes as much space
+      </div>
+    </div>
+
+    <div className="bg-tertiary-400 c-white d-inline-block">
+      <div className="flex flex-middle flex-center h-40">
+        as it needs
+      </div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-block">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+## Inline
+
+`.d-inline` creates inline elements.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="bg-tertiary-400 c-white d-inline-block mr-3">
+      this is an inline element
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-block">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+## Flex
+
+`.d-flex` creates a top level flex element.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="bg-tertiary-100 d-flex">
+        <div className="flex flex-1 flex-middle flex-center bg-tertiary-400 c-white mx-1 h-40">
+          1
+        </div>
+        <div className="flex flex-1 flex-middle flex-center bg-tertiary-400 c-white mx-1 h-40">
+          2
+        </div>
+        <div className="flex flex-1 flex-middle flex-center bg-tertiary-400 c-white mx-1 h-40">
+          3
+        </div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-flex">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+## Table
+
+Using `d-table`, `d-table-row`, `d-table-cell` it is possibl e to emulate a table built with `<table>`, `<tr>` and `<td>` respectively.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div class="d-table w-full">
+      <div class="d-table-row">
+        <div class="d-table-cell px-4 py-2">Cell 1</div>
+        <div class="d-table-cell px-4 py-2">Cell 2</div>
+        <div class="d-table-cell px-4 py-2">Cell 3</div>
+      </div>
+      <div class="d-table-row">
+        <div class="d-table-cell px-4 py-2">Cell 4</div>
+        <div class="d-table-cell px-4 py-2">Cell 5</div>
+        <div class="d-table-cell px-4 py-2">Cell 6</div>
+      </div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-block">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+
+
+
+## None
+
+Using `d-none`. Hides the element from the browser but also removes it from the dom
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div class="d-none w-full">
+      <p>lorem</p>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="d-none">...</div>
+  </Sandbox.Code>
+</Sandbox>
