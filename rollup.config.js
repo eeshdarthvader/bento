@@ -40,7 +40,8 @@ export default {
       exclude: 'node_modules/**'
     }),
     postcss({
-      extract: true
+      extract: true,
+      minimize: isProduction
     }),
     url(),
     svgr(),

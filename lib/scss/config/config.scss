@@ -24,6 +24,7 @@
   18. Background Size
   19. Background Repeat
   20. Background Position
+  21. Visibility
 ------------------------------------ */
 
 
@@ -491,5 +492,13 @@ $config: (
     'right-bottom': right bottom,
     'right-top': right top,
     'top': top
+  ),
+
+  // ------------------------------
+  // 21. Visibilty
+  // ------------------------------
+  'visibility': (
+    'visible': visible,
+    'hidden': hidden
   ),
 )

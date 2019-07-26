@@ -1,0 +1,16 @@
+/* -----------------------------------
+  Visibilty Generator
+  Generates utility classes for visibilty
+  based on config
+---------------------------------------
+  1. Visibilty
+------------------------------------ */
+
+// ------------------------------
+// Visibilty
+// ------------------------------
+@each $object, $value in config('visibility') {
+  .v-#{$object} {
+    visibility: $value
+  }
+}

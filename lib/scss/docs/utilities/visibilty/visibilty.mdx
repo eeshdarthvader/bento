@@ -1,0 +1,57 @@
+---
+name: Visibility
+route: /utilities/visibilty
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+import { Spacer } from '@lib'
+
+import Sandbox from '@components/Sandbox'
+
+
+# Visibilty
+
+Utility classes to toggle the visibilty of an element
+
+
+## Class reference
+<Reference>
+    <Property>
+        <Name>.v-hidden</Name>
+        <Output>visibilty: hidden;</Output>
+    </Property>
+    <Property>
+        <Name>.v-visibile</Name>
+        <Output>visibilty: visibile;</Output>
+    </Property>
+  </Reference>
+
+
+
+## Example
+
+Note that `v-hidden` hides an element, but still maintains its place in the DOM.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-middle flex-center bg-tertiary-100">
+      <div className="bg-tertiary-500 c-white h-44 w-80p v-visible" />
+    </div>
+  </Sandbox.Preview>
+  <Spacer my={1} />
+  <Sandbox.Preview>
+    <div className="flex flex-middle flex-center bg-tertiary-100">
+      <div className="bg-tertiary-500 c-white h-44 w-80p v-hidden" />
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="v-visible">...</div>
+    <div className="v-hidden">...</div>
+  </Sandbox.Code>
+</Sandbox>
