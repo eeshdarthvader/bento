@@ -13,6 +13,25 @@ import { Spacer } from "@lib";
 
 Utility classes for all typography elements.
 
+## Font family
+
+Bento uses three font stacks. Use these classes `ff-sans-serif`, `ff-serif` and `ff-mono` to change the `font-family`
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="ff-sans-serif fs-body-3 d-block">Millimeter</span>
+    <span className="ff-serif fs-body-3 d-block">Millimeter</span>
+    <span className="ff-mono fs-body-3 d-block">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="ff-sans-serif">...</p>
+    <p className="ff-serif">...</p>
+    <p className="ff-mono">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
 ## Font size
 
 Bento's type scale has the following classes to change the font size of an element. Use it in combination with font weight and line height for better harmony.
