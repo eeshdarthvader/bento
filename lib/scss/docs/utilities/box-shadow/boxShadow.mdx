@@ -1,0 +1,94 @@
+---
+name: Box Shadow
+route: /utilities/boxShadow
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import Sandbox from '@components/Sandbox'
+
+# Box Shadow
+
+Used to set box shadow attributes.
+
+## Class Reference
+
+<Reference>
+    <Property>
+        <Name>.elevation-0</Name>
+        <Output>box-shadow: 0;
+        </Output>
+    </Property>
+    <Property>
+        <Name>.elevation-1</Name>
+        <Output>box-shadow: <br /> <br />(0 1px 3px 0 rgba(0, 0, 0, 0.1),<br /> <br />0 1px 2px 0 rgba(0, 0, 0, 0.06));
+        </Output>
+    </Property>
+    <Property>
+        <Name>.elevation-2</Name>
+        <Output>box-shadow: <br /> <br />(0 4px 6px -1px rgba(0, 0, 0, 0.1),<br /> <br />0 2px 4px -1px rgba(0, 0, 0, 0.06));
+        </Output>
+    </Property>
+    <Property>
+        <Name>.elevation-3</Name>
+        <Output>box-shadow: <br /> <br />(0 10px 15px -3px rgba(0, 0, 0, 0.1),<br /> <br />0 4px 6px -2px rgba(0, 0, 0, 0.05));
+        </Output>
+    </Property>
+    <Property>
+        <Name>.elevation-4</Name>
+        <Output>box-shadow: <br /> <br />(0 20px 25px -5px rgba(0, 0, 0, 0.1),<br /> <br />0 10px 10px -5px rgba(0, 0, 0, 0.04));
+        </Output>
+    </Property>
+    <Property>
+        <Name>.elevation-5</Name>
+        <Output>box-shadow: <br /> <br />0 25px 50px -12px rgba(0, 0, 0, 0.25)
+        </Output>
+    </Property>
+</Reference>
+
+** Example **
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block ta-center flex flex-start flex-between flex-wrap" style={{
+        width: '600px'
+    }}>
+      <div className="bg-grey-05 elevation-0 h-50 flex flex-middle p-4 mx-4 my-4">No Box Shadow</div>
+      <div className="bg-grey-05 elevation-1 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 1</div>
+      <div className="bg-grey-05 elevation-2 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 2</div>
+      <div className="bg-grey-05 elevation-3 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 3</div>
+      <div className="bg-grey-05 elevation-4 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 4</div>
+      <div className="bg-grey-05 elevation-5 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 5</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="elevation-0">No Box Shadow</div>
+    <div className="elevation-1">Box Shadow 1</div>
+    <div className="elevation-2">Box Shadow 2</div>
+    <div className="elevation-3">Box Shadow 3</div>
+    <div className="elevation-4">Box Shadow 4</div>
+    <div className="elevation-5">Box Shadow 5</div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Hover state
+   Change the amount of box shadow on an element on hover. The syntax is : `.hover:elevation-{value}`.
+
+** Example **
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block ta-center flex flex-start flex-between flex-wrap" style={{
+        width: '600px'
+    }}>
+      <div className="bg-grey-05 hover:elevation-4 h-50 flex flex-middle p-4 mx-4 my-4">Box Shadow 4 on Hover</div>    
+      </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="hover:elevation-4">Box Shadow 4</div>
+  </Sandbox.Code>
+</Sandbox>
