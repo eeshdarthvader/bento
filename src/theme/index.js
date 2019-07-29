@@ -24,7 +24,7 @@ const Theme = ({children}) => {
         className="flex flex-column"
         style={{ minHeight: '100vh' }}
       >
-        <Header fluid={true} />
+        <Header fluid={true} activeNav={menuCategory}/>
 
         <div className="flex flex-1">
           <div

@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import classNames from "classnames"
 
 import {
   Row,
@@ -40,27 +41,27 @@ const Header = props => {
                 </Link>
 
                 <ul
-                  className="flex fs-body c-white"
+                  className="flex fs-body c-white flex-middle"
                   style={{ height: '72px' }}
                 >
-                  <li className="flex flex-middle hover:bg-slate-dark">
+                  <li>
                     <Link
                       to="/foundation/color"
-                      className="td-none c-inherit px-8 py-6">
+                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Foundation'})}>
                       Foundation
                     </Link>
                   </li>
-                  <li className="flex flex-middle hover:bg-slate-dark">
+                  <li>
                     <Link
                       to="/utilities/background"
-                      className="td-none c-inherit px-8 py-6">
+                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Utilities'})}>
                       Utilities
                     </Link>
                   </li>
-                  <li className="flex flex-middle hover:bg-slate-dark">
+                  <li>
                     <Link
                       to="/components/button"
-                      className="td-none c-inherit px-8 py-6">
+                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Components'})}>
                       Components
                     </Link>
                   </li>

@@ -5,7 +5,6 @@ import classnames from 'classnames'
 
 const Menu = ({category, doc}) => {
   const allMenus = useMenus()
-
   // Get only category menus
   const menu = allMenus.filter(menu => {
     return menu.name === category
@@ -14,7 +13,7 @@ const Menu = ({category, doc}) => {
   const menuItems = menu[0].menu
 
   return (
-    <ul className="mt-8 mx-5">
+    <ul className="mx-5 p-sticky l-0" style={{top: '104px'}}>
       {menuItems.map((menu, key) => {
         const liClass = classnames('br-2 wc-transform', {
           'c-tertiary-400': menu.name !== doc,
