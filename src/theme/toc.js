@@ -19,7 +19,7 @@ const generateTOC = (elems) => {
     return (
       <li className="fs-body c-grey-40 hover:c-grey-80 mb-2 antialiased wc-transform hover:translate" key={url}>
         <Scrollchor to={`#${url}`}
-          animate={{offset: -100, duration: 400}} 
+          animate={{offset: -100, duration: 280}}
           className="c-inherit td-none" >
           {heading}
         </Scrollchor>
