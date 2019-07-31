@@ -4,14 +4,9 @@ route: /utilities/background
 menu: Utilities
 ---
 
-import {
-  Reference,
-  Property,
-  Name,
-  Output
-} from '@components/Reference'
-import { Spacer } from '@lib'
-import Sandbox from '@components/Sandbox'
+import { Reference, Property, Name, Output } from "@components/Reference";
+import { Spacer } from "@lib";
+import Sandbox from "@components/Sandbox";
 
 # Background
 
@@ -20,72 +15,71 @@ Used to set the properties of a background image
 ## Class reference
 
 <Reference>
-    <Property>
-        <Name>.bs-auto</Name>
-        <Output>background-size: auto;</Output>
-    </Property>
-    <Property>
-        <Name>.bs-cover</Name>
-        <Output>background-size: cover;</Output>
-    </Property>
-    <Property>
-        <Name>.bs-contain</Name>
-        <Output>background-size: contain;</Output>
-    </Property>
-    <Property>
-        <Name>.br-repeat</Name>
-        <Output>background-repeat: repeat;</Output>
-    </Property>
-    <Property>
-        <Name>.br-no-repeat</Name>
-        <Output>background-repeat: no-repeat;</Output>
-    </Property>
-    <Property>
-        <Name>.br-repeat-x</Name>
-        <Output>background-repeat: repeat-x;</Output>
-    </Property>
-    <Property>
-        <Name>.br-repeat-y</Name>
-        <Output>background-repeat: repeat-y;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-bottom</Name>
-        <Output>background-position: bottom;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-center</Name>
-        <Output>background-position: center;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-left</Name>
-        <Output>background-position: left;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-left-bottom</Name>
-        <Output>background-position: left-bottom;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-left-top</Name>
-        <Output>background-position: left-top;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-right</Name>
-        <Output>background-position: right;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-right-bottom</Name>
-        <Output>background-position: right-bottom;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-right-top</Name>
-        <Output>background-position: right-top;</Output>
-    </Property>
-    <Property>
-        <Name>.bp-top</Name>
-        <Output>background-position: top;</Output>
-    </Property>
+  <Property>
+    <Name>.bs-auto</Name>
+    <Output>background-size: auto;</Output>
+  </Property>
+  <Property>
+    <Name>.bs-cover</Name>
+    <Output>background-size: cover;</Output>
+  </Property>
+  <Property>
+    <Name>.bs-contain</Name>
+    <Output>background-size: contain;</Output>
+  </Property>
+  <Property>
+    <Name>.br-repeat</Name>
+    <Output>background-repeat: repeat;</Output>
+  </Property>
+  <Property>
+    <Name>.br-no-repeat</Name>
+    <Output>background-repeat: no-repeat;</Output>
+  </Property>
+  <Property>
+    <Name>.br-repeat-x</Name>
+    <Output>background-repeat: repeat-x;</Output>
+  </Property>
+  <Property>
+    <Name>.br-repeat-y</Name>
+    <Output>background-repeat: repeat-y;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-bottom</Name>
+    <Output>background-position: bottom;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-center</Name>
+    <Output>background-position: center;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-left</Name>
+    <Output>background-position: left;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-left-bottom</Name>
+    <Output>background-position: left-bottom;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-left-top</Name>
+    <Output>background-position: left-top;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-right</Name>
+    <Output>background-position: right;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-right-bottom</Name>
+    <Output>background-position: right-bottom;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-right-top</Name>
+    <Output>background-position: right-top;</Output>
+  </Property>
+  <Property>
+    <Name>.bp-top</Name>
+    <Output>background-position: top;</Output>
+  </Property>
 </Reference>
-
 
 ## Background size
 
@@ -95,8 +89,8 @@ Used to set the properties of a background image
       alt="random image"
       className="bs-cover br-no-repeat bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/500x180)"
       }}
     />
     <Spacer my={2} />
@@ -104,8 +98,8 @@ Used to set the properties of a background image
       alt="random image"
       className="bs-contain br-no-repeat bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/500x180)"
       }}
     />
     <Spacer my={2} />
@@ -113,19 +107,17 @@ Used to set the properties of a background image
       alt="random image"
       className="bs-auto br-no-repeat bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/500x180)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/500x180)"
       }}
     />
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="bs-cover"/>
-    <div className="bs-contain"/>
-    <div className="bs-auto"/>
+    <div className="bs-cover" />
+    <div className="bs-contain" />
+    <div className="bs-auto" />
   </Sandbox.Code>
 </Sandbox>
-
-
 
 ## Background repeat
 
@@ -135,8 +127,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-repeat bp-center bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -144,8 +136,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-center bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -153,8 +145,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-repeat-x bp-center bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -162,21 +154,18 @@ Used to set the properties of a background image
       alt="random image"
       className="br-repeat-y bp-center bg-tertiary-100 w-100p"
       style={{
-        height: '200px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "200px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="br-repeat"/>
-    <div className="br-no-repeat"/>
-    <div className="br-repeat-x"/>
-    <div className="br-no-repeat-y"/>
+    <div className="br-repeat" />
+    <div className="br-no-repeat" />
+    <div className="br-repeat-x" />
+    <div className="br-no-repeat-y" />
   </Sandbox.Code>
 </Sandbox>
-
-
-
 
 ## Background position
 
@@ -186,8 +175,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-center bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -195,8 +184,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-top bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -204,8 +193,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-right-top bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -213,8 +202,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-right bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -222,8 +211,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-right-bottom bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -231,8 +220,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-bottom bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -240,8 +229,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-left-bottom bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -249,8 +238,8 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-left bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
     <Spacer my={2} />
@@ -258,20 +247,20 @@ Used to set the properties of a background image
       alt="random image"
       className="br-no-repeat bp-left-top bg-tertiary-100 w-100p"
       style={{
-        height: '140px',
-        backgroundImage: 'url(https://source.unsplash.com/WLUHO9A_xik/100x100)'
+        height: "140px",
+        backgroundImage: "url(https://source.unsplash.com/WLUHO9A_xik/100x100)"
       }}
     />
   </Sandbox.Preview>
   <Sandbox.Code>
-    <div className="bp-center"/>
-    <div className="bp-top"/>
-    <div className="bp-right-top"/>
-    <div className="bp-right"/>
-    <div className="bp-right-bottom"/>
-    <div className="bp-bottom"/>
-    <div className="bp-left-bottom"/>
-    <div className="bp-left"/>
-    <div className="bp-left-top"/>
+    <div className="bp-center" />
+    <div className="bp-top" />
+    <div className="bp-right-top" />
+    <div className="bp-right" />
+    <div className="bp-right-bottom" />
+    <div className="bp-bottom" />
+    <div className="bp-left-bottom" />
+    <div className="bp-left" />
+    <div className="bp-left-top" />
   </Sandbox.Code>
 </Sandbox>

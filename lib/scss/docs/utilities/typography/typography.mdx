@@ -1,0 +1,499 @@
+---
+name: Typography
+route: /utilities/typography
+menu: Utilities
+---
+
+import { Reference, Property, Name, Output, Text } from "@components/Reference";
+import Sandbox from "@components/Sandbox";
+
+import { Spacer } from "@lib";
+
+# Typography
+
+Utility classes for all typography elements.
+
+## Font family
+
+Bento uses three font stacks. Use these classes `ff-sans-serif`, `ff-serif` and `ff-mono` to change the `font-family`
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="ff-sans-serif fs-body-3 d-block">Millimeter</span>
+    <span className="ff-serif fs-body-3 d-block">Millimeter</span>
+    <span className="ff-mono fs-body-3 d-block">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="ff-sans-serif">...</p>
+    <p className="ff-serif">...</p>
+    <p className="ff-mono">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Font size
+
+Bento's type scale has the following classes to change the font size of an element. Use it in combination with font weight and line height for better harmony.
+
+<Reference>
+  <Property>
+    <Name>.fs-caption</Name>
+    <Output>font-size:10px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-caption-2</Name>
+    <Output>font-size:12px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-body</Name>
+    <Output>font-size:14px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-body-2</Name>
+    <Output>font-size:16px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-body-3</Name>
+    <Output>font-size:20px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-heading</Name>
+    <Output>font-size:24px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-heading-2</Name>
+    <Output>font-size:32px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-heading-3</Name>
+    <Output>font-size:36px;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-display</Name>
+    <Output>font-size:48px;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-display d-block">Millimeter</span>
+    <span className="fs-heading-3 d-block">Millimeter</span>
+    <span className="fs-heading-2 d-block">Millimeter</span>
+    <span className="fs-heading d-block">Millimeter</span>
+    <span className="fs-body-3 d-block">Millimeter</span>
+    <span className="fs-body-2 d-block">Millimeter</span>
+    <span className="fs-body d-block">Millimeter</span>
+    <span className="fs-caption-2 d-block">Millimeter</span>
+    <span className="fs-caption d-block">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="fs-display">...</p>
+    <p className="fs-heading-2">...</p>
+    <p className="fs-heading-1">...</p>. . .<p className="fs-caption">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Font weight
+
+The available range of weights is `100`(Ultra thin) to `900`(Black).
+Some of the commonly used weights are `.fw-400`, `.fw-500`, `.fw-600` and `.fw-800`
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-3 d-block fw-800">Millimeter</span>
+    <span className="fs-body-3 d-block fw-600">Millimeter</span>
+    <span className="fs-body-3 d-block fw-500">Millimeter</span>
+    <span className="fs-body-3 d-block fw-400">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="fw-800">...</p>
+    <p className="fw-600">...</p>
+    <p className="fw-500">...</p>
+    <p className="fw-400">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Line height
+
+Change the line height density with these classes.
+
+<Reference>
+
+  <Property>
+    <Name>.lh-solid</Name>
+    <Output>line-height:1;</Output>
+  </Property>
+  <Property>
+    <Name>.lh-title</Name>
+    <Output>line-height:1.25;</Output>
+  </Property>
+  <Property>
+    <Name>.lh-copy</Name>
+    <Output>line-height:1.5;</Output>
+  </Property>
+  </Reference>
+<Spacer my={8} />
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="c-neutral-800 m-0 lh-solid d-block">
+      <strong>Line height of this paragraph is set to 1.</strong> The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="c-neutral-800 m-0 lh-title d-block">
+      <strong>Line height of this paragraph is set to 1.25.</strong>The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="c-neutral-800 m-0 lh-copy d-block">
+      <strong>Line height of this paragraph is set to 1.5.</strong>The quick
+      brown fox jumped over the lazy dog. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="lh-solid">...</p>
+    <p className="lh-title">...</p>
+    <p className="lh-copy">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={8} />
+
+Additionally, `.lh-none` sets the `line-height` to `0`. It's best to not use it unless needed for a specific usecase.
+
+## Font style
+
+This property allows you to make text appear italicized. By default the `font-style` is set to `normal`
+
+<Reference>
+  <Property>
+    <Name>.fs-italic</Name>
+    <Output>font-style:italic;</Output>
+  </Property>
+  <Property>
+    <Name>.fs-normal</Name>
+    <Output>font-style:normal;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-3 d-block fw-400 fs-italic">Millimeter</span>
+    <span className="fs-body-3 d-block fw-400 fs-normal">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="fs-italic">...</p>
+    <p className="fs-normal">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Text decoration
+
+Change the appearance of the decorative lines using these classes.
+
+<Reference>
+  <Property>
+    <Name>.td-underline</Name>
+    <Output>text-decoration: underline;</Output>
+  </Property>
+  <Property>
+    <Name>.td-none</Name>
+    <Output>text-decoration: none;</Output>
+  </Property>
+  <Property>
+    <Name>.td-line-through</Name>
+    <Output>text-decoration: line-through;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-3 d-block td-underline">Millimeter</span>
+    <span className="fs-body-3 d-block td-none">Millimeter</span>
+    <span className="fs-body-3 d-block td-line-through">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="td-underline">...</p>
+    <p className="td-none">...</p>
+    <p className="td-line-through">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Text align
+
+Change the alignment of the text using these classes.
+
+<Reference>
+  <Property>
+    <Name>.ta-left</Name>
+    <Output>text-align: left;</Output>
+  </Property>
+  <Property>
+    <Name>.ta-right</Name>
+    <Output>text-align: left;</Output>
+  </Property>
+  <Property>
+    <Name>.ta-center</Name>
+    <Output>text-align: center;</Output>
+  </Property>
+  <Property>
+    <Name>.ta-justify</Name>
+    <Output>text-align: justify;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-left">
+      <span className="fs-body-3">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-right">
+      <span className="fs-body-3">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-center">
+      <span className="fs-body-3">Hello</span>
+    </div>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <div className="d-inline-block h-44 bg-secondary-100 w-100p clearfix ta-justify">
+      <span className="fs-body-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </span>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="ta-left">...</div>
+    <div className="ta-right">...</div>
+    <div className="ta-center">...</div>
+    <div className="ta-justify">...</div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Font smoothing
+
+This property controls the application of anti-aliasing when fonts are rendered.
+
+<Reference>
+  <Property>
+    <Name>.fs-antialiased</Name>
+    <Output>font-smoothing: antialiased;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block fs-antialiased">Antialiased</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="fs-antialiased">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Letter spacing
+
+Defines the spacing between the characters of a block of text.
+
+<Reference>
+  <Property>
+    <Name>.ls-tight</Name>
+    <Output>letter-spacing: -1px;</Output>
+  </Property>
+  <Property>
+    <Name>.ls-normal</Name>
+    <Output>letter-spacing: 0px;</Output>
+  </Property>
+  <Property>
+    <Name>.ls-wide</Name>
+    <Output>letter-spacing: 1px;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block ls-tight">
+      Tightly letter-spaced at -1px
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block ls-normal">
+      No additional letter-spacing applied
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block ls-wide">
+      Loosely letter-spaced at 1px
+    </span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="ls-tight">...</p>
+    <p className="ls-normal">...</p>
+    <p className="ls-wide">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## Text color
+
+The color of the text can be changed by adding the color variables/classes.
+
+<Reference>
+  <Property>
+    <Name>.c-primary-500</Name>
+    <Output>color: #F77728;</Output>
+  </Property>
+  <Property>
+    <Name>.c-secondary-500</Name>
+    <Output>color: #3366CC;</Output>
+  </Property>
+  <Property>
+    <Name>.c-tertiary-500</Name>
+    <Output>color: #37404E;</Output>
+  </Property>
+  <Property>
+    <Name>.c-success-500</Name>
+    <Output>color: #80AA01;</Output>
+  </Property>
+  <Property>
+    <Name>.c-error-500</Name>
+    <Output>color: #FF3C2B;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-3 d-block c-primary-500">Millimeter</span>
+    <span className="fs-body-3 d-block c-secondary-500">Millimeter</span>
+    <span className="fs-body-3 d-block c-tertiary-500">Millimeter</span>
+    <span className="fs-body-3 d-block c-success-500">Millimeter</span>
+    <span className="fs-body-3 d-block c-error-500">Millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="c-primary-500">...</p>
+    <p className="c-secondary-500">...</p>
+    <p className="c-tertiary-500">...</p>
+    <p className="c-success-500">...</p>
+    <p className="c-error-500">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={8} />
+
+Additionally, refer the color page of the utilities to see all possible colors of the palette.
+
+## Text transform
+
+This property specifies how to capitalize an element's text.
+
+<Reference>
+  <Property>
+    <Name>.tt-normalcase</Name>
+    <Output>text-transform: normal;</Output>
+  </Property>
+  <Property>
+    <Name>.tt-uppercase</Name>
+    <Output>text-transform: uppercase;</Output>
+  </Property>
+  <Property>
+    <Name>.tt-lowercase</Name>
+    <Output>text-transform: lowercase;</Output>
+  </Property>
+  <Property>
+    <Name>.tt-capitalize</Name>
+    <Output>text-transform: capitalize;</Output>
+  </Property>
+  <Property>
+    <Name>.tt-unset</Name>
+    <Output>text-transform: unset;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-3 d-block tt-normalcase">millimeter</span>
+    <span className="fs-body-3 d-block tt-uppercase">millimeter</span>
+    <span className="fs-body-3 d-block tt-lowercase">millimeter</span>
+    <span className="fs-body-3 d-block tt-capitalize">millimeter</span>
+    <span className="fs-body-3 d-block tt-unset">millimeter</span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="tt-normalcase">...</p>
+    <p className="tt-uppercase">...</p>
+    <p className="tt-lowercase">...</p>
+    <p className="tt-capitalize">...</p>
+    <p className="tt-unset">...</p>
+  </Sandbox.Code>
+</Sandbox>
+
+## whitespace
+
+Defines how whitespace is handled inside an element.
+
+<Reference>
+  <Property>
+    <Name>.ws-normal</Name>
+    <Output>whitespace: normal;</Output>
+  </Property>
+  <Property>
+    <Name>.ws-nowrap</Name>
+    <Output>whitespace: nowrap;</Output>
+  </Property>
+</Reference>
+
+<Spacer my={8} />
+
+<Sandbox>
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block ws-normal">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua
+    </span>
+  </Sandbox.Preview>
+  <Spacer my={4} />
+  <Sandbox.Preview>
+    <span className="fs-body-2 d-block ws-nowrap">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    </span>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <p className="ws-normal">...</p>
+    <p className="ws-nowrap">...</p>
+  </Sandbox.Code>
+</Sandbox>
