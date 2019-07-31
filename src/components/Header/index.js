@@ -23,6 +23,10 @@ const Container = props => (
 )
 
 const Header = props => {
+
+  const navClass = classNames('d-flex hover:bg-slate-dark bb bw-4 bc-slate')
+  const activeNavClass = classNames('d-flex bg-slate-dark bb bw-4 bc-orange')
+
   return (
     <Fragment>
       <div style={{ height: '72px' }} className="bg-slate">
@@ -42,26 +46,32 @@ const Header = props => {
 
                 <ul
                   className="flex fs-body c-white flex-middle"
-                  style={{ height: '72px' }}
+                  style={{ height: '72px', listStyleType: 'none' }}
                 >
-                  <li>
+                  <li
+                    className={(props.activeNav === 'Foundation') ? activeNavClass : navClass}
+                  >
                     <Link
                       to="/foundation/color"
-                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Foundation'})}>
+                      className='td-none c-inherit px-8 py-6'>
                       Foundation
                     </Link>
                   </li>
-                  <li>
+                  <li
+                    className={(props.activeNav === 'Utilities') ? activeNavClass : navClass}
+                  >
                     <Link
                       to="/utilities/background"
-                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Utilities'})}>
+                      className='td-none c-inherit px-8 py-6'>
                       Utilities
                     </Link>
                   </li>
-                  <li>
+                  <li
+                    className={(props.activeNav === 'Components') ? activeNavClass : navClass}
+                  >
                     <Link
                       to="/components/button"
-                      className={classNames('td-none c-inherit px-8 py-6 hover:bg-slate-dark', {'bb bw-4 bc-orange': props.activeNav === 'Components'})}>
+                      className='td-none c-inherit px-8 py-6'>
                       Components
                     </Link>
                   </li>
