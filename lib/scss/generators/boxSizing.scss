@@ -13,4 +13,7 @@
   .box-#{$boxSize} {
     box-sizing: $value
   }
+  .bs-#{$boxSize} {
+    box-sizing: $value
+  }
 }

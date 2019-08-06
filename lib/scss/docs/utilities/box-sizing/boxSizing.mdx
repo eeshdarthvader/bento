@@ -21,15 +21,15 @@ Sets how the total width and height of an element is calculated.
 
 <Reference>
   <Property>
-    <Name>.box-content</Name>
+    <Name>.bs-content</Name>
     <Output>box-sizing: content-box;</Output>
   </Property>
   <Property>
-    <Name>.box-border</Name>
+    <Name>.bs-border</Name>
     <Output>box-sizing: border-box;</Output>
   </Property>
   <Property>
-    <Name>.box-unset</Name>
+    <Name>.bs-unset</Name>
     <Output>box-sizing: unset;</Output>
   </Property>
 </Reference>
@@ -41,20 +41,20 @@ This example explains `content-box` **without** and **with** `padding` and `bord
   <Sandbox.Preview>
     <div className="d-inline-block bg-tertiary-300 m-5 ba bc-tertiary-700">
         <p className="c-white p-4 ta-center">Parent container</p>
-        <div className="bg-tertiary-500 w-100p box-content">
+        <div className="bg-tertiary-500 w-100p bs-content">
             <p className="c-white ta-center">Child container</p>
-            
+
         </div>
     </div>
     <div className="d-inline-block bg-tertiary-300 m-5 ba bc-tertiary-700">
         <p className="c-white p-4 ta-center">Parent container</p>
-        <div className="bg-tertiary-500 w-100p ba bc-tertiary-700 box-content p-2">
+        <div className="bg-tertiary-500 w-100p ba bc-tertiary-700 bs-content p-2">
             <p className="c-white ta-center">Child container</p>
         </div>
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <p className="box-content">...</p>
+    <p className="bs-content">...</p>
   </Sandbox.Code>
 </Sandbox>
 
@@ -65,19 +65,19 @@ This example explains `border-box` **without** and **with** `padding` and `borde
   <Sandbox.Preview>
     <div className="d-inline-block bg-tertiary-300 m-5 ba bc-tertiary-700">
         <p className="c-white p-4 ta-center">Parent container</p>
-        <div className="bg-tertiary-500 w-100p box-border">
+        <div className="bg-tertiary-500 w-100p bs-border">
             <p className="c-white ta-center">Child container</p>
-            
+
         </div>
     </div>
     <div className="d-inline-block bg-tertiary-300 m-5 ba bc-tertiary-700">
         <p className="c-white p-4 ta-center">Parent container</p>
-        <div className="bg-tertiary-500 w-100p ba bc-tertiary-700 box-border p-2">
+        <div className="bg-tertiary-500 w-100p ba bc-tertiary-700 bs-border p-2">
             <p className="c-white ta-center">Child container</p>
         </div>
     </div>
   </Sandbox.Preview>
   <Sandbox.Code>
-    <p className="box-border">...</p>
+    <p className="bs-border">...</p>
   </Sandbox.Code>
 </Sandbox>
