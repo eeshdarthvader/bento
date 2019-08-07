@@ -3,7 +3,7 @@
   // &:nth-child(odd) {
   //   background-color: #FAFAFA;
   // }
-  border-bottom: solid 1px #D1DFED;
+  border-bottom: solid 1px #e6e6e6;
 }
 
 .propName {
@@ -15,8 +15,14 @@
   font-size: 12px !important;
 }
 
-.propEnums {
+.propByline {
   color: #283143;
+  margin-top: 12px !important;
+  font-size: 12px !important;
+}
+
+.propAcceptedValues {
+  color: #666666;
   font-size: 14px !important;
   margin: 0 !important;
   margin-left: 12px !important;

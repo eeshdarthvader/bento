@@ -6,7 +6,7 @@ import Table from './Table'
 const PropTable = ({ component }) => {
 
   const metadata = useStaticQuery(graphql`
-    query PropMetadata {
+    query MyQuery {
       allComponentMetadata {
         totalCount
         nodes {
@@ -15,6 +15,10 @@ const PropTable = ({ component }) => {
             name
             type {
               name
+              value
+            }
+            required
+            defaultValue {
               value
             }
             description {
@@ -31,7 +35,7 @@ const PropTable = ({ component }) => {
 
   // Filter nodes by displayName
   const comp = nodes.filter(
-    node => node.displayName === "Badge"
+    node => node.displayName === component
   )
 
   // Get props of component

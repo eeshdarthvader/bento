@@ -4,7 +4,9 @@ import "./proptable.scss";
 
 const Table = ({ props }) => {
 
-  const getEnumString = (values) => {
+  console.log(props)
+
+  const getEnumString = (values, defaultValue) => {
     // Generate array from values
     let arrayOfValues = [];
     for (let value of values) {
@@ -23,6 +25,14 @@ const Table = ({ props }) => {
     return EnumString
   }
 
+  const getBoolString = () => {
+    return 'true | false'
+  }
+
+  const getFuncString = () => {
+    return '() => {}'
+  }
+
   return (
     <div className="propTable">
 
@@ -30,11 +40,13 @@ const Table = ({ props }) => {
         return (
           <div className="propRow" key={index}>
             <div className="flex flex-middle">
-              <p className="propName fw-600">{prop.name}</p>
+              <p className="propName fw-600">{prop.name}{prop.required && <span className="c-error-500">*</span>}</p>
               <code className="propCode">{prop.type.name}</code>
-              {prop.type.name === "enum" &&
-                <p className="propEnums">{getEnumString(prop.type.value)}</p>
-              }
+              <p className="propAcceptedValues ff-mono">
+                {prop.type.name === "enum" && getEnumString(prop.type.value, prop.defaultValue.value)}
+                {prop.type.name === "bool" && getBoolString()}
+                {prop.type.name === "func" && getFuncString()}
+              </p>
             </div>
             <div>
               <p className="propDescription">
@@ -44,6 +56,11 @@ const Table = ({ props }) => {
           </div>
         )
       })}
+
+      <p className="propByline">
+        Props marked with (<span className="c-error-500">*</span>) are required
+      </p>
+
     </div>
   );
 }
