@@ -4,11 +4,23 @@ import "./proptable.scss";
 
 const Table = ({ props }) => {
 
-  console.log(props)
+  const getEnumString = (values) => {
+    // Generate array from values
+    let arrayOfValues = [];
+    for (let value of values) {
+      arrayOfValues.push(value.value)
+    }
 
-  const getEnumValues = (values) => {
-    console.log(values)
-    return 'lg | md | sm'
+    // Dequote values in array
+    const deQuotedValues = []
+    arrayOfValues.forEach(value => {
+      deQuotedValues.push(value.substr(1).slice(0, -1))
+    });
+
+    // Join values in array
+    const EnumString = deQuotedValues.join(' | ')
+
+    return EnumString
   }
 
   return (
@@ -21,7 +33,7 @@ const Table = ({ props }) => {
               <p className="propName fw-600">{prop.name}</p>
               <code className="propCode">{prop.type.name}</code>
               {prop.type.name === "enum" &&
-                <p className="propEnums">{getEnumValues(prop.type.value)}</p>
+                <p className="propEnums">{getEnumString(prop.type.value)}</p>
               }
             </div>
             <div>
