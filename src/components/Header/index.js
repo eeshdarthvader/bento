@@ -70,7 +70,7 @@ const Header = props => {
                     className={(props.activeNav === 'Components') ? activeNavClass : navClass}
                   >
                     <Link
-                      to="/components/button"
+                      to="/components/badge"
                       className='td-none c-inherit px-8 py-6'>
                       Components
                     </Link>

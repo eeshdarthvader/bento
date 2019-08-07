@@ -1,0 +1,30 @@
+.propRow {
+  padding: 12px 0;
+  // &:nth-child(odd) {
+  //   background-color: #FAFAFA;
+  // }
+  border-bottom: solid 1px #D1DFED;
+}
+
+.propName {
+  font-size: 14px !important;
+  margin: 0 12px 0 0 !important;
+}
+
+.propCode {
+  font-size: 12px !important;
+}
+
+.propEnums {
+  color: #283143;
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-left: 12px !important;
+}
+
+.propDescription {
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-top: 6px !important;
+  line-height: 1.6;
+}
