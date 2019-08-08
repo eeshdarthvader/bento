@@ -50,6 +50,15 @@ body {
     line-height: calculateRem(44px);
     margin-bottom: calculateRem(16px);
     font-weight: 600;
+
+    &+p {
+      &:first-of-type {
+        font-size: calculateRem(20px);
+        line-height: calculateRem(28px);
+        font-weight: 400;
+        margin-bottom: calculateRem(40px);
+      }
+    }
   }
 
   h2 {
@@ -83,13 +92,6 @@ body {
     font-size: calculateRem(16px);
     line-height: calculateRem(24px);
     margin-bottom: calculateRem(16px);
-
-    &:first-of-type {
-      font-size: calculateRem(20px);
-      line-height: calculateRem(28px);
-      font-weight: 400;
-      margin-bottom: calculateRem(40px);
-    }
   }
 
   code {

@@ -49,12 +49,12 @@ const Header = props => {
                   style={{ height: '72px', listStyleType: 'none' }}
                 >
                   <li
-                    className={(props.activeNav === 'Foundation') ? activeNavClass : navClass}
+                    className={(props.activeNav === 'Tokens') ? activeNavClass : navClass}
                   >
                     <Link
-                      to="/foundation/color"
+                      to="/tokens/color"
                       className='td-none c-inherit px-8 py-6'>
-                      Foundation
+                      Tokens
                     </Link>
                   </li>
                   <li
@@ -70,7 +70,7 @@ const Header = props => {
                     className={(props.activeNav === 'Components') ? activeNavClass : navClass}
                   >
                     <Link
-                      to="/components/button"
+                      to="/components/badge"
                       className='td-none c-inherit px-8 py-6'>
                       Components
                     </Link>

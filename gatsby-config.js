@@ -4,6 +4,16 @@ module.exports = {
   }],
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `components`,
+        path: `${__dirname}/lib/components/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-react-docgen`
+    },
+    {
       resolve: 'gatsby-plugin-sass'
     },
     {
