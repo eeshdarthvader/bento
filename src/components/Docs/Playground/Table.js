@@ -1,72 +1,31 @@
 import React from 'react';
 
-import {
-  Field,
-  Select
-} from '@lib'
+import Switcher from './Switcher'
 
-const Table = () => {
+const Table = ({ compProps }) => {
+
   return (
     <>
-      <div className="propRow">
-        <div className="flex flex-middle flex-between">
-          <div>
-            <div className="flex flex-middle">
-              <p className="propName">className</p> <code>string</code>
+        {compProps.map((prop, index) => {
+          return (
+            <div className="propRow" key={index}>
+              <div className="flex flex-middle flex-between">
+                <div>
+                  <div className="flex flex-middle">
+                    <p className="propName">{prop.name}{prop.required && <span className="c-error-500">*</span>}</p>
+                    <code className="propCode">{prop.type.name}</code>
+                  </div>
+                  <p className="propDescription">
+                    {prop.description.text}
+                  </p>
+                </div>
+                <div className="propSwitcher">
+                  <Switcher prp={prop}/>
+                </div>
+              </div>
             </div>
-            <p className="propDescription">
-              Classes to be added to the badge component
-            </p>
-          </div>
-          <div className="propSwitcher">
-            <Field />
-          </div>
-        </div>
-      </div>
-
-      <div className="propRow">
-        <div className="flex flex-middle flex-between">
-          <div>
-            <div className="flex flex-middle">
-              <p className="propName">size</p> <code>enum</code>
-            </div>
-            <p className="propDescription">
-              These values modify the size of the component
-            </p>
-          </div>
-          <div className="propSwitcher">
-            <Select>
-              <option defaultValue>md</option>
-              <option>lg</option>
-              <option>sm</option>
-            </Select>
-          </div>
-        </div>
-      </div>
-
-      <div className="propRow">
-        <div className="flex flex-middle flex-between">
-          <div>
-            <div className="flex flex-middle">
-              <p className="propName">type</p> <code>enum</code>
-            </div>
-            <p className="propDescription">
-              Changes the appearance of the component
-            </p>
-          </div>
-          <div className="propSwitcher">
-            <Select>
-              <option defaultValue>primary</option>
-              <option>secondary</option>
-              <option>light</option>
-              <option>dark</option>
-              <option>success</option>
-              <option>warning</option>
-            </Select>
-          </div>
-        </div>
-      </div>
-
+          )
+        })}
     </>
   );
 }
