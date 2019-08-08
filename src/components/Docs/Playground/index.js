@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 
 import Table from './Table'
 import Live from './Live'
 
 import { Spacer } from '@lib'
+
+import { getPropsFromMetadata } from './utils'
 
 import "./playground.scss"
 
@@ -39,16 +41,8 @@ const Playground = ({ code, scope }) => {
     }
   `)
 
-  // Get all nodes
-  const nodes = metadata.allComponentMetadata.nodes
-
-  // Filter nodes by displayName
-  const comp = nodes.filter(
-    node => node.displayName === displayName
-  )
-
-  // Get props of component
-  const props = comp[0].props
+  // Get props from displayName
+  const props = getPropsFromMetadata(metadata, displayName)
 
 
   return (
