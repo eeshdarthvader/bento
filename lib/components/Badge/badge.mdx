@@ -4,6 +4,7 @@ route: /components/badge
 menu: Components
 ---
 
+import { Badge } from '@lib'
 import PropTable from '@components/PropTable'
 import Playground from '@components/Playground'
 
@@ -18,7 +19,7 @@ Hello, I'm a mdx file!
 
 ## Playground
 
-<Playground />
+<Playground code="<Badge>Hello</Badge>" scope={{ Badge }}/>
 
 ## Heading 2
 
