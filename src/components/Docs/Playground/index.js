@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Spacer } from '@lib'
 import { getPropsFromMetadata, getMetadata } from './utils'
 
 import Table from './Table'
 import Live from './Live'
+import Stringer from './Stringer'
 
 import "./playground.scss"
 
@@ -19,18 +20,25 @@ const Playground = ({ code, scope }) => {
   // Get props from displayName
   const props = getPropsFromMetadata(metadata, displayName)
 
-  const handlePropChange = (props) => {
-    console.log(props)
-    // pass to function to generate prop string
-    // save every updated prop in state
-    // overwrite prop value if prop already exists
-    // "flatten" object to string
-  }
+
+  // Stores and passed swithcer updates to Stringer
+  const [switches, setSwitches] = useState({})
+
+  // Handles prop switches from table and save to state
+  const handlePropChange = props => setSwitches(props)
 
 
   return (
     <>
-      <Live code={code} scope={scope}/>
+      <Stringer code={code} switches={switches}>
+        {dynamicCode => (
+          <>
+          <pre><code>{dynamicCode}</code></pre>
+          <Live code={dynamicCode} scope={scope} />
+          </>
+        )}
+      </Stringer>
+
       <Spacer my={3} />
       <Table compProps={props} onPropChange={handlePropChange} />
     </>
