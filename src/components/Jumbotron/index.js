@@ -9,7 +9,7 @@ import {
   Button
 } from '../../../lib'
 
-import Background from './icons/bg.svg'
+import { ReactComponent as Background } from './icons/bg.svg'
 
 const Jumbotron = props => {
   const [copied, setCopyStatus] = useState(false)

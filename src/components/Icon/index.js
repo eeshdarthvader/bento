@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import SpeechIcon from './icons/speech.svg'
-import IdeaIcon from './icons/idea.svg'
-import ChartIcon from './icons/chart.svg'
-import ReuseIcon from './icons/reuse.svg'
-import DownloadIcon from './icons/download.svg'
-import BitbucketIcon from './icons/bitbucket.svg'
-import SketchIcon from './icons/sketch.svg'
+import { ReactComponent as SpeechIcon } from './icons/speech.svg'
+import { ReactComponent as IdeaIcon } from './icons/idea.svg'
+import { ReactComponent as ChartIcon } from './icons/chart.svg'
+import { ReactComponent as ReuseIcon } from './icons/reuse.svg'
+import { ReactComponent as DownloadIcon } from './icons/download.svg'
+import { ReactComponent as BitbucketIcon } from './icons/bitbucket.svg'
+import { ReactComponent as SketchIcon } from './icons/sketch.svg'
 
 const IconMap = ({ icon, ...props }) => {
   switch (icon) {
