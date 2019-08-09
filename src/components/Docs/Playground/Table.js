@@ -2,7 +2,7 @@ import React from 'react';
 
 import Switcher from './Switcher'
 
-const Table = ({ compProps }) => {
+const Table = ({ compProps, onPropChange }) => {
 
   return (
     <>
@@ -20,7 +20,7 @@ const Table = ({ compProps }) => {
                   </p>
                 </div>
                 <div className="propSwitcher">
-                  <Switcher prp={prop}/>
+                  <Switcher prp={prop} onPropChange={onPropChange} />
                 </div>
               </div>
             </div>
