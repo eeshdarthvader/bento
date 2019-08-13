@@ -21,7 +21,7 @@ const Playground = ({ code, scope }) => {
   const props = getPropsFromMetadata(metadata, displayName)
 
 
-  // Stores and passed swithcer updates to Stringer
+  // Stores and passes switcher updates to Stringer
   const [switches, setSwitches] = useState({})
 
   // Handles prop switches from table and save to state
@@ -33,7 +33,7 @@ const Playground = ({ code, scope }) => {
       <Stringer code={code} inputs={switches}>
         {dynamicCode => (
           <>
-          <pre><code>{dynamicCode}</code></pre>
+          {/* <pre><code>{dynamicCode}</code></pre> */}
           <Live code={dynamicCode} scope={scope} />
           </>
         )}

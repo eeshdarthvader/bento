@@ -10,12 +10,38 @@ const Stringer = ({ code, inputs, children }) => {
   const [switches, setSwitches] = useState({})
 
   useEffect(() => setSwitches({...switches, ...inputs}), [inputs]);
-  useEffect(() => generatePropString(), [switches]);
+  useEffect(() => generateCodeString(), [switches]);
 
   const generatePropString = () => {
-    console.log(switches)
-    if (isEmptyObject(switches)) return //
-    setDynamicCode("<Badge>Hello Moto</Badge>")
+    const propStrings = []
+
+    for (const key of Object.keys(switches)) {
+      propStrings.push(`${key}="${switches[key]}"`)
+    }
+
+    const propString = propStrings.join(' ')
+    return propString
+  }
+
+
+  const generateCodeParts = () => {
+    // Split code string by first instance on '>'
+    const splitString = code.split(/>(.+)/)
+    return splitString
+  }
+
+
+  const generateCodeString = () => {
+    if (isEmptyObject(switches)) return
+
+    const propString = generatePropString()
+    const codeParts = generateCodeParts()
+
+    const firstHalf = [codeParts[0], propString].join(' ')
+
+    const codeString = [firstHalf, codeParts[1]].join('>')
+
+    setDynamicCode(codeString)
     return
   }
 
