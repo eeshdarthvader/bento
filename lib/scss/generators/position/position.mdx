@@ -1,0 +1,397 @@
+---
+name: Position
+route: /utilities/position
+menu: Utilities
+---
+import { Reference, Property, Name, Output, Text } from "@components/Reference";
+import Sandbox from "@components/Sandbox";
+
+import { Spacer } from "@lib";
+import { Table, TRow, TCol } from '@components/Table'
+
+# Position
+
+Sets how the element is positioned in the DOM
+
+## Class reference
+
+<Reference>
+  <Property>
+    <Name>.p-static</Name>
+    <Output>position: static;</Output>
+  </Property>
+  <Property>
+    <Name>.p-relative</Name>
+    <Output>position: relative;</Output>
+  </Property>
+  <Property>
+    <Name>.p-absolute</Name>
+    <Output>position: absolute;</Output>
+  </Property>
+  <Property>
+    <Name>.p-fixed</Name>
+    <Output>position: fixed;</Output>
+  </Property>
+  <Property>
+    <Name>.p-sticky</Name>
+    <Output>position: sticky;</Output>
+  </Property>
+</Reference>
+
+## Positive coordinates
+<Table>
+<TRow className="flex flex-between p-3 bg-grey-05 c-pointer">
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            Prefix
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            0px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            4px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            8px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            12px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            16px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            20px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            24px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            28px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            80px
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            t
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .t-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            r
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .r-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            b
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .b-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            l
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .l-20
+        </TCol>
+    </TRow>
+    </Table>
+
+## Negative coordinates
+<Table>
+<TRow className="flex flex-between p-3 bg-grey-05 c-pointer">
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            Prefix
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            0px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            4px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            8px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            12px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            16px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            20px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            24px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            28px
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+            80px
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            nt
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nt-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            nr
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nr-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            nb
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nb-20
+        </TCol>
+    </TRow>
+    <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+        <TCol className="flex-1 flex flex-start">
+            nl
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-0
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-1
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-2
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-3
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-4
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-5
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-6
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-7
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            ...
+        </TCol>
+        <TCol className="flex-1 flex flex-start">
+            .nl-20
+        </TCol>
+    </TRow>
+    </Table>
