@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-// pass to function to generate prop string
-// save every updated prop in state
-// overwrite prop value if prop already exists
-// "flatten" object to string
+import { isEmptyObject } from "../utils";
 
-const Stringer = ({ code, switches, children }) => {
+// generate prop string
 
-  console.log('From swithes', switches)
+const Stringer = ({ code, inputs, children }) => {
 
-  // const [codes, setCodes] = useState("hello")
-  const dynamicCode = code;
+  const [dynamicCode, setDynamicCode] = useState(code)
+  const [switches, setSwitches] = useState({})
+
+  useEffect(() => setSwitches({...switches, ...inputs}), [inputs]);
+  useEffect(() => generatePropString(), [switches]);
+
+  const generatePropString = () => {
+    console.log(switches)
+    if (isEmptyObject(switches)) return //
+    setDynamicCode("<Badge>Hello Moto</Badge>")
+    return
+  }
 
   return (
-    <div>
+    <div {...switches}>
       {children(dynamicCode)}
     </div>
   );

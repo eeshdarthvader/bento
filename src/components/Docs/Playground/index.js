@@ -30,7 +30,7 @@ const Playground = ({ code, scope }) => {
 
   return (
     <>
-      <Stringer code={code} switches={switches}>
+      <Stringer code={code} inputs={switches}>
         {dynamicCode => (
           <>
           <pre><code>{dynamicCode}</code></pre>
