@@ -1,0 +1,36 @@
+.propRow {
+  padding: 12px 0;
+  // &:nth-child(odd) {
+  //   background-color: #FAFAFA;
+  // }
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.propName {
+  font-size: 14px !important;
+  margin: 0 12px 0 0 !important;
+}
+
+.propCode {
+  font-size: 12px !important;
+}
+
+.propByline {
+  color: #283143;
+  margin-top: 12px !important;
+  font-size: 12px !important;
+}
+
+.propAcceptedValues {
+  color: #666666;
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-left: 12px !important;
+}
+
+.propDescription {
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-top: 6px !important;
+  line-height: 1.6;
+}
