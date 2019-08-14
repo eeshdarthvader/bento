@@ -1,0 +1,21 @@
+.Switcher {
+    width: 62px;
+    height: 32px;
+	transition-duration: .4s;
+	transition-property: all;
+    cursor: pointer;
+    &__circle {
+        height: 28px;
+        width: 28px;
+        border: 0.5px solid rgba($color: #000000, $alpha: 0.1);
+        box-shadow: 0 3px 8px 0 rgba($color: #000000, $alpha: .15);
+        transition-duration: .2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        top: 50%;
+        transform: translateY(-50%);
+        &.slideRight {
+            left: calc(100% - 28px);
+        }
+    }
+}
