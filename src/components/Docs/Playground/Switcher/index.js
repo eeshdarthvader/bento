@@ -12,6 +12,9 @@ const Switcher = ({ prp, onPropChange}) => {
 
   const { handleInputChange } = useForm(onPropChange)
 
+  // No field in case of children prop
+  if (prp.name === 'children') return '';
+
   return (
     <>
       { prp.type.name === 'string' &&

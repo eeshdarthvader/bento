@@ -34,7 +34,7 @@ const Playground = ({ code, scope }) => {
         {dynamicCode => (
           <>
           {/* <pre><code>{dynamicCode}</code></pre> */}
-          <Live code={dynamicCode} scope={scope} />
+            <Live code={dynamicCode} scope={scope} theme="github"/>
           </>
         )}
       </Stringer>

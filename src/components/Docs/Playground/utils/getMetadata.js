@@ -2,6 +2,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getMetadata = () => {
 
+  // Possible to filter this data component wise
+  // however, since this a static query, cannot pass arguments
   const metadata = useStaticQuery(graphql`
     query MetaData {
       allComponentMetadata {
