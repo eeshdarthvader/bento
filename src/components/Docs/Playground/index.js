@@ -11,6 +11,7 @@ import "./playground.scss"
 
 const Playground = ({ code, scope }) => {
 
+  // TODO: Handle case where React.memo is used
   // Get display name of comp from scope
   const displayName = scope[Object.keys(scope)[0]].displayName
 
@@ -31,12 +32,7 @@ const Playground = ({ code, scope }) => {
   return (
     <>
       <Stringer code={code} inputs={switches}>
-        {dynamicCode => (
-          <>
-          {/* <pre><code>{dynamicCode}</code></pre> */}
-            <Live code={dynamicCode} scope={scope} theme="github"/>
-          </>
-        )}
+        {dynamicCode => <Live code={dynamicCode} scope={scope} theme="github"/>}
       </Stringer>
 
       <Spacer my={3} />

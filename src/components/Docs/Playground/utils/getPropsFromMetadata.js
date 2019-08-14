@@ -1,4 +1,5 @@
 const getPropsFromMetadata = (metadata, displayName) => {
+
   // Get all nodes
   const nodes = metadata.allComponentMetadata.nodes
 

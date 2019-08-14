@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { isEmptyObject } from "../utils";
+import { isEmptyObject, stringToBoolean } from "../utils";
 
 // generate prop string
 
@@ -16,7 +16,13 @@ const Stringer = ({ code, inputs, children }) => {
     const propStrings = []
 
     for (const key of Object.keys(switches)) {
-      propStrings.push(`${key}="${switches[key]}"`)
+
+      if (switches[key] === "true" || switches[key] === "false") {
+        propStrings.push(`${key}={${stringToBoolean(switches[key])}}`)
+      } else {
+        propStrings.push(`${key}="${switches[key]}"`)
+      }
+
     }
 
     const propString = propStrings.join(' ')
@@ -33,6 +39,7 @@ const Stringer = ({ code, inputs, children }) => {
 
   const generateCodeString = () => {
     if (isEmptyObject(switches)) return
+
 
     const propString = generatePropString()
     const codeParts = generateCodeParts()

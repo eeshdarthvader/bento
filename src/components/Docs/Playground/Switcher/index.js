@@ -3,7 +3,8 @@ import React from 'react';
 
 import {
   Field,
-  Select
+  Select,
+  Toggle
 } from '@lib'
 
 import { dequote, useForm } from '../utils'
@@ -41,6 +42,21 @@ const Switcher = ({ prp, onPropChange}) => {
             )
           })}
         </Select>
+      }
+
+      {prp.type.name === "bool" &&
+        <Toggle
+          name={prp.name}
+          value={prp.defaultValue.value}
+          onChange={handleInputChange}
+        >
+          <Toggle.Toggler value="true">
+            True
+          </Toggle.Toggler>
+          <Toggle.Toggler value="false">
+            False
+          </Toggle.Toggler>
+        </Toggle>
       }
     </>
   );

@@ -3,7 +3,6 @@ import React from 'react';
 import Switcher from './Switcher'
 
 const Table = ({ compProps, onPropChange }) => {
-  console.log(compProps);
 
   return (
     <>

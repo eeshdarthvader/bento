@@ -6,7 +6,7 @@ const Live = ({ code, scope }) => {
     <div className="live">
       <LiveProvider code={code} scope={scope}>
         <div className="react-live-preview">
-          <LivePreview />
+          <LivePreview className="w-100p"/>
         </div>
 
         <div className="prism-code">
