@@ -38,6 +38,82 @@ Sets how the element is positioned in the DOM
   </Property>
 </Reference>
 
+## Abbreviation
+<Table>
+  <TRow className="flex flex-between p-3 bg-grey-05 c-pointer">
+    <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+        Abbreviation
+    </TCol>
+    <TCol className="flex-1 flex flex-start c-grey-50 fw-500">
+        Definition
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        t
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        top
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        r
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        right
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        b
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        bottom
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        l
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        left
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        nt
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        negative top
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        nr
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        negative right
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        nb
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        negative bottom
+    </TCol>
+  </TRow>
+  <TRow className="flex flex-between p-3 c-pointer fs-caption-2" style="border-bottom:1px solid #e1e1e1;">
+    <TCol className="flex-1 flex flex-start">
+        nl
+    </TCol>
+    <TCol className="flex-1 flex flex-start">
+        negative left
+    </TCol>
+  </TRow>
+</Table>
+
 ## Positive coordinates
 <Table>
 <TRow className="flex flex-between p-3 bg-grey-05 c-pointer">
@@ -395,3 +471,22 @@ Sets how the element is positioned in the DOM
         </TCol>
     </TRow>
     </Table>
+
+## Example
+
+<Sandbox>
+    <Sandbox.Preview>
+        <div className="p-relative o-scroll" style="height:120px;">
+            <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-static">static</div>
+            <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-relative t-5 l-10" style="height:150px;">relative</div>
+            <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-absolute t-12 r-15">absolute</div>
+            <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-sticky t-15">sticky</div>
+        </div>
+    </Sandbox.Preview>
+    <Sandbox.Code>
+      <div className="p-static">...</div>
+      <div className="p-relative t-5 l-10">...</div>
+      <div className="p-absolute t-12 r-15">...</div>
+      <div className="p-sticky t-15">...</div>
+    </Sandbox.Code>
+</Sandbox>
