@@ -123,3 +123,87 @@ The flexbox utilities can be used to put together a flexbox grid.
     <Output>justify-content: space-around;</Output>
   </Property>
 </Reference>
+
+## Flex Direction
+
+Use `.flex-row` to position flex items horizontally from left to right.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-row-reverse` to position flex items horizontally in the opposite direction.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row-reverse bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-column` to position flex items vertically from top to bottom.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-column bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-column-reverse` to position flex items vertically in the opposite direction.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-column-reverse bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
