@@ -1,0 +1,126 @@
+---
+name: Flexbox
+route: /utilities/flexbox
+menu: Utilities
+---
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import Sandbox from '@components/Sandbox'
+import { Spacer, Container, Row, Col } from '@lib'
+
+# Flexbox
+
+The flexbox utilities can be used to put together a flexbox grid.
+
+## Class reference
+<Reference>
+  <Property>
+    <Name>.flex</Name>
+    <Output>display: flex;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-inline</Name>
+    <Output>display: inline-flex;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-row</Name>
+    <Output>flex-direction: row;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-column</Name>
+    <Output>flex-direction: column;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-row-reverse</Name>
+    <Output>flex-direction: row-reverse;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-column-reverse</Name>
+    <Output>flex-direction: column-reverse;</Output>
+  </Property>
+  
+  <Property>
+    <Name>.flex-nowrap</Name>
+    <Output>flex-wrap: nowrap;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap</Name>
+    <Output>flex-wrap: wrap;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-reverse</Name>
+    <Output>flex-wrap: wrap-reverse;</Output>
+  </Property>
+  
+  <Property>
+    <Name>.flex-auto</Name>
+    <Output>flex: 1 1 auto;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-1</Name>
+    <Output>flex: 1 1 0%;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-none</Name>
+    <Output>flex: none;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-no-shrink</Name>
+    <Output>flex-shrink: 0;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-first</Name>
+    <Output>order: -1;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-last</Name>
+    <Output>order: 99;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-stretch</Name>
+    <Output>align-items: stretch;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-top</Name>
+    <Output>align-items: flex-start;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-middle</Name>
+    <Output>align-items: center;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-bottom</Name>
+    <Output>align-items: flex-end;</Output>
+  </Property>
+
+  <Property>
+  <Name>.flex-start, .flex-left</Name>
+    <Output>justify-content: flex-start;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-end, .flex-right</Name>
+    <Output>justify-content: flex-end;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-center</Name>
+    <Output>justify-content: center;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-between</Name>
+    <Output>justify-content: space-between;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-around</Name>
+    <Output>justify-content: space-around;</Output>
+  </Property>
+
+</Reference>
