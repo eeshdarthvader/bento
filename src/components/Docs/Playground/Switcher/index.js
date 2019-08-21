@@ -25,6 +25,14 @@ const Switcher = ({ prp, onPropChange}) => {
           defaultValue={dequote(prp.defaultValue.value)}
         />
       }
+      {prp.type.name === 'number' &&
+        <Field
+          type="number"
+          name={prp.name}
+          onChange={handleInputChange}
+          defaultValue={dequote(prp.defaultValue.value)}
+        />
+      }
       {prp.type.name === 'enum' &&
         <Select
           name={prp.name}

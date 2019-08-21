@@ -33,6 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    ul {
+      list-style-type: none !important
+    }
   }
   & .prism-code {
     font-size: 15px;
