@@ -1,6 +1,6 @@
 .demo-wrapper {
   width: 100%;
-  background-color: #1B2438;
+  background-color: #1b2438;
   // background-color: #2b303b;
   padding: 12px;
   border-radius: 4px;
@@ -11,6 +11,7 @@
   background-color: white;
   border-radius: 2px;
   padding: 12px;
+  overflow: hidden;
 
   p {
     font-size: 14px;
@@ -33,7 +34,7 @@
     code {
       background-color: transparent !important;
       border: 0 !important;
-      color: #6290E0 !important;
+      color: #6290e0 !important;
       line-height: 24px !important;
       font-size: 14px !important;
     }
@@ -58,7 +59,7 @@ pre {
 .hljs-selector-id,
 .hljs-regexp,
 .hljs-deletion {
-  color: #6290E0 !important;
+  color: #6290e0 !important;
 }
 
 .hljs-number,
@@ -72,13 +73,13 @@ pre {
   color: #d08770;
 }
 .hljs-attribute {
-  color: #ebcb8b
+  color: #ebcb8b;
 }
 .hljs-string,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #FDC140;
+  color: #fdc140;
 }
 .hljs-title,
 .hljs-section {
@@ -94,7 +95,8 @@ pre {
   color: #c0c5ce;
   font-size: 16px !important;
   line-height: 1.5;
-  font-family: "SFMono-Regular", "Source Code Pro", "Consolas", "Menlo", "Courier", monospace;
+  font-family: "SFMono-Regular", "Source Code Pro", "Consolas", "Menlo",
+    "Courier", monospace;
 }
 .hljs-emphasis {
   font-style: italic;
