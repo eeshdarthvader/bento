@@ -270,3 +270,82 @@ Use `.flex-wrap-reverse` to wrap flex items in the reverse direction.
     </div>
   </Sandbox.Code>
 </Sandbox>
+
+## Flex
+
+Flex is the shorthand for `flex-grow`, `flex-shrink` and `flex-basis` combined. 
+
+Use `.flex-auto` to allow a flex item to grow and shrink in accordance to it's initial size.
+
+<Sandbox>
+  <Sandbox.Preview>
+  <span className="c-black fs-caption-2 my-2 d-block">Default behaviour</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+    <span className="c-black fs-caption-2 my-2 d-block">Flex auto</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-auto">...</div>
+        <div className="flex-auto">...</div>
+        <div className="flex-auto">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-1` to allow a flex item to grow and shrink as needed irrespective of it's intital size.
+
+<Sandbox>
+  <Sandbox.Preview>
+  <span className="c-black fs-caption-2 my-2 d-block">Default behaviour</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+    <span className="c-black fs-caption-2 my-2 d-block">Flex 1</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-1">...</div>
+        <div className="flex-1">...</div>
+        <div className="flex-1">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-none` to prevent a flex item from either growing or shrinking.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+        <div className="flex-none c-white bg-tertiary-500 px-4 py-2 m-2 ta-center">This item cannot grow or shrink</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-1">...</div>
+        <div className="flex-none">...</div>
+        <div className="flex-1">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
