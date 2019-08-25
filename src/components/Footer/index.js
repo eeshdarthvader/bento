@@ -77,7 +77,7 @@ const Footer = props => {
                     </p>
                   </div>
                   <div
-                    className="ba br-4 bc-grey-20 w-40 h-40 ml-4 flex flex-middle flex-center c-pointer hover:bg-grey-10"
+                    className="ba br-4 bc-grey-20 w-40 h-10 ml-4 flex flex-middle flex-center c-pointer hover:bg-grey-10"
                     onClick={scrollToTop}
                   >
                     <UpIcon />

@@ -4,7 +4,7 @@ import classNames from 'classnames'
 const Cell = ({ children, dark, className }) => {
 
   const cellClass = classNames(
-    'c-white flex flex-middle flex-center h-40',
+    'c-white flex flex-middle flex-center h-10',
     {
       'bg-secondary-500': !dark,
       'bg-secondary-900': dark
