@@ -12,7 +12,9 @@ const Table = ({ compProps, onPropChange }) => {
               <div className="flex flex-middle flex-between">
                 <div>
                   <div className="flex flex-middle">
-                    <p className="propName">{prop.name}{prop.required && <span className="c-error-500">*</span>}</p>
+                    <p className="propName">
+                      {prop.name}{prop.required && <span className="c-error-500">*</span>}
+                    </p>
                     <code className="propCode">{prop.type.name}</code>
                   </div>
                   <p className="propDescription">
