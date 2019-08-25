@@ -57,12 +57,15 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@svgr/webpack": "^4.3.2",
     "babel-loader": "^8.0.6",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-nprogress": "^2.1.2",
+    "gatsby-plugin-svgr": "^2.0.2",
     "pretty": "^2.0.0",
     "react-highlight": "^0.12.0",
     "react-intersection-observer": "^8.23.0",
+    "react-live": "^2.1.2",
     "react-scrollchor": "^6.0.0",
     "webpack-notifier": "^1.8.0"
   }

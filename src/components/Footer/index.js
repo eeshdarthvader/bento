@@ -6,7 +6,7 @@ import {
   Col
 } from '../../../lib'
 
-import UpIcon from './icons/up.svg'
+import { ReactComponent as UpIcon } from './icons/up.svg'
 
 var PackageInfo = require('../../../package.json');
 
