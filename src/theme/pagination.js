@@ -40,7 +40,7 @@ const Pagination = (props) => {
 
   return (
     <>
-    <Spacer my={8} />
+    <Spacer my={15} py={15}/>
     <Divider />
 
     <div className='flex flex-between py-9'>

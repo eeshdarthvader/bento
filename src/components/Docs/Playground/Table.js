@@ -5,7 +5,7 @@ import Switcher from './Switcher'
 const Table = ({ compProps, onPropChange }) => {
 
   return (
-    <>
+    <div className="propTable">
         {compProps.map((prop, index) => {
           return (
             <div className="propRow" key={index}>
@@ -26,7 +26,7 @@ const Table = ({ compProps, onPropChange }) => {
             </div>
           )
         })}
-    </>
+    </div>
   );
 }
 

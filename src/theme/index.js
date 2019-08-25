@@ -14,7 +14,7 @@ const Theme = ({children}) => {
   const TOC = generateTOC(children.props.children)
   const menuCategory = children.props.pageContext.frontmatter.menu
   const docName = children.props.pageContext.frontmatter.name
-  
+
   return (
     <Fragment>
       <Helmet>
@@ -46,7 +46,7 @@ const Theme = ({children}) => {
                 style={{ maxWidth: '720px' }}
               >
                 {children}
-                <Pagination  
+                <Pagination
                   docName={docName}
                   category={menuCategory}
                 />
@@ -71,7 +71,7 @@ const Theme = ({children}) => {
 
         </div>
       </div>
-      
+
     </Fragment>
   )
 }
