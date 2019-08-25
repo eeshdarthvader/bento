@@ -5,17 +5,20 @@ menu: Components
 ---
 
 import { Counter } from '@lib'
-import PropTable from '@components/PropTable'
+import Sandbox from '@components/Sandbox'
 import Playground from '@components/Playground'
 
 # Counter
 
-Hello, I'm a mdx file!
+Used for interactively changing count
 
-## Prop Reference
+## Usage
 
-<PropTable component="Counter" />
-
+<Sandbox>
+  <Sandbox.Text>
+    import {'{ Counter }'} from '@cleartrip/bento'
+  </Sandbox.Text>
+</Sandbox>
 
 ## Playground
 
