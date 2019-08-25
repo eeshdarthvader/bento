@@ -12,6 +12,7 @@ import "./playground.scss"
 
 // [ ] TODO: Handle compound components
 // [ ] TODO: Handle isRequired props
+// [ ] BUG: Boolean and number default props not recognized
 // [ ] TODO: Handle onOfType props
 const Playground = ({ code, scope }) => {
 
