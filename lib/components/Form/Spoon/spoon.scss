@@ -1,0 +1,11 @@
+.Spoon {
+    &__field {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &__button {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        transform: translateX(-1px);
+    }
+}
