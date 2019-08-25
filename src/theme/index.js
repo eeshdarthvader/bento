@@ -41,7 +41,8 @@ const Theme = ({children}) => {
             >
 
               <div
-                className="content flex-1 mt-8 pr-15"
+                className="content flex-1 mt-8 pr-15 box-border"
+                style={{ maxWidth: '720px' }}
               >
                 {children}
               </div>

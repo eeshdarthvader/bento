@@ -9,6 +9,10 @@ import Stringer from './Stringer'
 
 import "./playground.scss"
 
+
+// [ ] TODO: Handle compound components
+// [ ] TODO: Handle isRequired props
+// [ ] TODO: Handle onOfType props
 const Playground = ({ code, scope }) => {
 
   // TODO: Handle case where React.memo is used
