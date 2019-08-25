@@ -1,0 +1,336 @@
+---
+name: Sizing
+route: /utilities/sizing
+menu: Utilities
+---
+
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import Sandbox from '@components/Sandbox'
+
+# Sizing
+
+Used to set the width and height of elements on a page.
+
+## Class Reference
+
+Our classes for width and height have both static values(in pixels) and fluid(in percentages). Sizing classes take on
+the syntax of `.{property}-{sizing value}`. 
+
+## Static Width
+
+Elements can be given static values in pixels. The current set of static values are : 0, 10px, 20px, 30px and 40px. 
+
+<Reference> 
+    <Property>
+        <Name> .w-0 </Name> 
+        <Output>width: 0px;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-10 </Name> 
+        <Output>width: 10px;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-20 </Name> 
+        <Output>width: 20px;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-30 </Name> 
+        <Output>width: 30px;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-40 </Name> 
+        <Output>width: 40px;</Output> 
+    </Property>
+    <Property>
+        <Name> .wmx-40 </Name> 
+        <Output>max-width: 40px;</Output> 
+    </Property>
+</Reference>    
+
+** Example **
+<Sandbox>
+    <Sandbox.Preview>
+        <div className="bs-auto br-no-repeat" style={{ height: '100px'}}>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 c-grey-80 w-10 mr-2"> </div>
+                <span>.w-10</span>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 c-grey-80 w-20 mr-2"> </div>
+                <span>.w-20</span>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 c-grey-80 w-30 mr-2"> </div>
+                <span>.w-30</span>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 c-grey-80 w-40 mr-2"> </div>
+                <span>.w-40</span>
+            </div>
+        </div>
+    </Sandbox.Preview>
+      <Sandbox.Code>
+            <div className="w-10"></div>
+            <div className="w-20"></div>
+            <div className="w-30"></div>
+            <div className="w-40"></div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Fluid Width
+
+Fluid width values are represented in percentages. The values are in **multiples of 10** and range from a minimum of 0 to a maximum of 100. 
+
+<Reference> 
+    <Property>
+        <Name> .w-0 </Name> 
+        <Output>width: 0px;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-10p </Name> 
+        <Output>width: 10%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-20p </Name> 
+        <Output>width: 20%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-30p </Name> 
+        <Output>width: 30%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-40p </Name> 
+        <Output>width: 40%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-50p </Name> 
+        <Output>width: 50%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-60p </Name> 
+        <Output>width: 60%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-70p </Name> 
+        <Output>width: 70%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-80p </Name> 
+        <Output>width: 80%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-90p </Name> 
+        <Output>width: 90%;</Output> 
+    </Property>
+    <Property>
+        <Name> .w-100p </Name> 
+        <Output>width: 100%;</Output> 
+    </Property>
+    <Property>
+        <Name> .wmx-70p </Name> 
+        <Output>max-width: 70%;</Output> 
+    </Property>
+</Reference>
+
+** Example **
+<Sandbox>
+    <Sandbox.Preview>
+        <div className="bs-auto br-no-repeat" style={{ height: '200px'}}>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 ba c-grey-80 w-10p pl-2 py-2">.w-10p </div>
+                <div className="bg-primary-400 ba c-grey-80 w-90p pl-2 py-2">.w-90p </div>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 ba c-grey-80 w-20p pl-2 py-2">.w-20p </div>
+                <div className="bg-primary-400 ba c-grey-80 w-80p pl-2 py-2">.w-80p </div>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 ba c-grey-80 w-30p pl-2 py-2">.w-30p </div>
+                <div className="bg-primary-400 ba c-grey-80 w-70p pl-2 py-2">.w-70p </div>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 ba c-grey-80 w-40p pl-2 py-2">.w-40p </div>
+                <div className="bg-primary-400 ba c-grey-80 w-60p pl-2 py-2">.w-60p </div>
+            </div>
+            <div className="bs-solid d-flex mb-2">
+                <div className="bg-primary-400 ba c-grey-80 w-50p pl-2 py-2">.w-40p </div>
+                <div className="bg-primary-400 ba c-grey-80 w-50p pl-2 py-2">.w-60p </div>
+            </div>
+        </div>
+    </Sandbox.Preview>
+      <Sandbox.Code>
+            <div className="w-10p"></div>
+            <div className="w-20p"></div>
+            <div className="w-30p"></div>
+            <div className="w-40p"></div>
+            <div className="w-50p"></div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Height
+
+Height of an element is represented mostly in static values. These values are similar to our spacing values i.e. in multiples of 4
+and can range from **0-15(0 to 60px)**. 
+
+<Reference> 
+    <Property>
+        <Name> .h-0 </Name> 
+        <Output>height: 0px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-1 </Name> 
+        <Output>height: 4px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-2 </Name> 
+        <Output>height: 8px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-3 </Name> 
+        <Output>height: 12px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-4 </Name> 
+        <Output>height: 16px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-5 </Name> 
+        <Output>height: 20px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-6 </Name> 
+        <Output>height: 24px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-7 </Name> 
+        <Output>height: 28px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-8 </Name> 
+        <Output>height: 32px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-9 </Name> 
+        <Output>height: 36px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-10 </Name> 
+        <Output>height: 40px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-11 </Name> 
+        <Output>height: 44px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-12 </Name> 
+        <Output>height: 48px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-13 </Name> 
+        <Output>height: 52px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-14 </Name> 
+        <Output>height: 56px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-15 </Name> 
+        <Output>height: 60px;</Output> 
+    </Property>
+    <Property>
+        <Name> .h-100p </Name> 
+        <Output>height: 100%;</Output> 
+    </Property>
+</Reference>
+
+** Example **
+<Sandbox>
+    <Sandbox.Preview>
+        <div className="bs-auto br-no-repeat" style={{ height: '100%'}}>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-1</span>
+                <div className="bg-primary-400 c-grey-80 h-1 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-2</span>
+                <div className="bg-primary-400 c-grey-80 h-2 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-3</span>
+                <div className="bg-primary-400 c-grey-80 h-3 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-4</span>
+                <div className="bg-primary-400 c-grey-80 h-4 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-5</span>
+                <div className="bg-primary-400 c-grey-80 h-5 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-6</span>
+                <div className="bg-primary-400 c-grey-80 h-6 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-7</span>
+                <div className="bg-primary-400 c-grey-80 h-7 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-8</span>
+                <div className="bg-primary-400 c-grey-80 h-8 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-9</span>
+                <div className="bg-primary-400 c-grey-80 h-9 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-10</span>
+                <div className="bg-primary-400 c-grey-80 h-10 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-11</span>
+                <div className="bg-primary-400 c-grey-80 h-11 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-12</span>
+                <div className="bg-primary-400 c-grey-80 h-12 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-13</span>
+                <div className="bg-primary-400 c-grey-80 h-13 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-14</span>
+                <div className="bg-primary-400 c-grey-80 h-14 mr-2"> </div>
+            </div>
+            <div className="bs-solid d-flex flex-column mb-2">
+                <span>.h-15</span>
+                <div className="bg-primary-400 c-grey-80 h-15 mr-2"> </div>
+            </div>
+            
+        </div>
+    </Sandbox.Preview>
+      <Sandbox.Code>
+            <div className="h-1"></div>
+            <div className="h-2"></div>
+            <div className="h-3"></div>
+            <div className="h-4"></div>
+            <div className="h-5"></div>
+            <div className="h-6"></div>
+            <div className="h-7"></div>
+            <div className="h-8"></div>
+            <div className="h-9"></div>
+            <div className="h-10"></div>
+            <div className="h-11"></div>
+            <div className="h-12"></div>
+            <div className="h-13"></div>
+            <div className="h-14"></div>
+            <div className="h-15"></div>
+  </Sandbox.Code>
+</Sandbox>
