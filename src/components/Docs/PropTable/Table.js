@@ -4,8 +4,6 @@ import "./proptable.scss";
 
 const Table = ({ props }) => {
 
-  console.log(props)
-
   const getEnumString = (values, defaultValue) => {
     // Generate array from values
     let arrayOfValues = [];

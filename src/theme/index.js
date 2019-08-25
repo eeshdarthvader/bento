@@ -8,12 +8,13 @@ import Header from '../components/Header'
 
 import generateTOC from './toc'
 import Menu from './menu'
+import Pagination from './pagination'
 
 const Theme = ({children}) => {
   const TOC = generateTOC(children.props.children)
   const menuCategory = children.props.pageContext.frontmatter.menu
   const docName = children.props.pageContext.frontmatter.name
-
+  
   return (
     <Fragment>
       <Helmet>
@@ -44,6 +45,10 @@ const Theme = ({children}) => {
                 className="content flex-1 mt-8 pr-15"
               >
                 {children}
+                <Pagination  
+                  docName={docName}
+                  category={menuCategory}
+                />
               </div>
 
               <div className="toc w-20p">
@@ -65,6 +70,7 @@ const Theme = ({children}) => {
 
         </div>
       </div>
+      
     </Fragment>
   )
 }

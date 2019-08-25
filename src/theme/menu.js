@@ -5,13 +5,13 @@ import classnames from 'classnames'
 
 const Menu = ({category, doc}) => {
   const allMenus = useMenus()
+
   // Get only category menus
   const menu = allMenus.filter(menu => {
     return menu.name === category
   })
 
   const menuItems = menu[0].menu
-
   return (
     <ul className="mx-5 p-sticky l-0" style={{top: '104px'}}>
       {menuItems.map((menu, key) => {
