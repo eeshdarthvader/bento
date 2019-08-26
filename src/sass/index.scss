@@ -51,13 +51,11 @@ body {
     margin-bottom: calculateRem(16px);
     font-weight: 600;
 
-    &+p {
-      &:first-of-type {
-        font-size: calculateRem(20px);
-        line-height: calculateRem(28px);
-        font-weight: 400;
-        margin-bottom: calculateRem(40px);
-      }
+    & + p {
+      font-size: calculateRem(18px);
+      line-height: calculateRem(24px);
+      margin-bottom: calculateRem(16px);
+      font-weight: 400;
     }
   }
 
@@ -67,6 +65,12 @@ body {
     margin-bottom: calculateRem(16px);
     margin-top: calculateRem(54px);
     font-weight: 600;
+
+    & + p {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(24px);
+      margin-bottom: calculateRem(16px);
+    }
   }
 
   ul, ol {
@@ -88,11 +92,11 @@ body {
     margin-bottom: calculateRem(4px);
   }
 
-  p {
-    font-size: calculateRem(16px);
-    line-height: calculateRem(24px);
-    margin-bottom: calculateRem(16px);
-  }
+  // p {
+    // font-size: calculateRem(16px);
+    // line-height: calculateRem(24px);
+    // margin-bottom: calculateRem(16px);
+  // }
 
   code {
     background-color: #FFF9F5;

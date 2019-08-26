@@ -4,16 +4,22 @@ route: /components/badge
 menu: Components
 ---
 
-import PropTable from '@components/PropTable'
+import { Badge } from '@lib'
+import Sandbox from "@components/Sandbox";
+import Playground from '@components/Playground'
 
 # Badge
 
-Hello, I'm a mdx file!
+Used for highlighting key information
 
-## Prop Reference
+## Usage
 
-<PropTable component="Badge" />
+<Sandbox>
+  <Sandbox.Text>
+    import {'{ Badge }'} from '@cleartrip/bento'
+  </Sandbox.Text>
+</Sandbox>
 
-## Heading 2
+## Playground
 
-Mus dignissim quis neque tellus magna justo, vitae vestibulum lobortis id aliquet est, ex aliquam molestie etiam malesuada. Nullam massa venenatis luctus aliquam facilisis ornare metus porta porttitor in, est curae ac tortor quam elit amet.
+<Playground code="<Badge>Hello</Badge>" scope={{ Badge }}/>

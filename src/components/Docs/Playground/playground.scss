@@ -1,0 +1,70 @@
+
+
+.propRow {
+  padding: 18px 0;
+  border-bottom: solid 1px #e6e6e6;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.propCode {
+  font-size: 12px !important;
+}
+
+.propName {
+  font-size: 14px !important;
+  margin: 0 12px 0 0 !important;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.propSwitcher {
+  width: 230px;
+}
+
+.propDescription {
+  font-size: 14px !important;
+  margin-top: 4px;
+}
+
+
+.live {
+  background-color: #1b2438;
+  padding: 12px 12px 0 12px;
+  border-radius: 4px;
+  margin: 10px 0;
+
+  & .react-live {
+    position: relative;
+  }
+
+  & .react-live-preview {
+    white-space: normal;
+    padding: 20px;
+    border-radius: 2px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      list-style-type: none !important
+    }
+  }
+  & .prism-code {
+    font-size: 15px;
+    padding: 8px 0;
+    background: #1b2438;
+    overflow-x: auto;
+    font-family: monospace;
+    border-top-width: 0;
+    border-radius: 0 0 3px 3px;
+    caret-color: #fdcd6f;
+  }
+  & .react-live-error {
+    color: red;
+    padding: 5px;
+  }
+}

@@ -8,7 +8,8 @@ import {
   Col
 } from '../../../lib'
 
-import CleartripLogo from './icons/cleartrip.svg'
+// import CleartripLogo from './icons/cleartrip.svg'
+import { ReactComponent as CleartripLogo } from './icons/cleartrip.svg'
 
 const Container = props => (
   <div

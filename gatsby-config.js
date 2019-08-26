@@ -4,6 +4,9 @@ module.exports = {
   }],
   plugins: [
     {
+      resolve: `gatsby-plugin-svgr`
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `components`,
