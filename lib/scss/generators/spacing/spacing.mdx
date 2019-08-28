@@ -19,80 +19,81 @@ Used to define spacing values
 
 ## Custom scale
 
-Our spacing values are derived from our 4px baseline grid. Instead of using pixels, we have defined our own custom units and a new scale. This helps us in abstracting away from the technical details and ensuring scalability across products. 
+Our spacing values are derived from our 4px baseline grid. Instead of using pixels, we have defined our own custom units and a new scale. This helps us in abstracting away from the technical details and ensuring scalability across products.
 
 With our new scale, spacing units are set in multiples of 4 i.e. 1 unit = 4px.
 
-## Class Reference 
+## Class Reference
 Spacing classes take on the syntax of `.{property}-{spacing value}`. Spacing values can range from **0-15** i.e. 0px - 60px.
 
 ## Margin
 
-<Reference> 
+<Reference>
     <Property>
-        <Name> .m-1 </Name> 
-        <Output>margin: 4px;</Output> 
+        <Name> .m-1 </Name>
+        <Output>margin: 4px;</Output>
     </Property>
     <Property>
-        <Name> .mt-1 </Name> 
-        <Output>margin-top: 4px;</Output> 
+        <Name> .mt-1 </Name>
+        <Output>margin-top: 4px;</Output>
     </Property>
     <Property>
-        <Name> .mr-1 </Name> 
-        <Output>margin-right: 4px;</Output> 
+        <Name> .mr-1 </Name>
+        <Output>margin-right: 4px;</Output>
     </Property>
     <Property>
-        <Name> .mb-1 </Name> 
-        <Output>margin-bottom: 4px;</Output> 
+        <Name> .mb-1 </Name>
+        <Output>margin-bottom: 4px;</Output>
     </Property>
     <Property>
-        <Name> .ml-1 </Name> 
-        <Output>margin-left: 4px;</Output> 
+        <Name> .ml-1 </Name>
+        <Output>margin-left: 4px;</Output>
     </Property>
     <Property>
-        <Name> .mx-1 </Name> 
+        <Name> .mx-1 </Name>
         <Output>margin-left: 4px; <br /> <br />
-        margin-right: 4px;</Output> 
+        margin-right: 4px;</Output>
     </Property>
     <Property>
-        <Name> .my-1 </Name> 
+        <Name> .my-1 </Name>
         <Output>margin-top: 4px; <br /> <br />
-        margin-bottom: 4px;</Output> 
+        margin-bottom: 4px;</Output>
     </Property>
     <Property>
-        <Name> .nmt-1 </Name> 
-        <Output>margin-top: -4px; </Output> 
+        <Name> .nmt-1 </Name>
+        <Output>margin-top: -4px; </Output>
     </Property>
     <Property>
-        <Name> .nmr-1 </Name> 
-        <Output>margin-right: -4px;</Output> 
+        <Name> .nmr-1 </Name>
+        <Output>margin-right: -4px;</Output>
     </Property>
     <Property>
-        <Name> .nmb-1 </Name> 
-        <Output>margin-bottom: -4px;</Output> 
+        <Name> .nmb-1 </Name>
+        <Output>margin-bottom: -4px;</Output>
     </Property>
     <Property>
-        <Name> .nml-1 </Name> 
-        <Output>margin-left: -4px;</Output> 
+        <Name> .nml-1 </Name>
+        <Output>margin-left: -4px;</Output>
     </Property>
     <Property>
-        <Name> .nmx-1</Name> 
+        <Name> .nmx-1</Name>
         <Output>margin-left: -4px; <br /> <br />
-        margin-right: -4px;</Output> 
+        margin-right: -4px;</Output>
     </Property>
     <Property>
-        <Name> .nmy-1 </Name> 
+        <Name> .nmy-1 </Name>
         <Output>margin-top: -4px; <br /> <br />
-        margin-bottom: -4px;</Output> 
+        margin-bottom: -4px;</Output>
     </Property>
         <Property>
-        <Name> .m-auto</Name> 
-        <Output>margin: auto;</Output> 
+        <Name> .m-auto</Name>
+        <Output>margin: auto;</Output>
     </Property>
-</Reference>    
+</Reference>
 
-** Example **
- 
+### Example
+<Spacer my={2} />
+
 <Sandbox>
     <Sandbox.Preview>
         <div className="bs-auto br-no-repeat w-100p" style={{ height: '50px'}}>
@@ -110,41 +111,42 @@ Spacing classes take on the syntax of `.{property}-{spacing value}`. Spacing val
 
 ## Padding
 
-<Reference> 
+<Reference>
     <Property>
-        <Name> .p-1 </Name> 
-        <Output>padding: 4px;</Output> 
+        <Name> .p-1 </Name>
+        <Output>padding: 4px;</Output>
     </Property>
     <Property>
-        <Name> .pt-1 </Name> 
-        <Output>padding-top: 4px;</Output> 
+        <Name> .pt-1 </Name>
+        <Output>padding-top: 4px;</Output>
     </Property>
     <Property>
-        <Name> .pr-1 </Name> 
-        <Output>padding-right: 4px;</Output> 
+        <Name> .pr-1 </Name>
+        <Output>padding-right: 4px;</Output>
     </Property>
     <Property>
-        <Name> .pb-1 </Name> 
-        <Output>padding-bottom: 4px;</Output> 
+        <Name> .pb-1 </Name>
+        <Output>padding-bottom: 4px;</Output>
     </Property>
     <Property>
-        <Name> .pl-1 </Name> 
-        <Output>padding-left: 4px;</Output> 
+        <Name> .pl-1 </Name>
+        <Output>padding-left: 4px;</Output>
     </Property>
     <Property>
-        <Name> .px-1 </Name> 
+        <Name> .px-1 </Name>
         <Output>padding-left: 4px; <br /> <br />
-        padding-right: 4px;</Output> 
+        padding-right: 4px;</Output>
     </Property>
     <Property>
-        <Name> .py-1 </Name> 
+        <Name> .py-1 </Name>
         <Output>padding-top: 4px; <br /> <br />
-        padding-bottom: 4px;</Output> 
+        padding-bottom: 4px;</Output>
     </Property>
-</Reference>    
+</Reference>
 
-** Example **
- 
+### Example
+<Spacer my={2} />
+
 <Sandbox>
     <Sandbox.Preview>
         <div className="bs-auto br-no-repeat w-100p" style={{ height: '50px'}}>

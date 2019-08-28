@@ -73,6 +73,21 @@ body {
     }
   }
 
+
+  h3 {
+    font-size: calculateRem(20px);
+    line-height: calculateRem(28px);
+    margin-bottom: calculateRem(16px);
+    margin-top: calculateRem(54px);
+    font-weight: 600;
+
+    & + p {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(24px);
+      margin-bottom: calculateRem(16px);
+    }
+  }
+
   ul, ol {
     font-size: calculateRem(16px);
     line-height: calculateRem(24px);
@@ -92,10 +107,18 @@ body {
     margin-bottom: calculateRem(4px);
   }
 
+  p {
+    &+p {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(24px);
+      margin-bottom: calculateRem(16px);
+    }
+  }
+
   // p {
-    // font-size: calculateRem(16px);
-    // line-height: calculateRem(24px);
-    // margin-bottom: calculateRem(16px);
+  //   font-size: calculateRem(16px);
+  //   line-height: calculateRem(24px);
+  //   margin-bottom: calculateRem(16px);
   // }
 
   code {
