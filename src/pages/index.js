@@ -115,6 +115,11 @@ const Home = () => (
 
           <Spacer my={5} />
 
+          <a
+            href="https://app.abstract.com/projects/e51fe7ff-a100-4a77-b59d-7226ede4c28a"
+            target="_blank"
+            className="td-none c-inherit d-block"
+          >
           <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
             <Icon
               icon="sketch"
@@ -124,18 +129,25 @@ const Home = () => (
               Download Sketch library
             </p>
           </div>
+          </a>
 
           <Spacer my={2} />
 
-          <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
-            <Icon
-              icon="bitbucket"
-              className="mr-4 current-fill c-slate h-8 w-30"
-            />
-            <p className="fs-body-2 fw-500 c-grey-60">
-              Visit Bitbucket repository
-            </p>
-          </div>
+          <a
+            href="https://bitbucket.org/cleartrip/bento/"
+            target="_blank"
+            className="td-none c-inherit d-block"
+          >
+            <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
+              <Icon
+                icon="bitbucket"
+                className="mr-4 current-fill c-slate h-8 w-30"
+              />
+              <p className="fs-body-2 fw-500 c-grey-60">
+                  Visit Bitbucket repository
+              </p>
+            </div>
+          </a>
 
         </Col>
       </Row>
