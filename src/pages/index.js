@@ -118,6 +118,7 @@ const Home = () => (
           <a
             href="https://app.abstract.com/projects/e51fe7ff-a100-4a77-b59d-7226ede4c28a"
             target="_blank"
+            rel="noopener noreferrer"
             className="td-none c-inherit d-block"
           >
           <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
@@ -136,6 +137,7 @@ const Home = () => (
           <a
             href="https://bitbucket.org/cleartrip/bento/"
             target="_blank"
+            rel="noopener noreferrer"
             className="td-none c-inherit d-block"
           >
             <div className="ba bc-grey-20 p-5 br-4 hover:bg-grey-10 c-pointer flex flex-middle">
