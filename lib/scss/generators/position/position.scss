@@ -9,24 +9,39 @@
 // ------------------------------
 // Position
 // ------------------------------
-@each $position, $value in config('position.strategies') {
+@each $position, $value in config("position.strategies") {
   .p-#{$position} {
-    position: $value
+    position: $value;
   }
 }
-
 
 // ------------------------------
 // Coordinates
 // ------------------------------
-@each $coordinate in config('position.coordinates') {
-  .t-#{$coordinate} { top: $coordinate * 1px}
-  .b-#{$coordinate} { bottom: $coordinate * 1px}
-  .l-#{$coordinate} { left: $coordinate * 1px}
-  .r-#{$coordinate} { right: $coordinate * 1px}
+@each $coordinate in config("position.coordinates") {
+  .t-#{$coordinate} {
+    top: $coordinate * 4px;
+  }
+  .b-#{$coordinate} {
+    bottom: $coordinate * 4px;
+  }
+  .l-#{$coordinate} {
+    left: $coordinate * 4px;
+  }
+  .r-#{$coordinate} {
+    right: $coordinate * 4px;
+  }
 
-  .nt-#{$coordinate} { top: $coordinate * -1px }
-  .nb-#{$coordinate} { bottom: $coordinate * -1px }
-  .nl-#{$coordinate} { left: $coordinate * -1px }
-  .nr-#{$coordinate} { right: $coordinate * -1px }
+  .nt-#{$coordinate} {
+    top: $coordinate * -4px;
+  }
+  .nb-#{$coordinate} {
+    bottom: $coordinate * -4px;
+  }
+  .nl-#{$coordinate} {
+    left: $coordinate * -4px;
+  }
+  .nr-#{$coordinate} {
+    right: $coordinate * -4px;
+  }
 }
