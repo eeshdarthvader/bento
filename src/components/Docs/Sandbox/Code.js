@@ -23,7 +23,7 @@ const stringify = children => {
 const Code = ({ children }) => {
   return (
     <div className="demo-code">
-      <Highlight class="html">
+      <Highlight class="markup">
         {pretty(stringify(children))}
       </Highlight>
     </div>
