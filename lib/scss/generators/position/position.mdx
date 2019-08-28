@@ -490,3 +490,25 @@ Sets how the element is positioned in the DOM
         </TCol>
     </TRow>
     </Table>
+
+<Spacer my={4} />
+
+## Example 
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="d-inline-block ta-center oy-scroll p-relative" style={{
+        height: '250px',
+        width: '600px'
+    }}>
+      <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-absolute b-1 r-5">.b-1 .r-5</div>  
+      <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-absolute t-5 r-15">.t-5 .r-15</div>  
+      <div className="w-10p d-inline-block bg-tertiary-300 ba bc-tertiary-700 h-56 c-black fs-caption ta-center z-0 p-absolute t-10 l-12">.t-10 .l-12</div>  
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="p-absolute b-1 r-5"></div>
+    <div className="p-absolute t-5 r-15"></div>
+    <div className="p-absolute t-10 l-12"></div>
+
+  </Sandbox.Code>
+</Sandbox>
