@@ -37,7 +37,7 @@ const Theme = ({children}) => {
 
           <div className="flex-1 bg-white elevation-md">
             <div
-              className="w-90p m-auto flex pb-15"
+              className="w-90p m-auto flex pb-15 pl-15"
               style={{ maxWidth: '900px' }}
             >
 
