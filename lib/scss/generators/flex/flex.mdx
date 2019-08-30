@@ -1,0 +1,751 @@
+---
+name: Flexbox
+route: /utilities/flexbox
+menu: Utilities
+---
+import {
+  Reference,
+  Property,
+  Name,
+  Output
+} from '@components/Reference'
+
+import Sandbox from '@components/Sandbox'
+import { Spacer, Container, Row, Col } from '@lib'
+
+# Flexbox
+
+The flexbox utilities can be used to put together a flexbox grid.
+
+## Class reference
+<Reference>
+  <Property>
+    <Name>.flex</Name>
+    <Output>display: flex;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-inline</Name>
+    <Output>display: inline-flex;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-row</Name>
+    <Output>flex-direction: row;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-column</Name>
+    <Output>flex-direction: column;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-row-reverse</Name>
+    <Output>flex-direction: row-reverse;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-column-reverse</Name>
+    <Output>flex-direction: column-reverse;</Output>
+  </Property>
+  
+  <Property>
+    <Name>.flex-nowrap</Name>
+    <Output>flex-wrap: nowrap;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap</Name>
+    <Output>flex-wrap: wrap;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-reverse</Name>
+    <Output>flex-wrap: wrap-reverse;</Output>
+  </Property>
+  
+  <Property>
+    <Name>.flex-auto</Name>
+    <Output>flex: 1 1 auto;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-1</Name>
+    <Output>flex: 1 1 0%;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-none</Name>
+    <Output>flex: none;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-no-shrink</Name>
+    <Output>flex-shrink: 0;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-first</Name>
+    <Output>order: -1;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-last</Name>
+    <Output>order: 99;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-stretch</Name>
+    <Output>align-items: stretch;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-top</Name>
+    <Output>align-items: flex-start;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-middle</Name>
+    <Output>align-items: center;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-bottom</Name>
+    <Output>align-items: flex-end;</Output>
+  </Property>
+
+  <Property>
+    <Name>.flex-wrap-stretch</Name>
+    <Output>align-content: stretch;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-top</Name>
+    <Output>align-content: flex-start;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-middle</Name>
+    <Output>align-content: flex-center;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-bottom</Name>
+    <Output>align-content: flex-end;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-between</Name>
+    <Output>align-content: space-between;</Output>
+  </Property>
+  <Property>
+    <Name>.flex-wrap-around</Name>
+    <Output>align-content: space-around;</Output>
+  </Property>
+
+  <Property>
+  <Name>.flex-start, .flex-left</Name>
+    <Output>justify-content: flex-start;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-end, .flex-right</Name>
+    <Output>justify-content: flex-end;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-center</Name>
+    <Output>justify-content: center;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-between</Name>
+    <Output>justify-content: space-between;</Output>
+  </Property>
+  <Property>
+  <Name>.flex-around</Name>
+    <Output>justify-content: space-around;</Output>
+  </Property>
+</Reference>
+
+## Flex Direction
+
+Use `.flex-row` to position flex items horizontally from left to right.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-row-reverse` to position flex items horizontally in the opposite direction.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row-reverse bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-column` to position flex items vertically from top to bottom.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-column bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-column-reverse` to position flex items vertically in the opposite direction.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-column-reverse bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Flex Wrap
+
+Use `.flex-no-wrap` to prevent flex items from wrapping.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-nowrap bg-tertiary-100 w-100p h-52">
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="w-40p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-nowrap">
+        <div className="w-30p flex-none">1</div>
+        <div className="w-40p flex-none">2</div>
+        <div className="w-30p flex-none">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap` to allow flex items to wrap normally.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap bg-tertiary-100 w-100p">
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="w-40p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap">
+        <div className="w-30p flex-none">1</div>
+        <div className="w-40p flex-none">2</div>
+        <div className="w-30p flex-none">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-reverse` to wrap flex items in the reverse direction.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap-reverse bg-tertiary-100 w-100p">
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="w-40p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="w-30p flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap-reverse">
+        <div className="w-30p flex-none">1</div>
+        <div className="w-40p flex-none">2</div>
+        <div className="w-30p flex-none">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Flex
+
+Flex is the shorthand for `flex-grow`, `flex-shrink` and `flex-basis` combined. 
+
+Use `.flex-auto` to allow a flex item to grow and shrink in accordance to it's initial size.
+
+<Sandbox>
+  <Sandbox.Preview>
+  <span className="c-black fs-caption-2 my-2 d-block">Default behaviour</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+    <span className="c-black fs-caption-2 my-2 d-block">Flex auto</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="flex-auto c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-auto">...</div>
+        <div className="flex-auto">...</div>
+        <div className="flex-auto">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-1` to allow a flex item to grow and shrink as needed irrespective of it's intital size.
+
+<Sandbox>
+  <Sandbox.Preview>
+  <span className="c-black fs-caption-2 my-2 d-block">Default behaviour</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+    <span className="c-black fs-caption-2 my-2 d-block">Flex 1</span>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Short</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Medium length</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">Larger in length when compared</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-1">...</div>
+        <div className="flex-1">...</div>
+        <div className="flex-1">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-none` to prevent a flex item from either growing or shrinking.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+        <div className="flex-none c-white bg-tertiary-500 px-4 py-2 m-2 ta-center">This item cannot grow or shrink</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-1">...</div>
+        <div className="flex-none">...</div>
+        <div className="flex-1">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-no-shrink` to prevent a flex item from shrinking.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex bg-tertiary-100 w-100p">
+        <div className="flex-none c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+        <div className="flex-no-shrink c-white bg-tertiary-500 px-4 py-2 m-2 ta-center">This item cannot shrink</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">This item can grow or shrink as needed</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex">
+        <div className="flex-none">...</div>
+        <div className="flex-no-shrink">...</div>
+        <div className="flex-1">...</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Order
+
+Use `.flex-first` and `.flex-last` to render flex items in a different order than their natural DOM order.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center flex-last">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center flex-first">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row">
+        <div>1</div>
+        <div className="flex-last">2</div>
+        <div className="flex-first">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Align Items
+
+Used to control how flex items are position along the container's cross/vertical/(Y) axis.
+
+Use `.flex-stretch` to stretch items to fill the container's width.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row flex-stretch bg-tertiary-100 w-100p" style="height:140px;">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row flex-stretch">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-top` to align items to the start of the container's cross/vertical axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row flex-top bg-tertiary-100 w-100p" style="height:140px;">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row flex-top">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-middle` to align items to the start of the container's cross/vertical axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row flex-middle bg-tertiary-100 w-100p" style="height:140px;">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row flex-middle">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-bottom` to align items to the start of the container's cross/vertical axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-row flex-bottom bg-tertiary-100 w-100p" style="height:140px;">
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="flex-1 c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-row flex-bottom">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Align Content
+
+Used to control how lines are positioned in multi-line flex containers.
+
+Use `.flex-wrap-stretch` for the lines to stretch and take up the remaining space.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-stretch bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-stretch">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-top` to pack lines at the start of cross/vertical axis in a flex container.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-top bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-top">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-middle` to pack lines at the center of cross/vertical axis in a flex container.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-middle bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-middle">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-bottom` to pack lines at the end of cross/vertical axis in a flex container.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-bottom bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-bottom">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-between` to distribute lines in a way that there is equal amount of space between each line.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-between bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-between">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-wrap-around` to distribute lines in a way that there is equal amount of space around each line.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-wrap flex-wrap-around bg-tertiary-100 w-100p" style="height:180px;">
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">1</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">2</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">3</div>
+        <div className="w-30p c-black bg-tertiary-400 px-4 py-2 m-2 ta-center h-24">4</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-wrap flex-wrap-around">
+        <div className="flex-1">1</div>
+        <div className="flex-1">2</div>
+        <div className="flex-1">3</div>
+        <div className="flex-1">4</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+## Justify Content
+
+Used to control how flex items are positioned along the container's main/horizontal/(X) axis.
+
+Use `.flex-start` or `.flex-left` to justify items against the start of the container's main/horizontal axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-start bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-end` or `.flex-right` to justify items against the end of the container's main/horizontal axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-end bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-center` to justify items along the center of the container's main/horizontal axis.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-center bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-between` to justify items along the container's main/horizontal axis in a way that there is an equal amount of space between each item.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-between bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
+
+<Spacer my={4} />
+
+Use `.flex-around` to justify items along the container's main/horizontal axis in a way that there is an equal amount of space around each item.
+
+<Sandbox>
+  <Sandbox.Preview>
+    <div className="flex flex-around bg-tertiary-100 w-100p h-52">
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">1</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">2</div>
+        <div className="c-black bg-tertiary-400 px-4 py-2 m-2 ta-center">3</div>
+    </div>
+  </Sandbox.Preview>
+  <Sandbox.Code>
+    <div className="flex flex-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+  </Sandbox.Code>
+</Sandbox>
