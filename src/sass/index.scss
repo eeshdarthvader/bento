@@ -115,10 +115,18 @@ body {
     }
   }
 
+  div {
+    &+p {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(24px);
+      margin-bottom: calculateRem(16px);
+    }
+  }
+
   // p {
-  //   font-size: calculateRem(16px);
-  //   line-height: calculateRem(24px);
-  //   margin-bottom: calculateRem(16px);
+    // font-size: calculateRem(16px);
+    // line-height: calculateRem(24px);
+    // margin-bottom: calculateRem(16px);
   // }
 
   code {
