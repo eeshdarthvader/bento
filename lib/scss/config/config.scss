@@ -510,4 +510,25 @@ $config: (
     'visible': visible,
     'hidden': hidden
   ),
+
+
+  // ------------------------------
+  // 22. Transition
+  // ------------------------------
+  'transition': (
+    'property': (
+      'bg' : background-color,
+      'color': color,
+      'border': border,
+      'box-shadow': box-shadow
+    ),
+    'duration': (
+      '500': 500ms,
+      '1000': 1000,
+      '1500': 1500,
+      '2000': 2000,
+      '2500': 2500,
+      '3000': 3000
+    )
+  )
 )
