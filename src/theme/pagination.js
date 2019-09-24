@@ -11,10 +11,8 @@ const Pagination = (props) => {
   const { docName, menus } = props;
 
   let arrangedMenus = Object.values(menus)
-  arrangedMenus = arrangedMenus.reduce(function(current, next){
-    return current.concat(next);
-  }, []);
-
+  arrangedMenus = Array.prototype.concat.apply([], arrangedMenus);
+  
   const currentPage = arrangedMenus.findIndex(menuItem => menuItem.name === docName)
 
   const isLast = currentPage === arrangedMenus.length - 1

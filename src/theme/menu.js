@@ -3,7 +3,9 @@ import { Link } from 'gatsby'
 import classnames from 'classnames'
 
 const Menu = ({ doc, menus }) => {
+
   const headings = Object.keys(menus)
+
   return (
     <ul className="mx-5 p-sticky l-0 pb-10" style={{ top: '104px' }}>
       {headings.map((heading) => {
