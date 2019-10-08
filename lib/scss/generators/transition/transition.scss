@@ -1,0 +1,29 @@
+/* -----------------------------------
+  Transition Generator
+  Generates utility classes for transition
+  based on config
+---------------------------------------
+  1. Transition
+------------------------------------ */
+
+// ------------------------------
+// Transition Property
+// ------------------------------
+@each $object, $value in config('transition.property') {
+    .tp-#{$object} {
+      transition-property: $value
+    }
+  }
+
+  // ------------------------------
+// Transition Duration
+// ------------------------------
+@each $object, $value in config('transition.duration') {
+    .td-#{$object} {
+      transition-duration: $value
+    }
+  }
+
+.t-all{
+  transition : all 0.2s ease;
+}  
