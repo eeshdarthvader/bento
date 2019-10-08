@@ -84,4 +84,12 @@
     border-bottom-left-radius: $borderRadius + px;
     border-bottom-right-radius: $borderRadius + px;
   }
+  .blr-#{$borderRadius} {
+    border-top-left-radius: $borderRadius + px;
+    border-bottom-left-radius: $borderRadius + px;
+  }
+  .brr-#{$borderRadius} {
+    border-top-right-radius: $borderRadius + px;
+    border-bottom-right-radius: $borderRadius + px;
+  }
 }
