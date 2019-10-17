@@ -1,6 +1,6 @@
 {
   "name": "@cleartrip/bento",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "description": "Cleartrip Design System",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
