@@ -1,5 +1,4 @@
 import React from 'react';
-import { useMenus } from 'docz'
 import { Link } from 'gatsby'
 import classNames from 'classnames'
 
@@ -9,25 +8,18 @@ import {
 } from '@lib'
 
 const Pagination = (props) => {
-  const { docName, category } = props;
-  const allMenus = useMenus()
+  const { docName, menus } = props;
 
+  let arrangedMenus = Object.values(menus)
+  arrangedMenus = Array.prototype.concat.apply([], arrangedMenus);
+  
+  const currentPage = arrangedMenus.findIndex(menuItem => menuItem.name === docName)
 
-
-  // Get only category menus
-  const menu = allMenus.filter(menu => {
-    return menu.name === category
-  })
-
-  const menuItems = menu[0].menu
-
-  const currentPage = menuItems.findIndex(menuItem => menuItem.name === docName)
-
-  const isLast = currentPage === menuItems.length - 1
+  const isLast = currentPage === arrangedMenus.length - 1
   const isFirst = currentPage === 0
 
-  const prevPage = menuItems[currentPage - 1]
-  const nextPage = menuItems[currentPage + 1]
+  const prevPage = arrangedMenus[currentPage - 1]
+  const nextPage = arrangedMenus[currentPage + 1]
 
   const linkClass = classNames(
     'td-none',
