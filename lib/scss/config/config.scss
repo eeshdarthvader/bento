@@ -60,7 +60,16 @@ $config: (
       'heading': (24px, 32px),
       'heading-2': (32px, 44px),
       'heading-3': (36px, 48px),
-      'display': (48px, 56px)
+      'display': (48px, 56px),
+      '1': (10px, 12px),
+      '2': (12px, 16px),
+      '3': (14px, 20px),
+      '4': (16px, 20px),
+      '5': (18px, 24px),
+      '6': (20px, 28px),
+      '7': (24px, 30px),
+      '8': (28px, 36px),
+      '9': (32px, 40px)
     ),
     'fontSizeMobile': ( // (font-size, line-height)
       'caption': (8px, 10px),
@@ -140,6 +149,7 @@ $config: (
 
     // orange
     'primary': (
+      '0': #FEF7EC,
       '100': #FEEED3,
       '200': #FED8A8,
       '300': #FCBD7D,
@@ -153,6 +163,7 @@ $config: (
 
     // blue
     'secondary': (
+      '0': #EFF5FC,
       '100': #D6E8FC,
       '200': #AECFF9,
       '300': #83AFEF,
@@ -166,6 +177,7 @@ $config: (
 
     // slate
     'tertiary': (
+      '0': #F2F6F9,
       '100': #E7EFF6,
       '200': #D1DFED,
       '300': #A6B7C9,
@@ -179,19 +191,21 @@ $config: (
 
     // green
     'success': (
-      '100': #F3FAC8,
-      '200': #E5F694,
-      '300': #CAE55C,
-      '400': #AACC33,
-      '500': #80AA01,
-      '600': #6A9200,
-      '700': #557A00,
-      '800': #426200,
-      '900': #345100,
+      '0': #F8FFEC,
+      '100': #E9F9D0,
+      '200': #CFF4A3,
+      '300': #A5E070,
+      '400': #7AC149,
+      '500': #46991A,
+      '600': #328313,
+      '700': #226E0D,
+      '800': #145808,
+      '900': #0B4904,
     ),
 
     // yellow
     'warning': (
+      '0': #FEF9E5,
       '100': #FEF4CC,
       '200': #FEE699,
       '300': #FED366,
@@ -205,6 +219,7 @@ $config: (
 
     // red
     'error': (
+      '0': #FFF4ED,
       '100': #FFE5D4,
       '200': #FFC5AA,
       '300': #FF9E7F,
@@ -218,6 +233,7 @@ $config: (
 
     // grey
     'neutral': (
+      '0': #F7F7F7,
       '100': #E6E6E6,
       '200': #CCCCCC,
       '300': #B3B3B3,
@@ -312,11 +328,11 @@ $config: (
     'md': 0 4px 8px rgba(59,64,69,.2), // deprecated
     'lg': 0 4px 12px rgba(36,39,41,.2), // deprecated
     '0': none,
-    '1': (0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)),
-    '2': (0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)),
-    '3': (0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)),
-    '4': (0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)),
-    '5': 0 25px 50px -12px rgba(0, 0, 0, 0.25)
+    '1': (0 1px 3px 0 rgba(191, 180, 180, 0.1), 0 1px 2px 0 rgba(191, 180, 180, 0.06)),
+    '2': (0 4px 6px -1px rgba(191, 180, 180, 0.1), 0 2px 4px -1px rgba(191, 180, 180, 0.06)),
+    '3': (0 10px 15px -3px rgba(191, 180, 180, 0.1), 0 4px 6px -2px rgba(191, 180, 180, 0.05)),
+    '4': (0 20px 25px -5px rgba(191, 180, 180, 0.1), 0 10px 10px -5px rgba(191, 180, 180, 0.04)),
+    '5': 0 25px 50px -12px rgba(191, 180, 180, 0.25)
   ),
 
 
@@ -510,4 +526,25 @@ $config: (
     'visible': visible,
     'hidden': hidden
   ),
+
+
+  // ------------------------------
+  // 22. Transition
+  // ------------------------------
+  'transition': (
+    'property': (
+      'bg' : background-color,
+      'color': color,
+      'border': border,
+      'box-shadow': box-shadow,
+      'elevation': box-shadow // alias for box-shadow
+    ),
+    'duration': (
+      '100': 100ms,
+      '200': 200ms,
+      '300': 300ms,
+      '500': 500ms,
+      '1000': 1000
+    )
+  )
 )
